@@ -79,8 +79,10 @@ const KonamiManager = new Lang.Class({
         let [success, keycode] = event.get_keycode();
         this._combo += ' ' + keycode;
 
-        let comboTail = this._combo.slice(-KONAMI_CODE.length);
-        if (comboTail == KONAMI_CODE) {
+        // Trim the string to make sure it doesn't get out of hand.
+        this._combo = this._combo.slice(-KONAMI_CODE.length);
+
+        if (this._combo == KONAMI_CODE) {
             this.emit('code-entered');
             this.reset();
         }
