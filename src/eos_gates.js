@@ -95,21 +95,17 @@ Signals.addSignalMethods(KonamiManager.prototype);
 
 const Application = new Lang.Class({
     Name: 'Application',
+    Extends: Gtk.Application,
 
     _init: function(process) {
         this._process = process;
 
-        this.application = new Gtk.Application({
-            application_id: 'com.endlessm.Gates',
-        });
-
-        this.application.connect('startup', Lang.bind(this, this._onStartup));
-        this.application.connect('activate', Lang.bind(this, this._onActivate));
+	this.parent({ application_id: 'com.endlessm.Gates' });
     },
 
     _spawnWine: function() {
         spawnUnderWine(this._process);
-        this.application.quit();
+        this.quit();
     },
 
     _onKonamiCodeEntered: function() {
@@ -121,7 +117,7 @@ const Application = new Lang.Class({
     },
 
     _closeWindow: function() {
-        this.application.quit();
+        this.quit();
     },
 
     _buildUI: function() {
@@ -129,7 +125,7 @@ const Application = new Lang.Class({
         // or checking our whitelist of apps.
         let processDisplayName = this._process.processName;
 
-        this._window = new Gtk.ApplicationWindow({ application: this.application,
+        this._window = new Gtk.ApplicationWindow({ application: this,
                                                    title: _("%s is unsupported").format(processDisplayName),
                                                    skip_taskbar_hint: true,
                                                    resizable: false,
@@ -176,7 +172,9 @@ const Application = new Lang.Class({
         this._window.add(box);
     },
 
-    _onStartup: function() {
+    vfunc_startup: function() {
+        this.parent();
+
         // Load custom CSS
         let resource = Gio.Resource.load(Config.RESOURCE_DIR + '/eos-gates.gresource');
         resource._register();
@@ -191,7 +189,7 @@ const Application = new Lang.Class({
         this._buildUI();
     },
 
-    _onActivate: function() {
+    vfunc_activate: function() {
         this._window.present();
     },
 });
@@ -237,6 +235,6 @@ function main(argv) {
         return 0;
     } else {
         let app = new Application(process);
-        return app.application.run(null);
+        return app.run(null);
     }
 }
