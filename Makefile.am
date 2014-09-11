@@ -48,3 +48,6 @@ EXTRA_DIST += \
 	src/config.js.in \
 	eos-gates.in \
 	$(NULL)
+
+download-putty:
+	curl http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe -o com.endlessm.test-whitelist.exe

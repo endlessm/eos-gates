@@ -43,3 +43,5 @@ stamp-h1
 /config.status
 /config.sub
 /m4/
+
+com.endlessm.test-whitelist.exe
