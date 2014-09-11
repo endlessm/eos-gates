@@ -85,6 +85,9 @@ const KonamiManager = new Lang.Class({
         if (this._combo == KONAMI_CODE) {
             this.emit('code-entered');
             this.reset();
+            return true;
+        } else {
+            return false;
         }
     },
 });
@@ -114,7 +117,7 @@ const Application = new Lang.Class({
     },
 
     _onKeyRelease: function(window, event) {
-        this._konami.keyRelease(event);
+        return this._konami.keyRelease(event);
     },
 
     _onOKClicked: function() {
