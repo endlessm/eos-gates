@@ -198,6 +198,9 @@ const Application = new Lang.Class({
 
 function getProcess(argv) {
     let processName = argv[0];
+    if (!processName)
+	return null;
+
     return { argv: argv,
              processName: processName };
 }
@@ -221,6 +224,10 @@ function main(argv) {
     setupEnvironment();
 
     let process = getProcess(argv);
+    if (!process) {
+	log('No argument provided - exiting');
+	return 1;
+    }
 
     recordMetrics(process);
 
