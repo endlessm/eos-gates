@@ -1,5 +1,8 @@
+com.endlessm.test-whitelist.exe
+com.endlessm.Gates.desktop
 eos-gates
 src/config.js
+
 *.gresource
 Makefile
 Makefile.in
@@ -45,6 +48,3 @@ stamp-h1
 /config.status
 /config.sub
 /m4/
-
-com.endlessm.test-whitelist.exe
-com.endlessm.Gates.desktop
