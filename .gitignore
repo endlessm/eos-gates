@@ -26,6 +26,7 @@ stamp-h1
 /depcomp
 /libtool
 /ltmain.sh
+/po/.intltool-merge-cache
 /po/Makevars.template
 /po/Makefile.in.in
 /po/POTFILES
@@ -46,3 +47,4 @@ stamp-h1
 /m4/
 
 com.endlessm.test-whitelist.exe
+com.endlessm.Gates.desktop

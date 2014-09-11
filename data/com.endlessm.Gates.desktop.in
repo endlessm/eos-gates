@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+_Name=Launch Windows Application
+_Comment=Launch Windows Applications
+Exec=@bindir@/eos-gates %F
+NoDisplay=true
+MimeType=application/x-ms-dos-executable;application/x-msi

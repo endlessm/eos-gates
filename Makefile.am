@@ -41,9 +41,15 @@ CLEANFILES += eos-gates
 
 bin_SCRIPTS = eos-gates
 
+@INTLTOOL_DESKTOP_RULE@
+
+desktopdir=$(datadir)/applications
+desktop_DATA = data/com.endlessm.Gates.desktop
+
 EXTRA_DIST += \
 	$(js_sources) \
 	$(resource_files) \
+	data/com.endlessm.Gates.desktop.in \
 	eos-gates.gresource.xml \
 	src/config.js.in \
 	eos-gates.in \
