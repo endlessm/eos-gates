@@ -33,7 +33,7 @@ function loadJSON(path) {
 function readWhitelist() {
     let dataDirs = GLib.get_system_data_dirs();
     dataDirs.forEach(function(dataDir) {
-        let path = GLib.build_filenamev([dataDir, 'eos-gates', 'whitelist.ini']);
+        let path = GLib.build_filenamev([dataDir, 'eos-gates', 'whitelist.json']);
         let data = loadJSON(path);
         if (!data || !data.length)
             return;
