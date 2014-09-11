@@ -116,10 +116,6 @@ const Application = new Lang.Class({
         return this._konami.keyRelease(event);
     },
 
-    _closeWindow: function() {
-        this.quit();
-    },
-
     _buildUI: function() {
         // TODO: Get a better display name by parsing PE information
         // or checking our whitelist of apps.
@@ -162,12 +158,8 @@ const Application = new Lang.Class({
 
         let button = new Gtk.Button({ visible: true,
                                       label: _("OK") });
-        button.connect('clicked', Lang.bind(this, this._closeWindow));
+        button.connect('clicked', Lang.bind(this, this.quit));
         box.add(button);
-
-        let accelGroup = new Gtk.AccelGroup();
-        accelGroup.connect(Gdk.KEY_Escape, 0, 0, Lang.bind(this, this._closeWindow));
-        this._window.add_accel_group(accelGroup);
 
         this._window.add(box);
     },
@@ -185,6 +177,11 @@ const Application = new Lang.Class({
 
         this._konami = new KonamiManager();
         this._konami.connect('code-entered', Lang.bind(this, this._onKonamiCodeEntered));
+
+        let action = new Gio.SimpleAction({ name: 'quit' });
+        action.connect('activate', Lang.bind(this, this.quit));
+        this.add_accelerator('Escape', 'app.quit', null);
+        this.add_action(action);
 
         this._buildUI();
     },
