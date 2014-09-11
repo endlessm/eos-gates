@@ -120,7 +120,7 @@ const Application = new Lang.Class({
         return this._konami.keyRelease(event);
     },
 
-    _onOKClicked: function() {
+    _closeWindow: function() {
         this.application.quit();
     },
 
@@ -166,8 +166,12 @@ const Application = new Lang.Class({
 
         let button = new Gtk.Button({ visible: true,
                                       label: _("OK") });
-        button.connect('clicked', Lang.bind(this, this._onOKClicked));
+        button.connect('clicked', Lang.bind(this, this._closeWindow));
         box.add(button);
+
+        let accelGroup = new Gtk.AccelGroup();
+        accelGroup.connect(Gdk.KEY_Escape, 0, 0, Lang.bind(this, this._closeWindow));
+        this._window.add_accel_group(accelGroup);
 
         this._window.add(box);
     },
