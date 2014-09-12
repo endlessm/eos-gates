@@ -1,5 +1,5 @@
 
-AC_INIT([Endless Gates], [0],
+AC_INIT([eos-gates], [0],
     [], [eos-gates], [http://endlessm.com])
 AM_INIT_AUTOMAKE([-Wall -Wno-portability foreign 1.11 tar-ustar])
 AM_SILENT_RULES([yes])

@@ -1,4 +1,3 @@
-
 SUBDIRS = po
 ACLOCAL_AMFLAGS = -I m4
 
@@ -12,6 +11,7 @@ eos-gates.gresource: eos-gates.gresource.xml $(resource_files)
 CLEANFILES += eos-gates.gresource
 
 do_subst = sed \
+	-e 's|@bindir[@]|$(bindir)|g' \
 	-e 's|@localedir[@]|$(localedir)|g' \
 	-e 's|@pkglibdir[@]|$(pkglibdir)|g' \
 	-e 's|@pkgdatadir[@]|$(pkgdatadir)|g' \
@@ -19,8 +19,11 @@ do_subst = sed \
 	-e 's|@PACKAGE_NAME[@]|$(PACKAGE)|g' \
 	-e 's|@PACKAGE_VERSION[@]|$(VERSION)|g' \
 	-e 's|@GETTEXT_PACKAGE[@]|$(GETTEXT_PACKAGE)|g'
+
 src/config.js: src/config.js.in Makefile
-	$(AM_V_GEN) $(do_subst) $< > $@
+	$(AM_V_GEN) $(MKDIR_P) $(builddir)/src && \
+	$(do_subst) $< > $@
+CLEANFILES += src/config.js
 
 # # # INSTALL RULES # # #
 
@@ -41,15 +44,23 @@ CLEANFILES += eos-gates
 
 bin_SCRIPTS = eos-gates
 
+%.desktop.in: %.desktop.in.in Makefile
+	$(AM_V_GEN) $(MKDIR_P) $(builddir)/data && \
+	$(do_subst) $< > $@
+
 @INTLTOOL_DESKTOP_RULE@
 
-desktopdir=$(datadir)/applications
+desktopdir = $(datadir)/applications
 desktop_DATA = data/com.endlessm.Gates.desktop
+CLEANFILES += \
+	data/com.endlessm.Gates.desktop \
+	data/com.endlessm.Gates.desktop.in \
+	$(NULL)
 
 EXTRA_DIST += \
 	$(js_sources) \
 	$(resource_files) \
-	data/com.endlessm.Gates.desktop.in \
+	data/com.endlessm.Gates.desktop.in.in \
 	eos-gates.gresource.xml \
 	src/config.js.in \
 	eos-gates.in \
