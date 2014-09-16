@@ -197,7 +197,7 @@ function getProcess(argv) {
 	return null;
 
     return { argv: argv,
-             processName: processName };
+             processName: GLib.path_get_basename(processName) };
 }
 
 function recordMetrics(process) {
