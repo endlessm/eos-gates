@@ -59,7 +59,7 @@ function isWhitelisted(process) {
 }
 
 function spawnUnderWine(process) {
-    let argv = ['wine', 'start'].concat(process.argv);
+    let argv = ['wine', 'start', '/unix'].concat(process.argv);
     Gio.Subprocess.new(argv, 0);
 }
 
