@@ -67,4 +67,4 @@ EXTRA_DIST += \
 	$(NULL)
 
 download-putty:
-	curl http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe -o com.endlessm.test-whitelist.exe
+	curl -L http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe -o com.endlessm.test-whitelist.exe
