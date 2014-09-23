@@ -72,17 +72,24 @@ const EosGatesWindows = new Lang.Class({
     APP_ID: 'com.endlessm.Gates.Windows',
 
     _launchNormally: function() {
-        spawnUnderWine(this._process);
+        spawnUnderWine(this._launchedFile);
     },
 });
 
 function getProcess(argv) {
-    let processName = argv[0];
-    if (!processName)
+    let processPath = argv[0];
+    if (!processPath)
 	return null;
 
+    let processName = GLib.path_get_basename(processPath);
+
+    // TODO: Get a better display name by parsing PE information
+    // or checking our whitelist of apps.
+    let displayName = processName;
+
     return { argv: argv,
-             processName: GLib.path_get_basename(processName) };
+             processName: processName,
+             displayName: displayName };
 }
 
 function main(argv) {

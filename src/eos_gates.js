@@ -44,8 +44,8 @@ const Application = new Lang.Class({
     Name: 'Application',
     Extends: Gtk.Application,
 
-    _init: function(process) {
-        this._process = process;
+    _init: function(launchedFile) {
+        this._launchedFile = launchedFile;
 
 	this.parent({ application_id: this.APP_ID });
     },
@@ -64,12 +64,10 @@ const Application = new Lang.Class({
     },
 
     _buildUI: function() {
-        // TODO: Get a better display name by parsing PE information
-        // or checking our whitelist of apps.
-        let processDisplayName = this._process.processName;
+        let displayName = this._launchedFile.displayName;
 
         this._window = new Gtk.ApplicationWindow({ application: this,
-                                                   title: _("%s is unsupported").format(processDisplayName),
+                                                   title: _("%s is unsupported").format(displayName),
                                                    skip_taskbar_hint: true,
                                                    resizable: false,
                                                    width_request: 640,
@@ -82,7 +80,7 @@ const Application = new Lang.Class({
                                 margin: 20,
                                 visible: true });
 
-        let escapedProcessName = GLib.markup_escape_text(processDisplayName, -1);
+        let escapedDisplayName = GLib.markup_escape_text(displayName, -1);
 
         let errorMessageBox = new Gtk.Box({ orientation: Gtk.Orientation.VERTICAL,
                                             valign: Gtk.Align.CENTER,
@@ -92,7 +90,7 @@ const Application = new Lang.Class({
 
         label = new Gtk.Label({ visible: true,
                                 use_markup: true,
-                                label: Format.vprintf(_("Sorry, you can't run <b>%s</b> on Endless yet."), [escapedProcessName]) });
+                                label: Format.vprintf(_("Sorry, you can't run <b>%s</b> on Endless yet."), [escapedDisplayName]) });
         label.get_style_context().add_class('unsupported-error');
         errorMessageBox.add(label);
 
