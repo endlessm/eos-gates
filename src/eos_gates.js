@@ -5,63 +5,10 @@ const Lang = imports.lang;
 const Signals = imports.signals;
 
 const Config = imports.config;
-const EosMetrics = imports.gi.EosMetrics;
 const GLib = imports.gi.GLib;
 const Gdk = imports.gi.Gdk;
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
-
-// Happens when a .exe or .msi file is opened. Contains the
-// argv that was passed to the application.
-const WINDOWS_APP_OPENED = 'cf09194a-3090-4782-ab03-87b2f1515aed';
-
-const WHITELISTED_APPS = [
-    // This is an unlikely binary name to run into, so just add it
-    // in here for testing purposes...
-    { processName: "com.endlessm.test-whitelist.exe" },
-];
-
-function loadJSON(path) {
-    try {
-        let [success, contents] = GLib.file_get_contents(path);
-        return JSON.parse(contents);
-    } catch(e) {
-        return null;
-    }
-}
-
-function readWhitelist() {
-    let dataDirs = GLib.get_system_data_dirs();
-    dataDirs.forEach(function(dataDir) {
-        let path = GLib.build_filenamev([dataDir, 'eos-gates', 'whitelist.json']);
-        let data = loadJSON(path);
-        if (!data || !data.length)
-            return;
-
-        Lang.copyProperties(data, WHITELISTED_APPS);
-    });
-}
-
-function matchWhitelist(process, entry) {
-    if (process.processName == entry.processName)
-        return true;
-
-    // TODO: match on PE metadata, like process name,
-    // signature, etc.
-
-    return false;
-}
-
-function isWhitelisted(process) {
-    return WHITELISTED_APPS.some(function(entry) {
-        return matchWhitelist(process, entry);
-    });
-}
-
-function spawnUnderWine(process) {
-    let argv = ['wine', 'start', '/unix'].concat(process.argv);
-    Gio.Subprocess.new(argv, 0);
-}
 
 const KONAMI_CODE = '111 111 116 116 113 114 113 114 56 38';
 const KonamiManager = new Lang.Class({
@@ -97,19 +44,19 @@ const Application = new Lang.Class({
     Name: 'Application',
     Extends: Gtk.Application,
 
-    _init: function(process) {
-        this._process = process;
+    _init: function(launchedFile) {
+        this._launchedFile = launchedFile;
 
-	this.parent({ application_id: 'com.endlessm.Gates' });
+	this.parent({ application_id: this.APP_ID });
     },
 
-    _spawnWine: function() {
-        spawnUnderWine(this._process);
-        this.quit();
+    _launchNormally: function() {
+        // Do nothing.
     },
 
     _onKonamiCodeEntered: function() {
-        this._spawnWine();
+        this._launchNormally();
+        this.quit();
     },
 
     _onKeyRelease: function(window, event) {
@@ -117,12 +64,8 @@ const Application = new Lang.Class({
     },
 
     _buildUI: function() {
-        // TODO: Get a better display name by parsing PE information
-        // or checking our whitelist of apps.
-        let processDisplayName = this._process.processName;
-
         this._window = new Gtk.ApplicationWindow({ application: this,
-                                                   title: _("%s is unsupported").format(processDisplayName),
+                                                   title: _("%s is unsupported").format(this._launchedFile.displayName),
                                                    skip_taskbar_hint: true,
                                                    resizable: false,
                                                    width_request: 640,
@@ -135,8 +78,6 @@ const Application = new Lang.Class({
                                 margin: 20,
                                 visible: true });
 
-        let escapedProcessName = GLib.markup_escape_text(processDisplayName, -1);
-
         let errorMessageBox = new Gtk.Box({ orientation: Gtk.Orientation.VERTICAL,
                                             valign: Gtk.Align.CENTER,
                                             vexpand: true,
@@ -145,7 +86,7 @@ const Application = new Lang.Class({
 
         label = new Gtk.Label({ visible: true,
                                 use_markup: true,
-                                label: Format.vprintf(_("Sorry, you can't run <b>%s</b> on Endless yet."), [escapedProcessName]) });
+                                label: this._getMainErrorMessage() });
         label.get_style_context().add_class('unsupported-error');
         errorMessageBox.add(label);
 
@@ -191,21 +132,6 @@ const Application = new Lang.Class({
     },
 });
 
-function getProcess(argv) {
-    let processName = argv[0];
-    if (!processName)
-	return null;
-
-    return { argv: argv,
-             processName: GLib.path_get_basename(processName) };
-}
-
-function recordMetrics(process) {
-    let recorder = EosMetrics.EventRecorder.get_default();
-    let data = new GLib.Variant('as', process.argv);
-    recorder.record_event(WINDOWS_APP_OPENED, data);
-}
-
 function setupEnvironment() {
     Gettext.bindtextdomain(Config.GETTEXT_PACKAGE, Config.LOCALE_DIR);
     Gettext.textdomain(Config.GETTEXT_PACKAGE);
@@ -213,25 +139,4 @@ function setupEnvironment() {
     window._ = Gettext.gettext;
 
     String.prototype.format = Format.format;
-}
-
-function main(argv) {
-    setupEnvironment();
-
-    let process = getProcess(argv);
-    if (!process) {
-	log('No argument provided - exiting');
-	return 1;
-    }
-
-    recordMetrics(process);
-
-    readWhitelist();
-    if (isWhitelisted(process)) {
-        spawnUnderWine(process);
-        return 0;
-    } else {
-        let app = new Application(process);
-        return app.run(null);
-    }
 }

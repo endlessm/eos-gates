@@ -1,6 +1,8 @@
+
 SUBDIRS = po
 ACLOCAL_AMFLAGS = -I m4
 
+bin_SCRIPTS =
 CLEANFILES =
 DISTCLEANFILES =
 EXTRA_DIST =
@@ -30,6 +32,8 @@ CLEANFILES += src/config.js
 js_sources = \
 	src/config.js \
 	src/eos_gates.js \
+	src/eos_gates_windows.js \
+	src/eos_gates_linux_package.js \
 	$(NULL)
 
 nobase_pkgdata_DATA = \
@@ -37,12 +41,17 @@ nobase_pkgdata_DATA = \
 	eos-gates.gresource \
 	$(NULL)
 
-eos-gates: eos-gates.in Makefile
+eos-gates-windows: eos-gates-windows.in Makefile
 	$(AM_V_GEN) $(do_subst) $< > $@
 	chmod +x $@
-CLEANFILES += eos-gates
+CLEANFILES += eos-gates-windows
+bin_SCRIPTS += eos-gates-windows
 
-bin_SCRIPTS = eos-gates
+eos-gates-linux-package: eos-gates-linux-package.in Makefile
+	$(AM_V_GEN) $(do_subst) $< > $@
+	chmod +x $@
+CLEANFILES += eos-gates-linux-package
+bin_SCRIPTS += eos-gates-linux-package
 
 %.desktop.in: %.desktop.in.in Makefile
 	$(AM_V_GEN) $(MKDIR_P) $(builddir)/data && \
@@ -51,20 +60,28 @@ bin_SCRIPTS = eos-gates
 @INTLTOOL_DESKTOP_RULE@
 
 desktopdir = $(datadir)/applications
-desktop_DATA = data/com.endlessm.Gates.desktop
+desktop_DATA = \
+	data/com.endlessm.Gates.Windows.desktop		\
+	data/com.endlessm.Gates.LinuxPackage.desktop	\
+	$(NULL)
+
 CLEANFILES += \
-	data/com.endlessm.Gates.desktop \
-	data/com.endlessm.Gates.desktop.in \
+	data/com.endlessm.Gates.Windows.desktop \
+	data/com.endlessm.Gates.Windows.desktop.in \
+	data/com.endlessm.Gates.LinuxPackage.desktop \
+	data/com.endlessm.Gates.LinuxPackage.desktop.in \
 	$(NULL)
 
 EXTRA_DIST += \
 	$(js_sources) \
-	$(resource_files) \
-	data/com.endlessm.Gates.desktop.in.in \
-	eos-gates.gresource.xml \
 	src/config.js.in \
-	eos-gates.in \
+	$(resource_files) \
+	eos-gates.gresource.xml \
+	eos-gates-windows.in \
+	data/com.endlessm.Gates.Windows.desktop.in.in \
+	eos-gates-linux-package.in \
+	data/com.endlessm.Gates.LinuxPackage.desktop.in.in \
 	$(NULL)
 
 download-putty:
-	curl http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe -o com.endlessm.test-whitelist.exe
+	curl -L http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe -o com.endlessm.test-whitelist.exe

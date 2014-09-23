@@ -2,6 +2,6 @@
 Type=Application
 _Name=Launch Windows Application
 _Comment=Launch Windows Applications
-Exec=@bindir@/eos-gates %F
+Exec=@bindir@/eos-gates-windows %F
 NoDisplay=true
 MimeType=application/x-ms-dos-executable;application/x-msi

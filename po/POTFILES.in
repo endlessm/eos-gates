@@ -1,3 +1,6 @@
 # List of source files which contain translatable strings.
 src/eos_gates.js
-data/com.endlessm.Gates.desktop.in.in
+src/eos_gates_windows.js
+data/com.endlessm.Gates.Windows.desktop.in.in
+src/eos_gates_linux_package.js
+data/com.endlessm.Gates.LinuxPackage.desktop.in.in
