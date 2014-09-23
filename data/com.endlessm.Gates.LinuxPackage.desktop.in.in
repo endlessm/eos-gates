@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+_Name=Install Linux Applications
+_Comment=Install Linux Applications
+Exec=@bindir@/eos-gates-linux-package %F
+NoDisplay=true
+MimeType=application/x-rpm;application/x-source-rpm;application/x-debian-package

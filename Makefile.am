@@ -33,6 +33,7 @@ js_sources = \
 	src/config.js \
 	src/eos_gates.js \
 	src/eos_gates_windows.js \
+	src/eos_gates_linux_package.js \
 	$(NULL)
 
 nobase_pkgdata_DATA = \
@@ -44,8 +45,13 @@ eos-gates-windows: eos-gates-windows.in Makefile
 	$(AM_V_GEN) $(do_subst) $< > $@
 	chmod +x $@
 CLEANFILES += eos-gates-windows
-
 bin_SCRIPTS += eos-gates-windows
+
+eos-gates-linux-package: eos-gates-linux-package.in Makefile
+	$(AM_V_GEN) $(do_subst) $< > $@
+	chmod +x $@
+CLEANFILES += eos-gates-linux-package
+bin_SCRIPTS += eos-gates-linux-package
 
 %.desktop.in: %.desktop.in.in Makefile
 	$(AM_V_GEN) $(MKDIR_P) $(builddir)/data && \
@@ -54,10 +60,16 @@ bin_SCRIPTS += eos-gates-windows
 @INTLTOOL_DESKTOP_RULE@
 
 desktopdir = $(datadir)/applications
-desktop_DATA = data/com.endlessm.Gates.Windows.desktop
+desktop_DATA = \
+	data/com.endlessm.Gates.Windows.desktop		\
+	data/com.endlessm.Gates.LinuxPackage.desktop	\
+	$(NULL)
+
 CLEANFILES += \
 	data/com.endlessm.Gates.Windows.desktop \
 	data/com.endlessm.Gates.Windows.desktop.in \
+	data/com.endlessm.Gates.LinuxPackage.desktop \
+	data/com.endlessm.Gates.LinuxPackage.desktop.in \
 	$(NULL)
 
 EXTRA_DIST += \
@@ -67,6 +79,8 @@ EXTRA_DIST += \
 	eos-gates.gresource.xml \
 	eos-gates-windows.in \
 	data/com.endlessm.Gates.Windows.desktop.in.in \
+	eos-gates-linux-package.in \
+	data/com.endlessm.Gates.LinuxPackage.desktop.in.in \
 	$(NULL)
 
 download-putty:
