@@ -64,10 +64,8 @@ const Application = new Lang.Class({
     },
 
     _buildUI: function() {
-        let displayName = this._launchedFile.displayName;
-
         this._window = new Gtk.ApplicationWindow({ application: this,
-                                                   title: _("%s is unsupported").format(displayName),
+                                                   title: _("%s is unsupported").format(this._launchedFile.displayName),
                                                    skip_taskbar_hint: true,
                                                    resizable: false,
                                                    width_request: 640,
@@ -80,8 +78,6 @@ const Application = new Lang.Class({
                                 margin: 20,
                                 visible: true });
 
-        let escapedDisplayName = GLib.markup_escape_text(displayName, -1);
-
         let errorMessageBox = new Gtk.Box({ orientation: Gtk.Orientation.VERTICAL,
                                             valign: Gtk.Align.CENTER,
                                             vexpand: true,
@@ -90,7 +86,7 @@ const Application = new Lang.Class({
 
         label = new Gtk.Label({ visible: true,
                                 use_markup: true,
-                                label: Format.vprintf(_("Sorry, you can't run <b>%s</b> on Endless yet."), [escapedDisplayName]) });
+                                label: this._getMainErrorMessage() });
         label.get_style_context().add_class('unsupported-error');
         errorMessageBox.add(label);
 

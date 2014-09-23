@@ -74,6 +74,11 @@ const EosGatesWindows = new Lang.Class({
     _launchNormally: function() {
         spawnUnderWine(this._launchedFile);
     },
+
+    _getMainErrorMessage: function() {
+        let escapedDisplayName = GLib.markup_escape_text(this._launchedFile.displayName, -1);
+        return _("Sorry, you can't run <b>%s</b> on Endless yet.").format(escapedDisplayName);
+    },
 });
 
 function getProcess(argv) {
