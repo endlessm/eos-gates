@@ -17,4 +17,4 @@ if [ "$RUN_DEBUG" != "" ]; then
     DEBUG_COMMAND="gdb --args"
 fi
 
-exec $DEBUG_COMMAND @GJS_CONSOLE@ -I @pkgdatadir@/src -c "const EosGates = imports.eos_gates; EosGates.main(ARGV);" "$@"
+exec $DEBUG_COMMAND @GJS_CONSOLE@ -I @pkgdatadir@/src -c "const EosGatesWindows = imports.eos_gates_windows; EosGatesWindows.main(ARGV);" "$@"

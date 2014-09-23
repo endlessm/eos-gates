@@ -1,6 +1,6 @@
 com.endlessm.test-whitelist.exe
-com.endlessm.Gates.desktop
-eos-gates
+com.endlessm.Gates.Windows.desktop
+eos-gates-windows
 src/config.js
 
 *.gresource
