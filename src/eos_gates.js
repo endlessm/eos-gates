@@ -99,6 +99,18 @@ const Application = new Lang.Class({
         label.get_style_context().add_class('unsupported-subtitle');
         errorMessageBox.add(label);
 
+        label = new Gtk.Label({ visible: true,
+                                use_markup: true,
+                                wrap: true,
+                                max_width_chars: 30,
+                                label: _("In the meantime, you can install applications from our <a href='endlessm-app://eos-app-store'>App Store</a>.") });
+        label.get_style_context().add_class('unsupported-subtitle');
+        label.connect('activate-link', Lang.bind(this, function() {
+            this.quit();
+            return false;
+        }));
+        errorMessageBox.add(label);
+
         box.add(errorMessageBox);
 
         let button = new Gtk.Button({ visible: true,
