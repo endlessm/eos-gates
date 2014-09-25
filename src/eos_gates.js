@@ -81,11 +81,15 @@ const Application = new Lang.Class({
         let errorMessageBox = new Gtk.Box({ orientation: Gtk.Orientation.VERTICAL,
                                             valign: Gtk.Align.CENTER,
                                             vexpand: true,
-                                            visible: true });
+                                            visible: true,
+                                            spacing: 6 });
         let label;
 
         label = new Gtk.Label({ visible: true,
                                 use_markup: true,
+                                wrap: true,
+                                max_width_chars: 40,
+                                halign: Gtk.Align.CENTER,
                                 label: this._getMainErrorMessage() });
         label.get_style_context().add_class('unsupported-error');
         errorMessageBox.add(label);
