@@ -81,11 +81,15 @@ const Application = new Lang.Class({
         let errorMessageBox = new Gtk.Box({ orientation: Gtk.Orientation.VERTICAL,
                                             valign: Gtk.Align.CENTER,
                                             vexpand: true,
-                                            visible: true });
+                                            visible: true,
+                                            spacing: 6 });
         let label;
 
         label = new Gtk.Label({ visible: true,
                                 use_markup: true,
+                                wrap: true,
+                                max_width_chars: 40,
+                                halign: Gtk.Align.CENTER,
                                 label: this._getMainErrorMessage() });
         label.get_style_context().add_class('unsupported-error');
         errorMessageBox.add(label);
@@ -93,6 +97,18 @@ const Application = new Lang.Class({
         label = new Gtk.Label({ visible: true,
                                 label: _("We're working on it, though!") });
         label.get_style_context().add_class('unsupported-subtitle');
+        errorMessageBox.add(label);
+
+        label = new Gtk.Label({ visible: true,
+                                use_markup: true,
+                                wrap: true,
+                                max_width_chars: 30,
+                                label: _("In the meantime, you can install applications from our <a href='endlessm-app://eos-app-store'>App Store</a>.") });
+        label.get_style_context().add_class('unsupported-subtitle');
+        label.connect('activate-link', Lang.bind(this, function() {
+            this.quit();
+            return false;
+        }));
         errorMessageBox.add(label);
 
         box.add(errorMessageBox);
