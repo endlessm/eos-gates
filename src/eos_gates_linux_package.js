@@ -25,7 +25,7 @@ const EosGatesLinuxPackage = new Lang.Class({
 
     _getMainErrorMessage: function() {
         let escapedDisplayName = GLib.markup_escape_text(this._launchedFile.displayName, -1);
-        return _("Sorry, you can't install <b>%s</b> on Endless yet.").format(escapedDisplayName);
+        return _("Sorry, you can't install <b>%s</b> on Endless.").format(escapedDisplayName);
     },
 });
 
