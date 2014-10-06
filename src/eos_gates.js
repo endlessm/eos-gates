@@ -95,11 +95,6 @@ const Application = new Lang.Class({
         errorMessageBox.add(label);
 
         label = new Gtk.Label({ visible: true,
-                                label: _("We're working on it, though!") });
-        label.get_style_context().add_class('unsupported-subtitle');
-        errorMessageBox.add(label);
-
-        label = new Gtk.Label({ visible: true,
                                 use_markup: true,
                                 wrap: true,
                                 max_width_chars: 30,
