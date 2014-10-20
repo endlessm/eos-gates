@@ -17,7 +17,8 @@ Package: eos-gates
 Architecture: all
 Section: non-free/utils
 Priority: extra
-Depends: gir1.2-glib-2.0,
+Depends: gir1.2-eosmetrics-0 (>= 0.2.0),
+         gir1.2-glib-2.0,
          gir1.2-gtk-3.0,
          gjs,
          ${misc:Depends}
