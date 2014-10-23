@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-08 21:00-0700\n"
-"PO-Revision-Date: 2014-10-09 04:01+0000\n"
+"PO-Revision-Date: 2014-10-22 23:51+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/eos-gates/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -20,36 +20,36 @@ msgstr ""
 #: ../src/eos_gates.js:68
 #, c-format
 msgid "%s is unsupported"
-msgstr ""
+msgstr "%s n'est pas pris en charge"
 
 #: ../src/eos_gates.js:101
 msgid ""
 "You can install applications from our <a href='endlessm-app://eos-app-"
 "store'>App Store</a>."
-msgstr ""
+msgstr "Vous pouvez installer des applications depuis notre <a href='endlessm-app://eos-app-store'>Boutique d'applications</a>."
 
 #: ../src/eos_gates.js:112
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../src/eos_gates_windows.js:80
 #, c-format
 msgid "Sorry, you can't run <b>%s</b> on Endless."
-msgstr ""
+msgstr "Désolé, vous ne pouvez pas faire fonctionner <b>%s</b> sur Endless."
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
 msgid "Launch Windows Application"
-msgstr ""
+msgstr "Lancer l'application Windows"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:2
 msgid "Launch Windows Applications"
-msgstr ""
+msgstr "Lancer les applications Windows"
 
 #: ../src/eos_gates_linux_package.js:28
 #, c-format
 msgid "Sorry, you can't install <b>%s</b> on Endless."
-msgstr ""
+msgstr "Désolé, vous ne pouvez pas installer <b>%s</b> sur Endless."
 
 #: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
 msgid "Install Linux Applications"
-msgstr ""
+msgstr "Installer les applications Linux"
