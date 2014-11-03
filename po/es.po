@@ -4,14 +4,15 @@
 # 
 # Translators:
 # Eddy Alegria <eddy@endlessm.com>, 2014
+# Joel Gil Leon <joel@endlessm.com>, 2014
 # Roddy Shuler <roddy@endlessm.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-08 21:00-0700\n"
-"PO-Revision-Date: 2014-10-09 04:03+0000\n"
-"Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
+"PO-Revision-Date: 2014-10-29 19:19+0000\n"
+"Last-Translator: Joel Gil Leon <joel@endlessm.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/eos-gates/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,7 +29,7 @@ msgstr "%s no es soportado"
 msgid ""
 "You can install applications from our <a href='endlessm-app://eos-app-"
 "store'>App Store</a>."
-msgstr "Puedes instalar programas desde nuestra <a href='endlessm-app://eos-app-store'>Centro de programas</a>."
+msgstr "Puedes instalar programas desde nuestro <a href='endlessm-app://eos-app-store'>Centro de programas</a>."
 
 #: ../src/eos_gates.js:112
 msgid "OK"
