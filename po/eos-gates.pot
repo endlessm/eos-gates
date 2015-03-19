@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-13 06:57+0000\n"
+"POT-Creation-Date: 2015-03-19 06:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/eos_gates.js:68
-#, c-format
+#, javascript-format
 msgid "%s is unsupported"
 msgstr ""
 
@@ -33,7 +33,7 @@ msgid "OK"
 msgstr ""
 
 #: ../src/eos_gates_windows.js:80
-#, c-format
+#, javascript-format
 msgid "Sorry, you can't run <b>%s</b> on Endless."
 msgstr ""
 
@@ -46,7 +46,7 @@ msgid "Launch Windows Applications"
 msgstr ""
 
 #: ../src/eos_gates_linux_package.js:28
-#, c-format
+#, javascript-format
 msgid "Sorry, you can't install <b>%s</b> on Endless."
 msgstr ""
 
