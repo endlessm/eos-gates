@@ -11,10 +11,9 @@ const EosGates = imports.eos_gates;
 // the package.
 const LINUX_PACKAGE_OPENED = '0bba3340-52e3-41a2-854f-e6ed36621379';
 
-function recordMetrics(packageFile) {
-    let recorder = EosMetrics.EventRecorder.get_default();
-    let data = new GLib.Variant('s', packageFile.packagePath);
-    recorder.record_event(LINUX_PACKAGE_OPENED, data);
+function recordPackageOpen(packageFile) {
+    let packageFilepath = new GLib.Variant('s', packageFile.packagePath);
+    this._eventRecorder.record_event(LINUX_PACKAGE_OPENED, packageFilepath);
 }
 
 const EosGatesLinuxPackage = new Lang.Class({
@@ -26,6 +25,10 @@ const EosGatesLinuxPackage = new Lang.Class({
     _getMainErrorMessage: function() {
         let escapedDisplayName = GLib.markup_escape_text(this._launchedFile.displayName, -1);
         return _("Sorry, you can't install <b>%s</b> on Endless.").format(escapedDisplayName);
+    },
+
+    _init: function() {
+        this._eventRecorder = new EosMetrics.EventRecorder();
     },
 });
 
@@ -54,7 +57,7 @@ function main(argv) {
 	return 1;
     }
 
-    recordMetrics(packageFile);
+    recordPackageOpen(packageFile);
 
     let app = new EosGatesLinuxPackage(packageFile);
     return app.run(null);

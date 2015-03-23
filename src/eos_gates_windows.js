@@ -17,10 +17,9 @@ const WHITELISTED_APPS = [
 // argv that was passed to the application.
 const WINDOWS_APP_OPENED = 'cf09194a-3090-4782-ab03-87b2f1515aed';
 
-function recordMetrics(process) {
-    let recorder = EosMetrics.EventRecorder.get_default();
-    let data = new GLib.Variant('as', process.argv);
-    recorder.record_event(WINDOWS_APP_OPENED, data);
+function recordWindowsAppOpen(process) {
+    let args = new GLib.Variant('as', process.argv);
+    this._eventRecorder.record_event(WINDOWS_APP_OPENED, args);
 }
 
 function spawnUnderWine(process) {
@@ -79,6 +78,10 @@ const EosGatesWindows = new Lang.Class({
         let escapedDisplayName = GLib.markup_escape_text(this._launchedFile.displayName, -1);
         return _("Sorry, you can't run <b>%s</b> on Endless.").format(escapedDisplayName);
     },
+
+    _init: function() {
+        this._eventRecorder = new EosMetrics.EventRecorder();
+    },
 });
 
 function getProcess(argv) {
@@ -106,7 +109,7 @@ function main(argv) {
 	return 1;
     }
 
-    recordMetrics(process);
+    recordWindowsAppOpen(process);
 
     readWhitelist();
     if (isWhitelisted(process)) {
