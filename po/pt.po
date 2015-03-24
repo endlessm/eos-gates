@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-13 06:57+0000\n"
+"POT-Creation-Date: 2015-03-19 06:25+0000\n"
 "PO-Revision-Date: 2014-12-23 10:19+0000\n"
 "Last-Translator: Richard Vignais\n"
 "Language-Team: Portuguese (http://www.transifex.com/projects/p/eos-gates/language/pt/)\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../src/eos_gates.js:68
-#, c-format
+#, javascript-format
 msgid "%s is unsupported"
 msgstr "%s não é suportado"
 
@@ -35,7 +35,7 @@ msgid "OK"
 msgstr "OK"
 
 #: ../src/eos_gates_windows.js:80
-#, c-format
+#, javascript-format
 msgid "Sorry, you can't run <b>%s</b> on Endless."
 msgstr "Desculpe, você não pode executar <b>%s</b> no Endless."
 
@@ -48,7 +48,7 @@ msgid "Launch Windows Applications"
 msgstr "Abrir programas de Windows"
 
 #: ../src/eos_gates_linux_package.js:28
-#, c-format
+#, javascript-format
 msgid "Sorry, you can't install <b>%s</b> on Endless."
 msgstr "Desculpe, você não pode instalar <b>%s</b> no Endless. "
 
