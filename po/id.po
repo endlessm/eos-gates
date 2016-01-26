@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-19 02:47+0000\n"
-"PO-Revision-Date: 2016-01-22 18:58+0000\n"
+"PO-Revision-Date: 2016-01-24 15:15+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/endless-mobile-inc/eos-gates/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -20,36 +20,36 @@ msgstr ""
 #: ../src/eos_gates.js:68
 #, javascript-format
 msgid "%s is unsupported"
-msgstr ""
+msgstr "%s tidak didukung"
 
 #: ../src/eos_gates.js:101
 msgid ""
 "You can install applications from our <a href='endlessm-app://eos-app-"
 "store'>App Store</a>."
-msgstr ""
+msgstr "Anda dapat memasang aplikasi dari <a href='endlessm-app://eos-app-store'>App Store</a> kami."
 
 #: ../src/eos_gates.js:112
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../src/eos_gates_windows.js:80
 #, javascript-format
 msgid "Sorry, you can't run <b>%s</b> on Endless."
-msgstr ""
+msgstr "Maaf, Anda tidak dapat menjalankan <b>%s</b> di Endless."
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
 msgid "Launch Windows Application"
-msgstr ""
+msgstr "Luncurkan aplikasi Windows"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:2
 msgid "Launch Windows Applications"
-msgstr ""
+msgstr "Jalankan Aplikasi Windows"
 
 #: ../src/eos_gates_linux_package.js:28
 #, javascript-format
 msgid "Sorry, you can't install <b>%s</b> on Endless."
-msgstr ""
+msgstr "Maaf, Anda tidak dapat memasang <b>%s</b> di Endless."
 
 #: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
 msgid "Install Linux Applications"
-msgstr ""
+msgstr "Pasang Aplikasi Linux"
