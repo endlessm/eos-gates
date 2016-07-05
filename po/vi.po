@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 01:37+0000\n"
-"PO-Revision-Date: 2016-04-16 04:17+0000\n"
+"POT-Creation-Date: 2016-06-28 01:39+0000\n"
+"PO-Revision-Date: 2016-07-03 06:03+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Vietnamese (http://www.transifex.com/endless-mobile-inc/eos-gates/language/vi/)\n"
 "MIME-Version: 1.0\n"
@@ -20,36 +20,36 @@ msgstr ""
 #: ../src/eos_gates.js:68
 #, javascript-format
 msgid "%s is unsupported"
-msgstr ""
+msgstr "%s is unsupported không được hỗ trợ"
 
 #: ../src/eos_gates.js:101
 msgid ""
 "You can install applications from our <a href='endlessm-app://eos-app-"
 "store'>App Store</a>."
-msgstr ""
+msgstr "Bạn có thể cài đặt các ứng dụng từ <a href='endlessm-app://eos-app-store'>App Store</a> (Cửa hàng Ứng dụng) của chúng tôi."
 
 #: ../src/eos_gates.js:112
 msgid "OK"
-msgstr ""
+msgstr "Ok"
 
 #: ../src/eos_gates_windows.js:80
 #, javascript-format
 msgid "Sorry, you can't run <b>%s</b> on Endless."
-msgstr ""
+msgstr "Rất tiếc, bạn không thể chạy <b>%s</b> trên Endless."
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
 msgid "Launch Windows Application"
-msgstr ""
+msgstr "Khởi chạy Ứng dụng Windows"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:2
 msgid "Launch Windows Applications"
-msgstr ""
+msgstr "Khởi chạy các Ứng dụng Windows"
 
 #: ../src/eos_gates_linux_package.js:28
 #, javascript-format
 msgid "Sorry, you can't install <b>%s</b> on Endless."
-msgstr ""
+msgstr "Rất tiếc, bạn không thể cài đặt <b>%s</b> trên Endless."
 
 #: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
 msgid "Install Linux Applications"
-msgstr ""
+msgstr "Cài đặt Các ứng dụng Linux"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 01:37+0000\n"
-"PO-Revision-Date: 2016-04-16 04:17+0000\n"
+"POT-Creation-Date: 2016-06-28 01:39+0000\n"
+"PO-Revision-Date: 2016-07-03 06:02+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Thai (http://www.transifex.com/endless-mobile-inc/eos-gates/language/th/)\n"
 "MIME-Version: 1.0\n"
@@ -20,36 +20,36 @@ msgstr ""
 #: ../src/eos_gates.js:68
 #, javascript-format
 msgid "%s is unsupported"
-msgstr ""
+msgstr "ไม่สนับสนุน %s "
 
 #: ../src/eos_gates.js:101
 msgid ""
 "You can install applications from our <a href='endlessm-app://eos-app-"
 "store'>App Store</a>."
-msgstr ""
+msgstr "คุณสามารถติดตั้งแอพพลิเคชั่นจาก <a href='endlessm-app://eos-app-store'>App Store</a> ของเรา"
 
 #: ../src/eos_gates.js:112
 msgid "OK"
-msgstr ""
+msgstr "ตกลง"
 
 #: ../src/eos_gates_windows.js:80
 #, javascript-format
 msgid "Sorry, you can't run <b>%s</b> on Endless."
-msgstr ""
+msgstr "ขออภัย คุณไม่สามารถเปิดใช้งาน <b>%s</b> บน Endless ได้"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
 msgid "Launch Windows Application"
-msgstr ""
+msgstr "เริ่มวินโดว์แอพลิเคชัน"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:2
 msgid "Launch Windows Applications"
-msgstr ""
+msgstr "เริ่มวินโดว์แอพลิเคชัน"
 
 #: ../src/eos_gates_linux_package.js:28
 #, javascript-format
 msgid "Sorry, you can't install <b>%s</b> on Endless."
-msgstr ""
+msgstr "ขออภัย คุณไม่สามารถติดตั้ง <b>%s</b> บน Endless ได้"
 
 #: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
 msgid "Install Linux Applications"
-msgstr ""
+msgstr "ติดตั้งแอพลิเคชัน Linux"
