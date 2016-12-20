@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Stefan Schroeder <ondekoza@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-13 02:43+0000\n"
-"PO-Revision-Date: 2016-12-14 07:41+0000\n"
-"Last-Translator: Vicki Niu <vicki@endlessm.com>\n"
+"PO-Revision-Date: 2016-12-16 20:52+0000\n"
+"Last-Translator: Stefan Schroeder <ondekoza@gmail.com>\n"
 "Language-Team: German (http://www.transifex.com/endless-mobile-inc/eos-gates/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,36 +21,36 @@ msgstr ""
 #: ../src/eos_gates.js:68
 #, javascript-format
 msgid "%s is unsupported"
-msgstr ""
+msgstr "%s wird nicht unterstützt"
 
 #: ../src/eos_gates.js:101
 msgid ""
 "You can install applications from our <a href='endlessm-app://eos-app-"
 "store'>App Store</a>."
-msgstr ""
+msgstr "Programme werden mit dem <a href='endlessm-app://eos-app-store'>App Store</a> installiert "
 
 #: ../src/eos_gates.js:112
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../src/eos_gates_windows.js:80
 #, javascript-format
 msgid "Sorry, you can't run <b>%s</b> on Endless."
-msgstr ""
+msgstr "Tut mir leid, aber <b>%s</b> funktioniert nicht mit Endless"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
 msgid "Launch Windows Application"
-msgstr ""
+msgstr "Windows-Programm starten"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:2
 msgid "Launch Windows Applications"
-msgstr ""
+msgstr "Windows-Programme starten"
 
 #: ../src/eos_gates_linux_package.js:28
 #, javascript-format
 msgid "Sorry, you can't install <b>%s</b> on Endless."
-msgstr ""
+msgstr "Tut mir leid, aber <b>%s</b> kann nicht auf Endless installiert werden."
 
 #: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
 msgid "Install Linux Applications"
-msgstr ""
+msgstr "Linux-Programme installieren"
