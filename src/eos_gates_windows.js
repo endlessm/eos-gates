@@ -39,14 +39,17 @@ function loadJSON(path) {
 
 function readWhitelist() {
     let dataDirs = GLib.get_system_data_dirs();
-    dataDirs.forEach(function(dataDir) {
+    return dataDirs.map((dataDir) => {
         let path = GLib.build_filenamev([dataDir, 'eos-gates', 'whitelist.json']);
         let data = loadJSON(path);
         if (!data || !data.length)
-            return;
+            return [];
 
-        Lang.copyProperties(data, WHITELISTED_APPS);
-    });
+	return data;
+    }).reduce((whitelist, incoming) =>
+        whitelist.concat(incoming),
+        []
+    ).concat(WHITELISTED_APPS);
 }
 
 function matchWhitelist(process, entry) {
@@ -59,7 +62,7 @@ function matchWhitelist(process, entry) {
     return false;
 }
 
-function isWhitelisted(process) {
+function isWhitelisted(process, whitelist) {
     return WHITELISTED_APPS.some(function(entry) {
         return matchWhitelist(process, entry);
     });
@@ -108,8 +111,8 @@ function main(argv) {
 
     recordMetrics(process);
 
-    readWhitelist();
-    if (isWhitelisted(process)) {
+    let whitelist = readWhitelist();
+    if (isWhitelisted(process, whitelist)) {
         spawnUnderWine(process);
         return 0;
     } else {
