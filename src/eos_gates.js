@@ -48,9 +48,19 @@ function recordMetrics(event, data) {
 }
 
 function actionButtonProps(props, application) {
+    if (!props.replacement)
+        return {
+            label: _('OK'),
+            action: Lang.bind(application, application.quit)
+        };
+
+    let appName = !!props.replacement.replacementInfo ?
+                  props.replacement.replacementInfo.appName : props.replacement.appName;
+
+
     if (props.alreadyHaveReplacement)
         return {
-            label: _('Launch %s').format(props.replacement.appName),
+            label: _('Launch %s').format(appName),
             action: function() {
                 launchFlatpakApp(props.replacement.flatpakInfo.id,
                                  props.attempt.argv);
@@ -58,20 +68,14 @@ function actionButtonProps(props, application) {
             }
         };
 
-    if (props.replacement)
-        return {
-            label: _('Install %s in App Store').format(props.replacement.appName),
-            action: function() {
-                installAppFromStore(props.replacement.flatpakInfo.remote,
-                                    props.replacement.flatpakInfo.id,
-                                    props.attempt.argv);
-                application.quit();
-            }
-        };
-
     return {
-        label: _('OK'),
-        action: Lang.bind(application, application.quit)
+        label: _('Install %s in App Store').format(appName),
+        action: function() {
+            installAppFromStore(props.replacement.flatpakInfo.remote,
+                                props.replacement.flatpakInfo.id,
+                                props.attempt.argv);
+            application.quit();
+        }
     };
 }
 
@@ -101,13 +105,19 @@ const Application = new Lang.Class({
     },
 
     getHelpMessage: function() {
+        if (!this.replacement)
+            return _("You can install applications from our <a href='endlessm-app://eos-app-store'>App Store</a>.");
+
+        let isEquivalentApp = !!this.replacement.replacementInfo;
+        let appName = !!this.replacement.replacementInfo ?
+                      this.replacement.replacementInfo.appName : this.replacement.appName;
+        let additionalInfo = !!this.replacement.replacementInfo ?
+                      ', ' + this.replacement.replacementInfo.description + ',' : '';
+
         if (this._alreadyHaveReplacement)
-            return _("However, you already have <b>%s</b> installed on this Computer").format(this.replacement.appName);
+            return _("However, you already have <b>%s</b>%s installed on this Computer").format(appName, additionalInfo);
 
-        if (this.replacement)
-            return _("However, you can install <b>%s</b> on the Endless App Store").format(this.replacement.appName);
-
-        return _("You can install applications from our <a href='endlessm-app://eos-app-store'>App Store</a>.");
+        return _("However, you can install <b>%s</b>%s on the Endless App Store").format(appName, additionalInfo);
     },
 
     getActionButton: function() {
