@@ -34,7 +34,8 @@ function getPackageFile(argv) {
     // information.
     let displayName = filename;
 
-    return { packagePath: packagePath,
+    return { argv: argv,
+             path: packagePath,
              filename: filename,
              displayName: displayName };
 }

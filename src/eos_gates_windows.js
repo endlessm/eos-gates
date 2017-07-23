@@ -62,7 +62,7 @@ function readWhitelist() {
 }
 
 function matchWhitelist(process, entry) {
-    if (process.processName == entry.processName)
+    if (process.filename == entry.processName)
         return true;
 
     // TODO: match on PE metadata, like process name,
@@ -156,7 +156,8 @@ function getProcess(argv) {
     let displayName = processName;
 
     return { argv: argv,
-             processName: processName,
+             path: processPath,
+             filename: processName,
              displayName: displayName };
 }
 
@@ -167,6 +168,8 @@ function findInArray(array, test) {
 
     return null;
 }
+
+
 
 function main(argv) {
     let process = getProcess(argv);
@@ -185,7 +188,7 @@ function main(argv) {
     }
 
     let compatibleAppStoreApp = findInArray(FLATPAK_APPS,
-                                            a => a.processName.exec(process.processName));
+                                            a => a.processName.exec(process.filename));
 
     if (compatibleAppStoreApp) {
         if (EosGates.flatpakAppRef(compatibleAppStoreApp.flatpakInfo.id) != null)
