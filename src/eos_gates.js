@@ -5,6 +5,7 @@ const Lang = imports.lang;
 const Signals = imports.signals;
 
 const Config = imports.config;
+const Flatpak = imports.gi.Flatpak;
 const GLib = imports.gi.GLib;
 const Gdk = imports.gi.Gdk;
 const Gio = imports.gi.Gio;
@@ -149,6 +150,38 @@ const Application = new Lang.Class({
         this._window.present();
     },
 });
+
+function spawnProcess(argv=[]) {
+    return Gio.Subprocess.new(argv, Gio.SubprocessFlags.NONE);
+}
+
+function getAppStoreAppId(remote, appId) {
+    let installation = Flatpak.Installation.new_system(null);
+    let flatpakRemote = null;
+
+    let defaultBranch = null;
+    try {
+        flatpakRemote = installation.get_remote_by_name(remote, null);
+    } catch (e) {
+        logError(e, 'Could not find flatpak remote %s: %s'.format(remote));
+    }
+
+    // Get the default branch now to construct the full unique ID GNOME Software expects.
+    if (flatpakRemote) {
+        defaultBranch = flatpakRemote.get_default_branch()
+        if (defaultBranch)
+            return 'system/flatpak/%s/desktop/%s.desktop/%s'.format(remote,
+                                                                    appId,
+                                                                    defaultBranch);
+    }
+
+    return appId;
+}
+
+function installAppFromStore(remote, appId) {
+    let appStoreId = getAppStoreAppId(remote, appId);
+    spawnProcess(['gnome-software', '--details=%s'.format(appStoreId)]);
+}
 
 function setupEnvironment() {
     Gettext.bindtextdomain(Config.GETTEXT_PACKAGE, Config.LOCALE_DIR);
