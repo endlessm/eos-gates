@@ -279,6 +279,18 @@ function flatpakAppRef(appId) {
     }
 }
 
+function findInArray(array, test) {
+    for (let i = 0; i < array.length; ++i)
+        if (test(array[i]))
+            return array[i];
+
+    return null;
+}
+
+function findReplacementApp(filename, replacements) {
+    return findInArray(replacements, a => a.regex.exec(filename));
+}
+
 function setupEnvironment() {
     Gettext.bindtextdomain(Config.GETTEXT_PACKAGE, Config.LOCALE_DIR);
     Gettext.textdomain(Config.GETTEXT_PACKAGE);

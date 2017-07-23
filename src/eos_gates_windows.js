@@ -119,14 +119,6 @@ function getProcess(argv) {
              displayName: displayName };
 }
 
-function findInArray(array, test) {
-    for (let i = 0; i < array.length; ++i)
-        if (test(array[i]))
-            return array[i];
-
-    return null;
-}
-
 function main(argv) {
     let process = getProcess(argv);
     if (!process) {
@@ -145,7 +137,6 @@ function main(argv) {
 
     return (new EosGatesWindows({
         attempt: process,
-        replacement: findInArray(FLATPAK_APPS,
-                                 a => a.regex.exec(process.filename))
+        replacement: EosGates.findReplacementApp(process.filename, FLATPAK_APPS)
     })).run(null);
 }
