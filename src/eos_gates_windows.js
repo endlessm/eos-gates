@@ -1,6 +1,7 @@
 
 const Lang = imports.lang;
 
+const Flatpak = imports.gi.Flatpak;
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
@@ -124,6 +125,30 @@ const EosGatesWindowsAppInAppStore = new Lang.Class({
     }
 });
 
+const EosGatesWindowsAppAlreadyInstalled = new Lang.Class({
+    Name: 'EosGatesWindowsAppAlreadyInstalled',
+    Extends: EosGatesWindows,
+
+    _init: function(launchedFile, compatibleApp) {
+        this.parent(launchedFile);
+        this._compatibleApp = compatibleApp;
+    },
+
+    getHelpMessage: function() {
+        return _("However, you already have <b>%s</b> installed on this Computer").format(this._compatibleApp.appName);
+    },
+
+    getActionButton: function() {
+        let button = new Gtk.Button({ visible: true,
+                                      label: _("Launch %s").format(this._compatibleApp.appName) });
+        button.connect('clicked', Lang.bind(this, function() {
+            EosGates.launchFlatpakApp(this._compatibleApp.flatpakInfo.id);
+            this.quit();
+        }));
+        return button;
+    }
+});
+
 function getProcess(argv) {
     let processPath = argv[0];
     if (!processPath)
@@ -167,6 +192,9 @@ function main(argv) {
                                             a => a.processName.exec(process.processName));
 
     if (compatibleAppStoreApp) {
+        if (EosGates.flatpakAppRef(compatibleAppStoreApp.flatpakInfo.id) != null)
+            return (new EosGatesWindowsAppAlreadyInstalled(process, compatibleAppStoreApp)).run(null);
+
         return (new EosGatesWindowsAppInAppStore(process,
                                                  compatibleAppStoreApp)).run(null);
     }
