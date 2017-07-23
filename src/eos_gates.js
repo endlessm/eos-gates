@@ -262,7 +262,7 @@ function launchFlatpakApp(replacement, originalPayload) {
                       new GLib.Variant('(sas)', [replacement.flatpakInfo.id, originalPayload]));
         spawnProcess(['flatpak', 'run', replacement.flatpakInfo.id]);
     } catch (e) {
-        logError(e, 'Something went wrong in launching %s'.format(this._compatibleApp.flatpakInfo.id));
+        logError(e, 'Something went wrong in launching %s'.format(replacement.flatpakInfo.id));
     }
 }
 
