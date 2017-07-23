@@ -3,6 +3,7 @@ const Lang = imports.lang;
 
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
+const Gtk = imports.gi.Gtk;
 const EosMetrics = imports.gi.EosMetrics;
 
 const EosGates = imports.eos_gates;
@@ -12,6 +13,19 @@ const WHITELISTED_APPS = [
     // This is an unlikely binary name to run into, so just add it
     // in here for testing purposes...
     { processName: "com.endlessm.test-whitelist.exe" },
+];
+
+const FLATPAK_APPS = [
+    {
+        processName: /[Ss]potify[Ss]etup.*.exe/,
+        appName: _('Spotify'),
+        flatpakInfo: { remote: 'eos-apps', id: 'com.spotify.Client' }
+    },
+    {
+        processName: /[Ff]irefox\s+[Ss]etup.*.exe/,
+        appName: _('Firefox'),
+        flatpakInfo: { remote: 'eos-apps', id: 'org.mozilla.Firefox' }
+    }
 ];
 
 // Happens when a .exe or .msi file is opened. Contains the
@@ -85,6 +99,31 @@ const EosGatesWindows = new Lang.Class({
     },
 });
 
+const EosGatesWindowsAppInAppStore = new Lang.Class({
+    Name: 'EosGatesWindowsAppInAppStore',
+    Extends: EosGatesWindows,
+
+    _init: function(launchedFile, compatibleApp) {
+        this.parent(launchedFile);
+        this._compatibleApp = compatibleApp;
+    },
+
+    getHelpMessage: function() {
+        return _("However, you can install <b>%s</b> on the Endless App Store").format(this._compatibleApp.appName);
+    },
+
+    getActionButton: function() {
+        let button = new Gtk.Button({ visible: true,
+                                      label: _("Install in App Store")});
+        button.connect('clicked', Lang.bind(this, function() {
+            EosGates.installAppFromStore(this._compatibleApp.flatpakInfo.remote,
+                                         this._compatibleApp.flatpakInfo.id);
+            this.quit();
+        }));
+        return button;
+    }
+});
+
 function getProcess(argv) {
     let processPath = argv[0];
     if (!processPath)
@@ -101,9 +140,15 @@ function getProcess(argv) {
              displayName: displayName };
 }
 
-function main(argv) {
-    EosGates.setupEnvironment();
+function findInArray(array, test) {
+    for (let i = 0; i < array.length; ++i)
+        if (test(array[i]))
+            return array[i];
 
+    return null;
+}
+
+function main(argv) {
     let process = getProcess(argv);
     if (!process) {
         log('No argument provided - exiting');
@@ -116,8 +161,15 @@ function main(argv) {
     if (isWhitelisted(process, whitelist)) {
         spawnUnderWine(process);
         return 0;
-    } else {
-        let app = new EosGatesWindows(process);
-        return app.run(null);
     }
+
+    let compatibleAppStoreApp = findInArray(FLATPAK_APPS,
+                                            a => a.processName.exec(process.processName));
+
+    if (compatibleAppStoreApp) {
+        return (new EosGatesWindowsAppInAppStore(process,
+                                                 compatibleAppStoreApp)).run(null);
+    }
+
+    return (new EosGatesWindows(process)).run(null);
 }
