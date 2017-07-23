@@ -183,6 +183,27 @@ function installAppFromStore(remote, appId) {
     spawnProcess(['gnome-software', '--details=%s'.format(appStoreId)]);
 }
 
+function launchFlatpakApp(appId) {
+    try {
+        spawnProcess(['flatpak', 'run', appId]);
+    } catch (e) {
+        logError(e, 'Something went wrong in launching %s'.format(this._compatibleApp.flatpakInfo.id));
+    }
+}
+
+function flatpakAppRef(appId) {
+    try {
+        return Flatpak.Installation.new_system(null).get_installed_ref(Flatpak.RefKind.APP,
+                                                                       appId,
+                                                                       null,
+                                                                       null,
+                                                                       null);
+    } catch (e) {
+        // Could not get ref, app is probably not installed
+        return null;
+    }
+}
+
 function setupEnvironment() {
     Gettext.bindtextdomain(Config.GETTEXT_PACKAGE, Config.LOCALE_DIR);
     Gettext.textdomain(Config.GETTEXT_PACKAGE);
