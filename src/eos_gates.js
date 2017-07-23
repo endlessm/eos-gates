@@ -51,8 +51,8 @@ const Application = new Lang.Class({
     Name: 'Application',
     Extends: Gtk.Application,
 
-    _init: function(launchedFile) {
-        this._launchedFile = launchedFile;
+    _init: function(props) {
+        this.attempt = props.attempt;
 
 	this.parent({ application_id: this.APP_ID });
     },
@@ -83,7 +83,7 @@ const Application = new Lang.Class({
 
     _buildUI: function() {
         this._window = new Gtk.ApplicationWindow({ application: this,
-                                                   title: _("%s is unsupported").format(this._launchedFile.displayName),
+                                                   title: _("%s is unsupported").format(this.attempt.displayName),
                                                    skip_taskbar_hint: true,
                                                    resizable: false,
                                                    width_request: 640,

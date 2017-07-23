@@ -84,11 +84,11 @@ const EosGatesWindows = new Lang.Class({
     APP_ID: 'com.endlessm.Gates.Windows',
 
     _launchNormally: function() {
-        spawnUnderWine(this._launchedFile);
+        spawnUnderWine(this.attempt);
     },
 
     _getMainErrorMessage: function() {
-        let escapedDisplayName = GLib.markup_escape_text(this._launchedFile.displayName, -1);
+        let escapedDisplayName = GLib.markup_escape_text(this.attempt.displayName, -1);
         return _("Sorry, you can't run <b>%s</b> on Endless.").format(escapedDisplayName);
     },
 });
@@ -97,8 +97,8 @@ const EosGatesWindowsAppInAppStore = new Lang.Class({
     Name: 'EosGatesWindowsAppInAppStore',
     Extends: EosGatesWindows,
 
-    _init: function(launchedFile, compatibleApp) {
-        this.parent(launchedFile);
+    _init: function(props, compatibleApp) {
+        this.parent(props);
         this._compatibleApp = compatibleApp;
     },
 
@@ -123,8 +123,8 @@ const EosGatesWindowsAppAlreadyInstalled = new Lang.Class({
     Name: 'EosGatesWindowsAppAlreadyInstalled',
     Extends: EosGatesWindows,
 
-    _init: function(launchedFile, compatibleApp) {
-        this.parent(launchedFile);
+    _init: function(props, compatibleApp) {
+        this.parent(props);
         this._compatibleApp = compatibleApp;
     },
 
@@ -192,11 +192,13 @@ function main(argv) {
 
     if (compatibleAppStoreApp) {
         if (EosGates.flatpakAppRef(compatibleAppStoreApp.flatpakInfo.id) != null)
-            return (new EosGatesWindowsAppAlreadyInstalled(process, compatibleAppStoreApp)).run(null);
+            return (new EosGatesWindowsAppAlreadyInstalled({ attempt: process }, compatibleAppStoreApp)).run(null);
 
-        return (new EosGatesWindowsAppInAppStore(process,
+        return (new EosGatesWindowsAppInAppStore({ attempt: process },
                                                  compatibleAppStoreApp)).run(null);
     }
 
-    return (new EosGatesWindows(process)).run(null);
+    return (new EosGatesWindows({
+        attempt: process
+    })).run(null);
 }
