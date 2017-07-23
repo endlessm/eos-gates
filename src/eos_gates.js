@@ -63,6 +63,17 @@ const Application = new Lang.Class({
         return this._konami.keyRelease(event);
     },
 
+    getHelpMessage: function() {
+        return _("You can install applications from our <a href='endlessm-app://eos-app-store'>App Store</a>.");
+    },
+
+    getActionButton: function() {
+        let button = new Gtk.Button({ visible: true,
+	                                  label: _("OK") });
+        button.connect('clicked', Lang.bind(this, this.quit));
+        return button;
+    },
+
     _buildUI: function() {
         this._window = new Gtk.ApplicationWindow({ application: this,
                                                    title: _("%s is unsupported").format(this._launchedFile.displayName),
@@ -98,7 +109,7 @@ const Application = new Lang.Class({
                                 use_markup: true,
                                 wrap: true,
                                 max_width_chars: 30,
-                                label: _("You can install applications from our <a href='endlessm-app://org.gnome.Software'>App Center</a>.") });
+                                label: this.getHelpMessage() });
         label.get_style_context().add_class('unsupported-subtitle');
         label.connect('activate-link', Lang.bind(this, function() {
             this.quit();
@@ -107,11 +118,7 @@ const Application = new Lang.Class({
         errorMessageBox.add(label);
 
         box.add(errorMessageBox);
-
-        let button = new Gtk.Button({ visible: true,
-                                      label: _("OK") });
-        button.connect('clicked', Lang.bind(this, this.quit));
-        box.add(button);
+        box.add(this.getActionButton());
 
         this._window.add(box);
     },
