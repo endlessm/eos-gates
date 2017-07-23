@@ -38,6 +38,10 @@ const FLATPAK_APPS = [
     {
         regex: /endless-installer.*.exe/,
         overrideHelpMessage: _('But do not worry, you are already running Endless OS!')
+    },
+    {
+        regex: /.*\b([Aa]vira|[Nn]orton|[Mm]alwarebytes|[Ss]ophos|[Kk]aspersky|[Mm]c[Aa]ffe)\b.*.exe/,
+        overrideHelpMessage: _('But do not worry. With Endless OS you are already safe from viruses!')
     }
 ];
 
