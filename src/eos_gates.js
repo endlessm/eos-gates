@@ -109,6 +109,9 @@ const Application = new Lang.Class({
         if (!this.replacement)
             return _("You can install applications from our <a href='endlessm-app://eos-app-store'>App Store</a>.");
 
+        if (this.replacement.overrideHelpMessage)
+            return this.replacement.overrideHelpMessage;
+
         let isEquivalentApp = !!this.replacement.replacementInfo;
         let appName = !!this.replacement.replacementInfo ?
                       this.replacement.replacementInfo.appName : this.replacement.appName;
