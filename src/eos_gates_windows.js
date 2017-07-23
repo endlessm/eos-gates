@@ -42,7 +42,16 @@ const FLATPAK_APPS = [
     {
         regex: /.*\b([Aa]vira|[Nn]orton|[Mm]alwarebytes|[Ss]ophos|[Kk]aspersky|[Mm]c[Aa]ffe)\b.*.exe/,
         overrideHelpMessage: _('But do not worry. With Endless OS you are already safe from viruses!')
-    }
+    },
+    {
+        regex: /[Ww]indows.*[Ss]etup.*.exe/,
+        appName: _('Microsoft Windows'),
+        flatpakInfo: { remote: 'gnome-apps', id: 'org.gnome.Boxes' },
+        replacementInfo: {
+            appName: _('GNOME Boxes'),
+            description: _('a Virtual Machine where you can install Microsoft Windows and run it alongside Endless OS')
+        }
+    },
 ];
 
 // Happens when a .exe or .msi file is opened. Contains the
