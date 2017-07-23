@@ -47,14 +47,44 @@ function recordMetrics(event, data) {
     recorder.record_event(event, data);
 }
 
+function actionButtonProps(props, application) {
+    if (props.alreadyHaveReplacement)
+        return {
+            label: _('Launch %s').format(props.replacement.appName),
+            action: function() {
+                launchFlatpakApp(props.replacement.flatpakInfo.id,
+                                 props.attempt.argv);
+                application.quit();
+            }
+        };
+
+    if (props.replacement)
+        return {
+            label: _('Install %s in App Store').format(props.replacement.appName),
+            action: function() {
+                installAppFromStore(props.replacement.flatpakInfo.remote,
+                                    props.replacement.flatpakInfo.id,
+                                    props.attempt.argv);
+                application.quit();
+            }
+        };
+
+    return {
+        label: _('OK'),
+        action: Lang.bind(application, application.quit)
+    };
+}
+
 const Application = new Lang.Class({
     Name: 'Application',
     Extends: Gtk.Application,
 
     _init: function(props) {
         this.attempt = props.attempt;
+        this.replacement = props.replacement;
+        this._alreadyHaveReplacement = this.replacement && !!flatpakAppRef(this.replacement.flatpakInfo.id);
 
-	this.parent({ application_id: this.APP_ID });
+        this.parent({ application_id: this.APP_ID });
     },
 
     _launchNormally: function() {
@@ -71,13 +101,24 @@ const Application = new Lang.Class({
     },
 
     getHelpMessage: function() {
+        if (this._alreadyHaveReplacement)
+            return _("However, you already have <b>%s</b> installed on this Computer").format(this.replacement.appName);
+
+        if (this.replacement)
+            return _("However, you can install <b>%s</b> on the Endless App Store").format(this.replacement.appName);
+
         return _("You can install applications from our <a href='endlessm-app://eos-app-store'>App Store</a>.");
     },
 
     getActionButton: function() {
+        let props = actionButtonProps({
+            attempt: this.attempt,
+            replacement: this.replacement,
+            alreadyHaveReplacement: this._alreadyHaveReplacement
+        }, this);
         let button = new Gtk.Button({ visible: true,
-	                                  label: _("OK") });
-        button.connect('clicked', Lang.bind(this, this.quit));
+	                                  label: props.label });
+        button.connect('clicked', props.action);
         return button;
     },
 

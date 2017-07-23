@@ -93,57 +93,6 @@ const EosGatesWindows = new Lang.Class({
     },
 });
 
-const EosGatesWindowsAppInAppStore = new Lang.Class({
-    Name: 'EosGatesWindowsAppInAppStore',
-    Extends: EosGatesWindows,
-
-    _init: function(props, compatibleApp) {
-        this.parent(props);
-        this._compatibleApp = compatibleApp;
-    },
-
-    getHelpMessage: function() {
-        return _("However, you can install <b>%s</b> on the Endless App Store").format(this._compatibleApp.appName);
-    },
-
-    getActionButton: function() {
-        let button = new Gtk.Button({ visible: true,
-                                      label: _("Install in App Store")});
-        button.connect('clicked', Lang.bind(this, function() {
-            EosGates.installAppFromStore(this._compatibleApp.flatpakInfo.remote,
-                                         this._compatibleApp.flatpakInfo.id,
-                                         this._launchedFile.argv);
-            this.quit();
-        }));
-        return button;
-    }
-});
-
-const EosGatesWindowsAppAlreadyInstalled = new Lang.Class({
-    Name: 'EosGatesWindowsAppAlreadyInstalled',
-    Extends: EosGatesWindows,
-
-    _init: function(props, compatibleApp) {
-        this.parent(props);
-        this._compatibleApp = compatibleApp;
-    },
-
-    getHelpMessage: function() {
-        return _("However, you already have <b>%s</b> installed on this Computer").format(this._compatibleApp.appName);
-    },
-
-    getActionButton: function() {
-        let button = new Gtk.Button({ visible: true,
-                                      label: _("Launch %s").format(this._compatibleApp.appName) });
-        button.connect('clicked', Lang.bind(this, function() {
-            EosGates.launchFlatpakApp(this._compatibleApp.flatpakInfo.id,
-                                      this._launchedFile.argv);
-            this.quit();
-        }));
-        return button;
-    }
-});
-
 function getProcess(argv) {
     let processPath = argv[0];
     if (!processPath)
@@ -169,8 +118,6 @@ function findInArray(array, test) {
     return null;
 }
 
-
-
 function main(argv) {
     let process = getProcess(argv);
     if (!process) {
@@ -190,15 +137,9 @@ function main(argv) {
     let compatibleAppStoreApp = findInArray(FLATPAK_APPS,
                                             a => a.processName.exec(process.filename));
 
-    if (compatibleAppStoreApp) {
-        if (EosGates.flatpakAppRef(compatibleAppStoreApp.flatpakInfo.id) != null)
-            return (new EosGatesWindowsAppAlreadyInstalled({ attempt: process }, compatibleAppStoreApp)).run(null);
-
-        return (new EosGatesWindowsAppInAppStore({ attempt: process },
-                                                 compatibleAppStoreApp)).run(null);
-    }
-
     return (new EosGatesWindows({
-        attempt: process
+        attempt: process,
+        replacement: findInArray(FLATPAK_APPS,
+                                 a => a.processName.exec(process.filename))
     })).run(null);
 }
