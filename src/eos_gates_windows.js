@@ -6,6 +6,7 @@ const Gio = imports.gi.Gio;
 const EosMetrics = imports.gi.EosMetrics;
 
 const EosGates = imports.eos_gates;
+EosGates.setupEnvironment();
 
 const WHITELISTED_APPS = [
     // This is an unlikely binary name to run into, so just add it
