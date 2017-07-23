@@ -25,6 +25,15 @@ const FLATPAK_APPS = [
         processName: /[Ff]irefox\s+[Ss]etup.*.exe/,
         appName: _('Firefox'),
         flatpakInfo: { remote: 'eos-apps', id: 'org.mozilla.Firefox' }
+    },
+    {
+        processName: /iTunes.*.exe/,
+        appName: _('Apple iTunes'),
+        flatpakInfo: { remote: 'eos-apps', id: 'com.spotify.Client' },
+        replacementInfo: {
+            appName: _('Spotify'),
+            description: _('a streaming music service')
+        }
     }
 ];
 
