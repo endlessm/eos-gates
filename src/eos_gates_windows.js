@@ -34,6 +34,10 @@ const FLATPAK_APPS = [
             appName: _('Spotify'),
             description: _('a streaming music service')
         }
+    },
+    {
+        regex: /endless-installer.*.exe/,
+        overrideHelpMessage: _('But do not worry, you are already running Endless OS!')
     }
 ];
 
