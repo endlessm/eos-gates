@@ -62,7 +62,7 @@ function actionButtonProps(props, application) {
         return {
             label: _('Launch %s').format(appName),
             action: function() {
-                launchFlatpakApp(props.replacement.flatpakInfo.id,
+                launchFlatpakApp(props.replacement,
                                  props.attempt.argv);
                 application.quit();
             }
@@ -71,8 +71,7 @@ function actionButtonProps(props, application) {
     return {
         label: _('Install %s in App Store').format(appName),
         action: function() {
-            installAppFromStore(props.replacement.flatpakInfo.remote,
-                                props.replacement.flatpakInfo.id,
+            installAppFromStore(props.replacement,
                                 props.attempt.argv);
             application.quit();
         }
@@ -245,18 +244,23 @@ const EVENT_LAUNCHED_EQUIVALENT_INSTALLER_FOR_FLATPAK = '7de69d43-5f6b-4bef-b5f3
 
 const EVENT_LAUNCHED_EQUIVALENT_EXISTING_FLATPAK = '7de69d43-5f6b-4bef-b5f3-a21295b79185';
 
-function installAppFromStore(remote, appId, originalPayload) {
-    let appStoreId = getAppStoreAppId(remote, appId);
-    recordMetrics(EVENT_LAUNCHED_INSTALLER_FOR_FLATPAK,
-                  new GLib.Variant('(sas)', [appId, originalPayload]));
+function installAppFromStore(replacement, originalPayload) {
+    let appStoreId = getAppStoreAppId(replacement.flatpakInfo.remote,
+                                      replacement.flatpakInfo.id);
+    recordMetrics(replacement.replacementInfo ?
+                  EVENT_LAUNCHED_EQUIVALENT_INSTALLER_FOR_FLATPAK :
+                  EVENT_LAUNCHED_INSTALLER_FOR_FLATPAK,
+                  new GLib.Variant('(sas)', [replacement.flatpakInfo.id, originalPayload]));
     spawnProcess(['gnome-software', '--details=%s'.format(appStoreId)]);
 }
 
-function launchFlatpakApp(appId, originalPayload) {
+function launchFlatpakApp(replacement, originalPayload) {
     try {
-        recordMetrics(EVENT_LAUNCHED_EXISTING_FLATPAK,
-                      new GLib.Variant('(sas)', [appId, originalPayload]));
-        spawnProcess(['flatpak', 'run', appId]);
+        recordMetrics(replacement.replacementInfo ?
+                      EVENT_LAUNCHED_EQUIVALENT_EXISTING_FLATPAK :
+                      EVENT_LAUNCHED_EXISTING_FLATPAK,
+                      new GLib.Variant('(sas)', [replacement.flatpakInfo.id, originalPayload]));
+        spawnProcess(['flatpak', 'run', replacement.flatpakInfo.id]);
     } catch (e) {
         logError(e, 'Something went wrong in launching %s'.format(this._compatibleApp.flatpakInfo.id));
     }
