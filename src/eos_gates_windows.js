@@ -88,7 +88,7 @@ const EosGatesWindows = new Lang.Class({
 function getProcess(argv) {
     let processPath = argv[0];
     if (!processPath)
-	return null;
+        return null;
 
     let processName = GLib.path_get_basename(processPath);
 
@@ -106,8 +106,8 @@ function main(argv) {
 
     let process = getProcess(argv);
     if (!process) {
-	log('No argument provided - exiting');
-	return 1;
+        log('No argument provided - exiting');
+        return 1;
     }
 
     recordMetrics(process);
