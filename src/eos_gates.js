@@ -48,7 +48,7 @@ function recordMetrics(event, data) {
 }
 
 function actionButtonProps(props, application) {
-    if (!props.replacement)
+    if (!props.replacement || !props.replacement.flatpakInfo)
         return {
             label: _('OK'),
             action: Lang.bind(application, application.quit)
@@ -85,7 +85,9 @@ const Application = new Lang.Class({
     _init: function(props) {
         this.attempt = props.attempt;
         this.replacement = props.replacement;
-        this._alreadyHaveReplacement = this.replacement && !!flatpakAppRef(this.replacement.flatpakInfo.id);
+        this._alreadyHaveReplacement = (this.replacement &&
+                                        this.replacement.flatpakInfo &&
+                                        !!flatpakAppRef(this.replacement.flatpakInfo.id));
 
         this.parent({ application_id: this.APP_ID });
     },
