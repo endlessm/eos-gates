@@ -17,17 +17,17 @@ const WHITELISTED_APPS = [
 
 const FLATPAK_APPS = [
     {
-        processName: /[Ss]potify[Ss]etup.*.exe/,
+        regex: /[Ss]potify[Ss]etup.*.exe/,
         appName: _('Spotify'),
         flatpakInfo: { remote: 'eos-apps', id: 'com.spotify.Client' }
     },
     {
-        processName: /[Ff]irefox\s+[Ss]etup.*.exe/,
+        regex: /[Ff]irefox\s+[Ss]etup.*.exe/,
         appName: _('Firefox'),
         flatpakInfo: { remote: 'eos-apps', id: 'org.mozilla.Firefox' }
     },
     {
-        processName: /iTunes.*.exe/,
+        regex: /iTunes.*.exe/,
         appName: _('Apple iTunes'),
         flatpakInfo: { remote: 'eos-apps', id: 'com.spotify.Client' },
         replacementInfo: {
@@ -144,11 +144,11 @@ function main(argv) {
     }
 
     let compatibleAppStoreApp = findInArray(FLATPAK_APPS,
-                                            a => a.processName.exec(process.filename));
+                                            a => a.regex.exec(process.filename));
 
     return (new EosGatesWindows({
         attempt: process,
         replacement: findInArray(FLATPAK_APPS,
-                                 a => a.processName.exec(process.filename))
+                                 a => a.regex.exec(process.filename))
     })).run(null);
 }
