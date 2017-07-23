@@ -143,9 +143,6 @@ function main(argv) {
         return 0;
     }
 
-    let compatibleAppStoreApp = findInArray(FLATPAK_APPS,
-                                            a => a.regex.exec(process.filename));
-
     return (new EosGatesWindows({
         attempt: process,
         replacement: findInArray(FLATPAK_APPS,
