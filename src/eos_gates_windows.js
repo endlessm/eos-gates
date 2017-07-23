@@ -5,7 +5,6 @@ const Flatpak = imports.gi.Flatpak;
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
-const EosMetrics = imports.gi.EosMetrics;
 
 const EosGates = imports.eos_gates;
 EosGates.setupEnvironment();
@@ -32,12 +31,6 @@ const FLATPAK_APPS = [
 // Happens when a .exe or .msi file is opened. Contains the
 // argv that was passed to the application.
 const WINDOWS_APP_OPENED = 'cf09194a-3090-4782-ab03-87b2f1515aed';
-
-function recordMetrics(process) {
-    let recorder = EosMetrics.EventRecorder.get_default();
-    let data = new GLib.Variant('as', process.argv);
-    recorder.record_event(WINDOWS_APP_OPENED, data);
-}
 
 function spawnUnderWine(process) {
     let argv = ['wine', 'start', '/unix'].concat(process.argv);
@@ -118,7 +111,8 @@ const EosGatesWindowsAppInAppStore = new Lang.Class({
                                       label: _("Install in App Store")});
         button.connect('clicked', Lang.bind(this, function() {
             EosGates.installAppFromStore(this._compatibleApp.flatpakInfo.remote,
-                                         this._compatibleApp.flatpakInfo.id);
+                                         this._compatibleApp.flatpakInfo.id,
+                                         this._launchedFile.argv);
             this.quit();
         }));
         return button;
@@ -142,7 +136,8 @@ const EosGatesWindowsAppAlreadyInstalled = new Lang.Class({
         let button = new Gtk.Button({ visible: true,
                                       label: _("Launch %s").format(this._compatibleApp.appName) });
         button.connect('clicked', Lang.bind(this, function() {
-            EosGates.launchFlatpakApp(this._compatibleApp.flatpakInfo.id);
+            EosGates.launchFlatpakApp(this._compatibleApp.flatpakInfo.id,
+                                      this._launchedFile.argv);
             this.quit();
         }));
         return button;
@@ -180,7 +175,8 @@ function main(argv) {
         return 1;
     }
 
-    recordMetrics(process);
+    EosGates.recordMetrics(WINDOWS_APP_OPENED,
+                           new GLib.Variant('as', process.argv));
 
     let whitelist = readWhitelist();
     if (isWhitelisted(process, whitelist)) {

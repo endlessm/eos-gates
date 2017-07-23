@@ -6,6 +6,7 @@ const Signals = imports.signals;
 
 const Config = imports.config;
 const Flatpak = imports.gi.Flatpak;
+const EosMetrics = imports.gi.EosMetrics;
 const GLib = imports.gi.GLib;
 const Gdk = imports.gi.Gdk;
 const Gio = imports.gi.Gio;
@@ -40,6 +41,11 @@ const KonamiManager = new Lang.Class({
     },
 });
 Signals.addSignalMethods(KonamiManager.prototype);
+
+function recordMetrics(event, data) {
+    let recorder = EosMetrics.EventRecorder.get_default();
+    recorder.record_event(event, data);
+}
 
 const Application = new Lang.Class({
     Name: 'Application',
@@ -178,13 +184,27 @@ function getAppStoreAppId(remote, appId) {
     return appId;
 }
 
-function installAppFromStore(remote, appId) {
+// Happens when a .exe or .msi file is opened. Contains the
+// argv that was passed to the application.
+const EVENT_LAUNCHED_INSTALLER_FOR_FLATPAK = 'e98bf6d9-8511-44f9-a1bd-a1d0518934b9';
+
+const EVENT_LAUNCHED_EXISTING_FLATPAK = '192f39dd-79b3-4497-99fa-9d8aea28760c';
+
+const EVENT_LAUNCHED_EQUIVALENT_INSTALLER_FOR_FLATPAK = '7de69d43-5f6b-4bef-b5f3-a21295b79185';
+
+const EVENT_LAUNCHED_EQUIVALENT_EXISTING_FLATPAK = '7de69d43-5f6b-4bef-b5f3-a21295b79185';
+
+function installAppFromStore(remote, appId, originalPayload) {
     let appStoreId = getAppStoreAppId(remote, appId);
+    recordMetrics(EVENT_LAUNCHED_INSTALLER_FOR_FLATPAK,
+                  new GLib.Variant('(sas)', [appId, originalPayload]));
     spawnProcess(['gnome-software', '--details=%s'.format(appStoreId)]);
 }
 
-function launchFlatpakApp(appId) {
+function launchFlatpakApp(appId, originalPayload) {
     try {
+        recordMetrics(EVENT_LAUNCHED_EXISTING_FLATPAK,
+                      new GLib.Variant('(sas)', [appId, originalPayload]));
         spawnProcess(['flatpak', 'run', appId]);
     } catch (e) {
         logError(e, 'Something went wrong in launching %s'.format(this._compatibleApp.flatpakInfo.id));

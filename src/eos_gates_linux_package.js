@@ -11,12 +11,6 @@ const EosGates = imports.eos_gates;
 // the package.
 const LINUX_PACKAGE_OPENED = '0bba3340-52e3-41a2-854f-e6ed36621379';
 
-function recordMetrics(packageFile) {
-    let recorder = EosMetrics.EventRecorder.get_default();
-    let data = new GLib.Variant('s', packageFile.packagePath);
-    recorder.record_event(LINUX_PACKAGE_OPENED, data);
-}
-
 const EosGatesLinuxPackage = new Lang.Class({
     Name: 'EosGatesLinuxPackage',
     Extends: EosGates.Application,
@@ -54,7 +48,7 @@ function main(argv) {
 	return 1;
     }
 
-    recordMetrics(packageFile);
+    EosGates.recordMetrics(packageFile);
 
     let app = new EosGatesLinuxPackage(packageFile);
     return app.run(null);
