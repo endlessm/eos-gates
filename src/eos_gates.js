@@ -5,8 +5,8 @@ const Lang = imports.lang;
 const Signals = imports.signals;
 
 const Config = imports.config;
-const Flatpak = imports.gi.Flatpak;
 const EosMetrics = imports.gi.EosMetrics;
+const Flatpak = imports.gi.Flatpak;
 const GLib = imports.gi.GLib;
 const Gdk = imports.gi.Gdk;
 const Gio = imports.gi.Gio;
