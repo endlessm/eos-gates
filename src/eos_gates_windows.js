@@ -47,6 +47,11 @@ const FLATPAK_APPS = [
         flatpakInfo: { remote: 'eos-apps', id: 'org.mozilla.Firefox' }
     },
     {
+        regex: /.*[Ss]kype.*.exe/,
+        appName: _("Skype"),
+        flatpakInfo: { remote: 'eos-apps', id: 'com.microsoft.Skype' }
+    },
+    {
         regex: /iTunes.*.exe/,
         appName: _("Apple iTunes"),
         flatpakInfo: { remote: 'eos-apps', id: 'com.spotify.Client' },
