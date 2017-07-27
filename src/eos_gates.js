@@ -246,7 +246,7 @@ const EVENT_LAUNCHED_EXISTING_FLATPAK = '192f39dd-79b3-4497-99fa-9d8aea28760c';
 
 const EVENT_LAUNCHED_EQUIVALENT_INSTALLER_FOR_FLATPAK = '7de69d43-5f6b-4bef-b5f3-a21295b79185';
 
-const EVENT_LAUNCHED_EQUIVALENT_EXISTING_FLATPAK = '7de69d43-5f6b-4bef-b5f3-a21295b79185';
+const EVENT_LAUNCHED_EQUIVALENT_EXISTING_FLATPAK = '00d7bc1e-ec93-4c53-ae78-a6b40450be4a';
 
 function installAppFromStore(replacement, originalPayload) {
     let appStoreId = getAppStoreAppId(replacement.flatpakInfo.remote,
