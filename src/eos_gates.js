@@ -143,11 +143,6 @@ const Application = new Lang.Class({
         return button;
     },
 
-    _getMainErrorMessage: function() {
-        let escapedDisplayName = GLib.markup_escape_text(this.attempt.displayName, -1);
-        return _("Sorry, you can't install %s on Endless.").format("<b>%s</b>".format(escapedDisplayName));
-    },
-
     _buildUI: function() {
         this._window = new Gtk.ApplicationWindow({ application: this,
                                                    title: _("%s is unsupported").format(this.attempt.displayName),
