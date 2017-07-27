@@ -73,18 +73,14 @@ function loadJSON(path) {
 }
 
 function readWhitelist() {
-    let dataDirs = GLib.get_system_data_dirs();
-    return dataDirs.map((dataDir) => {
+    for (let dataDir of GLib.get_system_data_dirs()) {
         let path = GLib.build_filenamev([dataDir, 'eos-gates', 'whitelist.json']);
         let data = loadJSON(path);
         if (!data || !data.length)
-            return [];
+            continue;
 
-	return data;
-    }).reduce((whitelist, incoming) =>
-        whitelist.concat(incoming),
-        []
-    ).concat(WHITELISTED_APPS);
+        return data;
+    }
 }
 
 function matchWhitelist(process, entry) {
