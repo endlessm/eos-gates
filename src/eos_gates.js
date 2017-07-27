@@ -117,9 +117,9 @@ const Application = new Lang.Class({
                       this.replacement.replacementInfo.appName : this.replacement.appName;
 
         if (this._alreadyHaveReplacement)
-            return _("However, you already have ") + "<b>%s</b>".format(appName) +_(" installed on this Computer");
+            return _("However, you already have %s installed on this Computer").format("<b>%s</b>".format(appName));
 
-        return _("However, you can install ") + "<b>%s</b>".format(appName) + _("on the Endless App Center");
+        return _("However, you can install %s on the Endless App Center").format("<b>%s</b>".format(appName));
     },
 
     getExtraInformationMessage: function() {
@@ -145,7 +145,7 @@ const Application = new Lang.Class({
 
     _getMainErrorMessage: function() {
         let escapedDisplayName = GLib.markup_escape_text(this.attempt.displayName, -1);
-        return _("Sorry, you can't install ") + "<b>%s</b>".format(escapedDisplayName) + _(" on Endless.");
+        return _("Sorry, you can't install %s on Endless.").format("<b>%s</b>".format(escapedDisplayName));
     },
 
     _buildUI: function() {
