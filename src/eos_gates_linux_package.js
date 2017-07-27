@@ -49,7 +49,8 @@ function main(argv) {
 	return 1;
     }
 
-    EosGates.recordMetrics(packageFile);
+    EosGates.recordMetrics(LINUX_PACKAGE_OPENED,
+                           new GLib.Variant('as', packageFile.argv));
 
     let app = new EosGatesLinuxPackage({ attempt: packageFile });
     return app.run(null);
