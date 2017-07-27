@@ -48,7 +48,13 @@ function recordMetrics(event, data) {
 }
 
 function actionButtonProps(props, application) {
-    if (!props.replacement || !props.replacement.flatpakInfo)
+    // We check for either no flatpak-info or not already having
+    // a replacement, since we need the flatpak info to install the app
+    // from the app store. If we already have a replacement, then it is
+    // guaranteed that we have some sort of option (either through
+    // the flatpak info or the desktop file) to launch an existing
+    // application.
+    if (!props.replacement || (!props.replacement.flatpakInfo && !props.alreadyHaveReplacement))
         return {
             label: _("OK"),
             action: Lang.bind(application, application.quit)
@@ -62,8 +68,8 @@ function actionButtonProps(props, application) {
         return {
             label: _("Launch %s").format(appName),
             action: function() {
-                launchFlatpakApp(props.replacement,
-                                 props.attempt.argv);
+                launchReplacementApp(props.replacement,
+                                     props.attempt.argv);
                 application.quit();
             }
         };
@@ -86,8 +92,10 @@ const Application = new Lang.Class({
         this.attempt = props.attempt;
         this.replacement = props.replacement;
         this._alreadyHaveReplacement = (this.replacement &&
-                                        this.replacement.flatpakInfo &&
-                                        !!flatpakAppRef(this.replacement.flatpakInfo.id));
+                                        (this.replacement.flatpakInfo &&
+                                         !!flatpakAppRef(this.replacement.flatpakInfo.id)) ||
+                                        (this.replacement.desktopInfo &&
+                                         !!Gio.DesktopAppInfo.new(this.replacement.desktopInfo.id)));
 
         this.parent({ application_id: this.APP_ID });
     },
@@ -290,6 +298,27 @@ function launchFlatpakApp(replacement, originalPayload) {
     } catch (e) {
         logError(e, 'Something went wrong in launching %s'.format(replacement.flatpakInfo.id));
     }
+}
+
+function launchDesktopApp(replacement, originalPayload) {
+    try {
+        recordMetrics(replacement.replacementInfo ?
+                      EVENT_LAUNCHED_EQUIVALENT_EXISTING_FLATPAK :
+                      EVENT_LAUNCHED_EXISTING_FLATPAK,
+                      new GLib.Variant('(sas)', [replacement.desktopInfo.id, originalPayload]));
+        let appInfo = Gio.DesktopAppInfo.new(replacement.desktopInfo.id);
+        appInfo.launch([], null);
+    } catch (e) {
+        logError(e, 'Something went wrong in launching %s'.format(replacement.desktopInfo.id));
+    }
+}
+
+function launchReplacementApp(replacement, originalPayload) {
+    if (replacement.desktopInfo)
+        launchDesktopApp(replacement, originalPayload)
+    else
+        // Assuming that we have a replacement flatpak to launch
+        launchFlatpakApp(replacement, originalPayload);
 }
 
 function flatpakAppRef(appId) {
