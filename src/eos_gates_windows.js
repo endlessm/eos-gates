@@ -58,7 +58,7 @@ const FLATPAK_APPS = [
     generateEndlessInstallerEntry(),
     {
         regex: /.*\b([Aa]vira|[Nn]orton|[Mm]alwarebytes|[Ss]ophos|[Kk]aspersky|[Mm]c[Aa]ffe)\b.*.exe/,
-        overrideHelpMessage: _("But do not worry. With Endless OS you are already safe from viruses!")
+        overrideHelpMessage: _("But do not worry. With Endless OS you are already safe from viruses that only affect Windows!")
     }
     /*,
      * Commented out until we have a GNOME Boxes Flatpak
