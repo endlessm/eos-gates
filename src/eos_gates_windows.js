@@ -94,7 +94,7 @@ function matchWhitelist(process, entry) {
 }
 
 function isWhitelisted(process, whitelist) {
-    return WHITELISTED_APPS.some(function(entry) {
+    return whitelist.some(function(entry) {
         return matchWhitelist(process, entry);
     });
 }
