@@ -220,7 +220,6 @@ function getAppStoreAppId(remote, appId) {
     let installation = Flatpak.Installation.new_system(null);
     let flatpakRemote = null;
 
-    let defaultBranch = null;
     try {
         flatpakRemote = installation.get_remote_by_name(remote, null);
     } catch (e) {
@@ -229,7 +228,7 @@ function getAppStoreAppId(remote, appId) {
 
     // Get the default branch now to construct the full unique ID GNOME Software expects.
     if (flatpakRemote) {
-        defaultBranch = flatpakRemote.get_default_branch()
+        let defaultBranch = flatpakRemote.get_default_branch()
         if (defaultBranch)
             return 'system/flatpak/%s/desktop/%s.desktop/%s'.format(remote,
                                                                     appId,
