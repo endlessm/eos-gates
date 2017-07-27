@@ -50,7 +50,7 @@ function recordMetrics(event, data) {
 function actionButtonProps(props, application) {
     if (!props.replacement || !props.replacement.flatpakInfo)
         return {
-            label: _('OK'),
+            label: _("OK"),
             action: Lang.bind(application, application.quit)
         };
 
@@ -60,7 +60,7 @@ function actionButtonProps(props, application) {
 
     if (props.alreadyHaveReplacement)
         return {
-            label: _('Launch %s').format(appName),
+            label: _("Launch %s").format(appName),
             action: function() {
                 launchFlatpakApp(props.replacement,
                                  props.attempt.argv);
@@ -69,7 +69,7 @@ function actionButtonProps(props, application) {
         };
 
     return {
-        label: _('Install %s in App Store').format(appName),
+        label: _("Install %s in App Store").format(appName),
         action: function() {
             installAppFromStore(props.replacement,
                                 props.attempt.argv);

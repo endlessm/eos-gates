@@ -18,38 +18,38 @@ const WHITELISTED_APPS = [
 const FLATPAK_APPS = [
     {
         regex: /[Ss]potify[Ss]etup.*.exe/,
-        appName: _('Spotify'),
+        appName: _("Spotify"),
         flatpakInfo: { remote: 'eos-apps', id: 'com.spotify.Client' }
     },
     {
         regex: /[Ff]irefox\s+[Ss]etup.*.exe/,
-        appName: _('Firefox'),
+        appName: _("Firefox"),
         flatpakInfo: { remote: 'eos-apps', id: 'org.mozilla.Firefox' }
     },
     {
         regex: /iTunes.*.exe/,
-        appName: _('Apple iTunes'),
+        appName: _("Apple iTunes"),
         flatpakInfo: { remote: 'eos-apps', id: 'com.spotify.Client' },
         replacementInfo: {
-            appName: _('Spotify'),
-            description: _('a streaming music service')
+            appName: _("Spotify"),
+            description: _("a streaming music service")
         }
     },
     {
         regex: /endless-installer.*.exe/,
-        overrideHelpMessage: _('But do not worry, you are already running Endless OS!')
+        overrideHelpMessage: _("But do not worry, you are already running Endless OS!")
     },
     {
         regex: /.*\b([Aa]vira|[Nn]orton|[Mm]alwarebytes|[Ss]ophos|[Kk]aspersky|[Mm]c[Aa]ffe)\b.*.exe/,
-        overrideHelpMessage: _('But do not worry. With Endless OS you are already safe from viruses!')
+        overrideHelpMessage: _("But do not worry. With Endless OS you are already safe from viruses!")
     },
     {
         regex: /[Ww]indows.*[Ss]etup.*.exe/,
-        appName: _('Microsoft Windows'),
+        appName: _("Microsoft Windows"),
         flatpakInfo: { remote: 'gnome-apps', id: 'org.gnome.Boxes' },
         replacementInfo: {
-            appName: _('GNOME Boxes'),
-            description: _('a Virtual Machine where you can install Microsoft Windows and run it alongside Endless OS')
+            appName: _("GNOME Boxes"),
+            description: _("a Virtual Machine where you can install Microsoft Windows and run it alongside Endless OS")
         }
     },
 ];
