@@ -81,6 +81,8 @@ function readWhitelist() {
 
         return data;
     }
+
+    return [];
 }
 
 function matchWhitelist(process, entry) {
