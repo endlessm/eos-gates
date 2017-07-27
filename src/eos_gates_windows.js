@@ -32,7 +32,7 @@ const FLATPAK_APPS = [
         flatpakInfo: { remote: 'eos-apps', id: 'com.spotify.Client' },
         replacementInfo: {
             appName: _("Spotify"),
-            description: _("a streaming music service")
+            description: _("Spotify is a streaming music service")
         }
     },
     {
@@ -49,7 +49,7 @@ const FLATPAK_APPS = [
         flatpakInfo: { remote: 'gnome-apps', id: 'org.gnome.Boxes' },
         replacementInfo: {
             appName: _("GNOME Boxes"),
-            description: _("a Virtual Machine where you can install Microsoft Windows and run it alongside Endless OS")
+            description: _("GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and run it alongside Endless OS")
         }
     },
 ];
