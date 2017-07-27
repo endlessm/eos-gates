@@ -129,7 +129,7 @@ const Application = new Lang.Class({
             return null;
 
         return this.replacement.replacementInfo.description;
-    }
+    },
 
     getActionButton: function() {
         let props = actionButtonProps({
