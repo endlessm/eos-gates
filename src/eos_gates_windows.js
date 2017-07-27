@@ -15,6 +15,26 @@ const WHITELISTED_APPS = [
     { processName: "com.endlessm.test-whitelist.exe" },
 ];
 
+function generateEndlessInstallerEntry() {
+    let entry = {
+        regex: /endless-installer.*.exe/,
+        overrideHelpMessage: _("You are already running Endless OS!")
+    };
+
+    // If we detect the presence of eos-installer.desktop, inform
+        // the user on how to actually install Endless OS.
+    if (!!Gio.DesktopAppInfo.new("eos-installer.desktop")) {
+        entry.overrideHelpMessage = _("You are already running Endless OS from live media!");
+        entry.desktopInfo = { id: 'eos-installer.desktop' },
+        entry.replacementInfo = {
+            appName: _("Endless OS Installer"),
+            description: _("You can install Endless OS by running the Endless OS Installer.")
+        }
+    }
+
+    return entry;
+}
+
 const FLATPAK_APPS = [
     {
         regex: /[Ss]potify[Ss]etup.*.exe/,
@@ -35,10 +55,7 @@ const FLATPAK_APPS = [
             description: _("Spotify is a streaming music service")
         }
     },
-    {
-        regex: /endless-installer.*.exe/,
-        overrideHelpMessage: _("But do not worry, you are already running Endless OS!")
-    },
+    generateEndlessInstallerEntry(),
     {
         regex: /.*\b([Aa]vira|[Nn]orton|[Mm]alwarebytes|[Ss]ophos|[Kk]aspersky|[Mm]c[Aa]ffe)\b.*.exe/,
         overrideHelpMessage: _("But do not worry. With Endless OS you are already safe from viruses!")
