@@ -145,8 +145,8 @@ const Application = new Lang.Class({
 
     _getMainErrorMessage: function() {
         let escapedDisplayName = GLib.markup_escape_text(this.attempt.displayName, -1);
-        return _("Sorry, you can't install ") + "<b>%s</b>" + _(" on Endless.").format(escapedDisplayName);
-    }
+        return _("Sorry, you can't install ") + "<b>%s</b>".format(escapedDisplayName) + _(" on Endless.");
+    },
 
     _buildUI: function() {
         this._window = new Gtk.ApplicationWindow({ application: this,
