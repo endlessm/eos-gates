@@ -115,14 +115,21 @@ const Application = new Lang.Class({
         let isEquivalentApp = !!this.replacement.replacementInfo;
         let appName = !!this.replacement.replacementInfo ?
                       this.replacement.replacementInfo.appName : this.replacement.appName;
-        let additionalInfo = !!this.replacement.replacementInfo ?
-                      ', ' + this.replacement.replacementInfo.description + ',' : '';
 
         if (this._alreadyHaveReplacement)
             return _("However, you already have ") + "<b>%s</b>".format(appName) +_(" installed on this Computer");
 
         return _("However, you can install ") + "<b>%s</b>".format(appName) + _("on the Endless App Center");
     },
+
+    getExtraInformationMessage: function() {
+        if (!this.replacement ||
+            !this.replacement.replacementInfo ||
+            !this.replacement.replacementInfo.description)
+            return null;
+
+        return this.replacement.replacementInfo.description;
+    }
 
     getActionButton: function() {
         let props = actionButtonProps({
@@ -183,6 +190,16 @@ const Application = new Lang.Class({
             return false;
         }));
         errorMessageBox.add(label);
+
+        let extraInformationMessage = this.getExtraInformationMessage();
+        if (extraInformationMessage) {
+            label = new Gtk.Label({ visible: true,
+                                    use_markup: true,
+                                    wrap: true,
+                                    max_width_chars: 30,
+                                    label: this.getHelpMessage() });
+            errorMessageBox.add(label);
+        }
 
         box.add(errorMessageBox);
         box.add(this.getActionButton());
