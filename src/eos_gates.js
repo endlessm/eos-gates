@@ -119,9 +119,9 @@ const Application = new Lang.Class({
                       ', ' + this.replacement.replacementInfo.description + ',' : '';
 
         if (this._alreadyHaveReplacement)
-            return _("However, you already have <b>%s</b>%s installed on this Computer").format(appName, additionalInfo);
+            return _("However, you already have ") + "<b>%s</b>".format(appName) +_(" installed on this Computer");
 
-        return _("However, you can install <b>%s</b>%s on the Endless App Store").format(appName, additionalInfo);
+        return _("However, you can install ") + "<b>%s</b>".format(appName) + _("on the Endless App Center");
     },
 
     getActionButton: function() {
@@ -131,10 +131,15 @@ const Application = new Lang.Class({
             alreadyHaveReplacement: this._alreadyHaveReplacement
         }, this);
         let button = new Gtk.Button({ visible: true,
-	                                  label: props.label });
+                                      label: props.label });
         button.connect('clicked', props.action);
         return button;
     },
+
+    _getMainErrorMessage: function() {
+        let escapedDisplayName = GLib.markup_escape_text(this.attempt.displayName, -1);
+        return _("Sorry, you can't install ") + "<b>%s</b>" + _(" on Endless.").format(escapedDisplayName);
+    }
 
     _buildUI: function() {
         this._window = new Gtk.ApplicationWindow({ application: this,
