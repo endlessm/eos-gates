@@ -101,8 +101,7 @@ const Application = new Lang.Class({
         this._alreadyHaveReplacement = (this.replacement &&
                                         (this.replacement.flatpakInfo &&
                                          !!flatpakAppRef(this.replacement.flatpakInfo.id)) ||
-                                        (this.replacement.desktopInfo &&
-                                         !!Gio.DesktopAppInfo.new(this.replacement.desktopInfo.id)));
+                                        this.replacement.desktopInfo);
 
         this.parent({ application_id: this.APP_ID });
     },

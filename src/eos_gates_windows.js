@@ -23,9 +23,10 @@ function generateEndlessInstallerEntry() {
 
     // If we detect the presence of eos-installer.desktop, inform
     // the user on how to actually install Endless OS.
+    let desktopInfo = Gio.DesktopAppInfo.new('eos-installer.desktop');
     if (desktopInfo) {
         entry.overrideHelpMessage = _("You are already running Endless OS from live media");
-        entry.desktopInfo = { id: 'eos-installer.desktop' },
+        entry.desktopInfo = desktopInfo,
         entry.replacementInfo = {
             appName: _("Endless OS Installer"),
             description: _("You can install Endless OS by running the Endless OS Installer.")
