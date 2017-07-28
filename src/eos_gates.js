@@ -63,7 +63,6 @@ function actionButtonProps(props, application) {
     let appName = !!props.replacement.replacementInfo ?
                   props.replacement.replacementInfo.appName : props.replacement.appName;
 
-
     if (props.alreadyHaveReplacement)
         return {
             label: _("Launch %s").format(appName),
