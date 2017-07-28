@@ -121,6 +121,10 @@ const FLATPAK_APPS = [
     {
         regex: /.*\b(avira|norton|malwarebytes|sophos|kaspersky|mcaffe|avg|avast).*.exe/i,
         overrideHelpMessage: _("But do not worry. With Endless OS you are already safe from viruses that only affect Windows")
+    },
+    {
+        regex: /.*\bflash.*player.*.exe/i,
+        overrideHelpMessage: _("Adobe Flash is downloaded and installed automatically by your browser on Endless OS. Please visit %s to check whether it has been installed correctly and contact the %s for support if you still have problems").format(EosGates.link(_("the Adobe Flash test page"), "https://www.adobe.com/software/flash/about"), EosGates.link(_("Endless OS Community"), "https://community.endlessos.com"))
     }
     /*,
      * Commented out until we have a GNOME Boxes Flatpak
