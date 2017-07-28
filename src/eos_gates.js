@@ -292,7 +292,11 @@ function installAppFromStore(replacement, originalPayload) {
                   EVENT_LAUNCHED_EQUIVALENT_INSTALLER_FOR_FLATPAK :
                   EVENT_LAUNCHED_INSTALLER_FOR_FLATPAK,
                   new GLib.Variant('(sas)', [replacement.flatpakInfo.id, originalPayload]));
-    spawnProcess(['gnome-software', '--details=%s'.format(appStoreId)]);
+    Gio.DBusActionGroup.get(Gio.Application.get_default().get_dbus_connection(),
+                            'org.gnome.Software',
+                            '/org/gnome/Software')
+                       .activate_action('details',
+                                        new GLib.Variant('(ss)', [appStoreId, '']));
 }
 
 function launchFlatpakAppForInstallation(installation, replacement) {
