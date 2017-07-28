@@ -101,7 +101,8 @@ const Application = new Lang.Class({
         this._alreadyHaveReplacement = (this.replacement &&
                                         ((this.replacement.flatpakInfo &&
                                          !!flatpakAppRef(this.replacement.flatpakInfo.id)) ||
-                                         this.replacement.desktopInfo));
+                                         this.replacement.desktopInfo ||
+                                         this.replacement.linkInfo));
 
         this.parent({ application_id: this.APP_ID });
     },
@@ -342,12 +343,37 @@ function launchDesktopApp(replacement, originalPayload) {
     }
 }
 
+function launchLink(replacement, originalPayload) {
+    try {
+        recordMetrics(replacement.replacementInfo ?
+                      EVENT_LAUNCHED_EQUIVALENT_EXISTING_FLATPAK :
+                      EVENT_LAUNCHED_EXISTING_FLATPAK,
+                      new GLib.Variant('(sas)', [replacement.linkInfo.href, originalPayload]));
+        let path = Gio.File.new_for_uri(replacement.linkInfo.href);
+        let handler = path.query_default_handler(null);
+        if (handler) {
+            handler.launch([path], null);
+        } else {
+            throw new Error('Could not find handler for link');
+        }
+    } catch (e) {
+        logError(e, 'Something went wrong in launching %s'.format(replacement.linkInfo.href));
+    }
+}
+
 function launchReplacementApp(replacement, originalPayload) {
-    if (replacement.desktopInfo)
-        launchDesktopApp(replacement, originalPayload)
-    else
-        // Assuming that we have a replacement flatpak to launch
-        launchFlatpakApp(replacement, originalPayload);
+    if (replacement.desktopInfo) {
+        launchDesktopApp(replacement, originalPayload);
+        return;
+    }
+
+    if (replacement.linkInfo) {
+        launchLink(replacement, originalPayload);
+        return;
+    }
+
+    // Assuming that we have a replacement flatpak to launch
+    launchFlatpakApp(replacement, originalPayload);
 }
 
 function flatpakAppRef(appId) {
