@@ -58,6 +58,11 @@ const FLATPAK_APPS = [
         flatpakInfo: { remote: 'eos-apps', id: 'com.microsoft.Skype' }
     },
     {
+        regex: /dropbox.*.exe/i,
+        appName: _("Dropbox"),
+        flatpakInfo: { remote: 'eos-apps', id: 'com.dropbox.Client' }
+    },
+    {
         regex: /whatsapp.*.exe/i,
         appName: _("WhatsApp"),
         desktopInfo: Gio.DesktopAppInfo.new("eos-link-whatsapp.desktop")
