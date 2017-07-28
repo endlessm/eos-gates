@@ -117,6 +117,12 @@ const FLATPAK_APPS = [
             description: _("VLC is a media player that can play most media files")
         }
     },
+    {
+        regex: /line.*.exe/i,
+        appName: _("LINE"),
+        linkInfo: { href: 'https://chrome.google.com/webstore/detail/line/menkifleemblimdogmoihpfopnplikde' },
+        overrideHelpMessage: _("You can install and use LINE through the Google Chrome Web Store")
+    },
     generateEndlessInstallerEntry(),
     {
         regex: /.*\b(avira|norton|malwarebytes|sophos|kaspersky|mcaffe|avg|avast).*.exe/i,
