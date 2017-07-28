@@ -80,6 +80,15 @@ const FLATPAK_APPS = [
         }
     },
     {
+        regex: /.*utorrent.*.exe/i,
+        appName: _("uTorrent"),
+        flatpakInfo: { remote: 'eos-apps', id: 'com.transmissionbt.Transmission' },
+        replacementInfo: {
+            appName: _("Transmission"),
+            description: _("Transmission is a BitTorrent client, like uTorrent")
+        }
+    },
+    {
         regex: /divx.*.exe/i,
         appName: _("DivX Codecs"),
         flatpakInfo: { remote: 'eos-apps', id: 'org.videolan.VLC' },
