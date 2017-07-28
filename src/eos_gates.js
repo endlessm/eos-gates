@@ -99,9 +99,9 @@ const Application = new Lang.Class({
         this.attempt = props.attempt;
         this.replacement = props.replacement;
         this._alreadyHaveReplacement = (this.replacement &&
-                                        (this.replacement.flatpakInfo &&
+                                        ((this.replacement.flatpakInfo &&
                                          !!flatpakAppRef(this.replacement.flatpakInfo.id)) ||
-                                        this.replacement.desktopInfo);
+                                         this.replacement.desktopInfo));
 
         this.parent({ application_id: this.APP_ID });
     },
