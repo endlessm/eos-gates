@@ -61,6 +61,33 @@ const FLATPAK_APPS = [
             description: _("Spotify is a streaming music service")
         }
     },
+    {
+        regex: /vlc.*.exe/i,
+        appName: _("VLC"),
+        flatpakInfo: { remote: 'eos-apps', id: 'org.videolan.VLC' },
+        replacementInfo: {
+            appName: _("VLC"),
+            description: _("VLC is a media player that can play most media files")
+        }
+    },
+    {
+        regex: /k-lite-mega-codec-pack.*.exe/i,
+        appName: _("K-Lite Mega Codec Pack"),
+        flatpakInfo: { remote: 'eos-apps', id: 'org.videolan.VLC' },
+        replacementInfo: {
+            appName: _("VLC"),
+            description: _("VLC is a media player that can play most media files")
+        }
+    },
+    {
+        regex: /divx.*.exe/i,
+        appName: _("DivX Codecs"),
+        flatpakInfo: { remote: 'eos-apps', id: 'org.videolan.VLC' },
+        replacementInfo: {
+            appName: _("VLC"),
+            description: _("VLC is a media player that can play most media files")
+        }
+    },
     generateEndlessInstallerEntry(),
     {
         regex: /.*\b(avira|norton|malwarebytes|sophos|kaspersky|mcaffe|avg|avast).*.exe/i,
