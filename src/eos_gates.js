@@ -313,9 +313,8 @@ function launchDesktopApp(replacement, originalPayload) {
         recordMetrics(replacement.replacementInfo ?
                       EVENT_LAUNCHED_EQUIVALENT_EXISTING_FLATPAK :
                       EVENT_LAUNCHED_EXISTING_FLATPAK,
-                      new GLib.Variant('(sas)', [replacement.desktopInfo.id, originalPayload]));
-        let appInfo = Gio.DesktopAppInfo.new(replacement.desktopInfo.id);
-        appInfo.launch([], null);
+                      new GLib.Variant('(sas)', [replacement.desktopInfo.get_id(), originalPayload]));
+        replacement.desktopInfo.launch([], null);
     } catch (e) {
         logError(e, 'Something went wrong in launching %s'.format(replacement.desktopInfo.id));
     }
