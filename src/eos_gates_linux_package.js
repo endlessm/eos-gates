@@ -6,6 +6,7 @@ const Gio = imports.gi.Gio;
 const EosMetrics = imports.gi.EosMetrics;
 
 const EosGates = imports.eos_gates;
+const Replacements = imports.replacements;
 
 // Happens when a .rpm or .deb is opened. Contains the filename of
 // the package.
@@ -52,6 +53,11 @@ function main(argv) {
     EosGates.recordMetrics(LINUX_PACKAGE_OPENED,
                            new GLib.Variant('as', packageFile.argv));
 
-    let app = new EosGatesLinuxPackage({ attempt: packageFile });
+    let app = new EosGatesLinuxPackage({
+        attempt: packageFile,
+        replacement: EosGates.findReplacementApp(packageFile.filename,
+                                                 'linux',
+                                                 Replacements.definitions())
+    });
     return app.run(null);
 }
