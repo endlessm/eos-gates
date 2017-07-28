@@ -349,13 +349,7 @@ function launchLink(replacement, originalPayload) {
                       EVENT_LAUNCHED_EQUIVALENT_EXISTING_FLATPAK :
                       EVENT_LAUNCHED_EXISTING_FLATPAK,
                       new GLib.Variant('(sas)', [replacement.linkInfo.href, originalPayload]));
-        let path = Gio.File.new_for_uri(replacement.linkInfo.href);
-        let handler = path.query_default_handler(null);
-        if (handler) {
-            handler.launch([path], null);
-        } else {
-            throw new Error('Could not find handler for link');
-        }
+        Gio.AppInfo.launch_default_for_uri(replacement.linkInfo.href, null);
     } catch (e) {
         logError(e, 'Something went wrong in launching %s'.format(replacement.linkInfo.href));
     }
