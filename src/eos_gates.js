@@ -208,7 +208,7 @@ const Application = new Lang.Class({
                                     use_markup: true,
                                     wrap: true,
                                     max_width_chars: 30,
-                                    label: this.getExtraInformationMessage() });
+                                    label: extraInformationMessage });
             errorMessageBox.add(label);
         }
 
