@@ -397,8 +397,8 @@ function findInArray(array, test) {
     return null;
 }
 
-function findReplacementApp(filename, replacements) {
-    return findInArray(replacements, a => a.regex.exec(filename));
+function findReplacementApp(filename, platform, replacements) {
+    return findInArray(replacements, a => a.regex[platform] && a.regex[platform].exec(filename));
 }
 
 function setupEnvironment() {
