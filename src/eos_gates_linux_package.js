@@ -45,8 +45,8 @@ function main(argv) {
 
     let packageFile = getPackageFile(argv);
     if (!packageFile) {
-	log('No argument provided - exiting');
-	return 1;
+        log('No argument provided - exiting');
+        return 1;
     }
 
     EosGates.recordMetrics(LINUX_PACKAGE_OPENED,
