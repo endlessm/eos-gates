@@ -295,13 +295,32 @@ function installAppFromStore(replacement, originalPayload) {
     spawnProcess(['gnome-software', '--details=%s'.format(appStoreId)]);
 }
 
+function launchFlatpakAppForInstallation(installation, replacement) {
+    let ref = null;
+
+    try {
+        ref = installation.get_current_installed_app(replacement.flatpakInfo.id, null);
+    } catch (e) {
+        return false;
+    }
+
+    installation.launch(replacement.flatpakInfo.id,
+                        null,
+                        'master',
+                        ref.get_latest_commit(),
+                        null);
+
+    return true;
+}
+
 function launchFlatpakApp(replacement, originalPayload) {
     try {
         recordMetrics(replacement.replacementInfo ?
                       EVENT_LAUNCHED_EQUIVALENT_EXISTING_FLATPAK :
                       EVENT_LAUNCHED_EXISTING_FLATPAK,
                       new GLib.Variant('(sas)', [replacement.flatpakInfo.id, originalPayload]));
-        spawnProcess(['flatpak', 'run', replacement.flatpakInfo.id]);
+        if (!launchFlatpakAppForInstallation(Flatpak.Installation.new_user(null), replacement))
+            launchFlatpakAppForInstallation(Flatpak.Installation.new_system(null), replacement);
     } catch (e) {
         logError(e, 'Something went wrong in launching %s'.format(replacement.flatpakInfo.id));
     }
