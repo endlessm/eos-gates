@@ -35,35 +35,40 @@ function definitions() {
         },
         {
             regex: {
-                windows: /firefox\s+setup.*.exe/i
+                windows: /firefox\s+setup.*.exe/i,
+                linux: /firefox.*/i
             },
             appName: _("Firefox"),
             flatpakInfo: { remote: 'eos-apps', id: 'org.mozilla.Firefox' }
         },
         {
             regex: {
-                windows: /chrome.*.exe/i
+                windows: /chrome.*.exe/i,
+                linux: /google-chrome.*/i
             },
             appName: _("Google Chrome "),
             flatpakInfo: { remote: 'eos-apps', id: 'com.google.Chrome' }
         },
         {
             regex: {
-                 windows: /.*skype.*.exe/i
+                 windows: /.*skype.*.exe/i,
+                 linux: /skype.*/i
             },
             appName: _("Skype"),
             flatpakInfo: { remote: 'eos-apps', id: 'com.microsoft.Skype' }
         },
         {
             regex: {
-                 windows: /dropbox.*.exe/i
+                 windows: /dropbox.*.exe/i,
+                 linux: /dropbox.*/i
             },
             appName: _("Dropbox"),
             flatpakInfo: { remote: 'eos-apps', id: 'com.dropbox.Client' }
         },
         {
             regex: {
-                 windows: /steam.*.exe/i
+                 windows: /steam.*.exe/i,
+                 linux: /steam.*/i
             },
             appName: _("Steam"),
             flatpakInfo: { remote: 'eos-apps', id: 'com.valvesoftware.Steam' }
@@ -88,7 +93,8 @@ function definitions() {
         },
         {
             regex: {
-                windows: /vlc.*.exe/i
+                windows: /vlc.*.exe/i,
+                linux: /vlc.*/i
             },
             appName: _("VLC"),
             flatpakInfo: { remote: 'eos-apps', id: 'org.videolan.VLC' },
@@ -147,7 +153,8 @@ function definitions() {
         },
         {
             regex: {
-                windows: /.*\bflash.*player.*.exe/i
+                windows: /.*\bflash.*player.*.exe/i,
+                linux: /flash-player.*/i
             },
             overrideHelpMessage: _("Adobe Flash is downloaded and installed automatically by your browser on Endless OS. Please visit %s to check whether it has been installed correctly and contact the %s for support if you still have problems").format(EosGates.link(_("the Adobe Flash test page"), "https://www.adobe.com/software/flash/about"), EosGates.link(_("Endless OS Community"), "https://community.endlessos.com"))
         }
