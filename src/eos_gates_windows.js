@@ -1,7 +1,6 @@
 
 const Lang = imports.lang;
 
-const Flatpak = imports.gi.Flatpak;
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
