@@ -96,6 +96,7 @@ function getProcess(argv) {
 }
 
 function main(argv) {
+    EosGates.setupEnvironment();
     let process = getProcess(argv);
     if (!process) {
         log('No argument provided - exiting');
