@@ -48,6 +48,11 @@ const FLATPAK_APPS = [
         flatpakInfo: { remote: 'eos-apps', id: 'org.mozilla.Firefox' }
     },
     {
+        regex: /chrome.*.exe/i,
+        appName: _("Google Chrome "),
+        flatpakInfo: { remote: 'eos-apps', id: 'com.google.Chrome' }
+    },
+    {
         regex: /.*skype.*.exe/i,
         appName: _("Skype"),
         flatpakInfo: { remote: 'eos-apps', id: 'com.microsoft.Skype' }
