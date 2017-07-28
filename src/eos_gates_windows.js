@@ -138,7 +138,7 @@ const EosGatesWindows = new Lang.Class({
 
     _getMainErrorMessage: function() {
         let escapedDisplayName = GLib.markup_escape_text(this.attempt.displayName, -1);
-        return _("Sorry, you can't run %s on Endless.").format("<b>%s</b>".format(escapedDisplayName));
+        return _("Sorry, you can't run %s on Endless.").format(EosGates.bold(escapedDisplayName));
     }
 });
 

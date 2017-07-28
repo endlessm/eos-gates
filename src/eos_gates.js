@@ -83,6 +83,14 @@ function actionButtonProps(props, application) {
     };
 }
 
+function bold(text) {
+    return '<b>%s</b>'.format(text);
+}
+
+function link(text, href) {
+    return '<a href="%s">%s</a>'.format(href, text);
+}
+
 const Application = new Lang.Class({
     Name: 'Application',
     Extends: Gtk.Application,
@@ -114,7 +122,8 @@ const Application = new Lang.Class({
 
     getHelpMessage: function() {
         if (!this.replacement)
-            return _("You can install applications from our <a href='endlessm-app://eos-app-store'>App Store</a>.");
+            return _("You can install applications from our %s.").format(link(_("App Store"),
+                                                                              'endlessm-app://eos-app-store'));
 
         if (this.replacement.overrideHelpMessage)
             return this.replacement.overrideHelpMessage;
@@ -124,9 +133,9 @@ const Application = new Lang.Class({
                       this.replacement.replacementInfo.appName : this.replacement.appName;
 
         if (this._alreadyHaveReplacement)
-            return _("However, you already have %s installed on this Computer").format("<b>%s</b>".format(appName));
+            return _("However, you already have %s installed on this Computer").format(bold(appName));
 
-        return _("However, you can install %s on the Endless App Center").format("<b>%s</b>".format(appName));
+        return _("However, you can install %s on the Endless App Center").format(bold(appName));
     },
 
     getExtraInformationMessage: function() {
