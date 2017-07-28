@@ -133,7 +133,7 @@ const Application = new Lang.Class({
                       this.replacement.replacementInfo.appName : this.replacement.appName;
 
         if (this._alreadyHaveReplacement)
-            return _("However, you already have %s installed on this Computer").format(bold(appName));
+            return _("However, you already have %s installed").format(bold(appName));
 
         return _("However, you can install %s on the Endless App Center").format(bold(appName));
     },
