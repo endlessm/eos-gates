@@ -74,7 +74,7 @@ function actionButtonProps(props, application) {
         };
 
     return {
-        label: _("Install %s in App Store").format(appName),
+        label: _("Install %s").format(appName),
         action: function() {
             installAppFromStore(props.replacement,
                                 props.attempt.argv);
