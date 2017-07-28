@@ -38,22 +38,22 @@ function generateEndlessInstallerEntry() {
 
 const FLATPAK_APPS = [
     {
-        regex: /[Ss]potify[Ss]etup.*.exe/,
+        regex: /spotifysetup.*.exe/i,
         appName: _("Spotify"),
         flatpakInfo: { remote: 'eos-apps', id: 'com.spotify.Client' }
     },
     {
-        regex: /[Ff]irefox\s+[Ss]etup.*.exe/,
+        regex: /firefox\s+setup.*.exe/i,
         appName: _("Firefox"),
         flatpakInfo: { remote: 'eos-apps', id: 'org.mozilla.Firefox' }
     },
     {
-        regex: /.*[Ss]kype.*.exe/,
+        regex: /.*skype.*.exe/i,
         appName: _("Skype"),
         flatpakInfo: { remote: 'eos-apps', id: 'com.microsoft.Skype' }
     },
     {
-        regex: /iTunes.*.exe/,
+        regex: /itunes.*.exe/i,
         appName: _("Apple iTunes"),
         flatpakInfo: { remote: 'eos-apps', id: 'com.spotify.Client' },
         replacementInfo: {
@@ -63,7 +63,7 @@ const FLATPAK_APPS = [
     },
     generateEndlessInstallerEntry(),
     {
-        regex: /.*\b([Aa]vira|[Nn]orton|[Mm]alwarebytes|[Ss]ophos|[Kk]aspersky|[Mm]c[Aa]ffe)\b.*.exe/,
+        regex: /.*\b(avira|norton|malwarebytes|sophos|kaspersky|mcaffe|avg|avast).*.exe/i,
         overrideHelpMessage: _("But do not worry. With Endless OS you are already safe from viruses that only affect Windows")
     }
     /*,
