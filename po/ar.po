@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Roddy Shuler <roddy@endlessm.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-30 01:45+0000\n"
-"PO-Revision-Date: 2014-10-26 19:42+0000\n"
+"POT-Creation-Date: 2017-07-27 00:42-0700\n"
+"PO-Revision-Date: 2017-08-01 21:59+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/endless-mobile-inc/eos-gates/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -20,13 +21,13 @@ msgstr ""
 #: ../src/eos_gates.js:68
 #, javascript-format
 msgid "%s is unsupported"
-msgstr ""
+msgstr "%s غير مدعوم"
 
 #: ../src/eos_gates.js:101
 msgid ""
-"You can install applications from our <a href='endlessm-app://eos-app-"
-"store'>App Store</a>."
-msgstr "يمكنك تنصيب التطبيقات من <a href='endlessm-app://eos-app-store'>متجر التطبيقات</a> خاصتنا."
+"You can install applications from our <a href='endlessm-"
+"app://org.gnome.Software'>App Center</a>."
+msgstr "يمكنك تنصيب التطبيقات من <a href='endlessm-app://org.gnome.Software'>متجر التطبيقات</a> خاصتنا."
 
 #: ../src/eos_gates.js:112
 msgid "OK"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-30 01:45+0000\n"
-"PO-Revision-Date: 2017-04-16 02:13+0000\n"
+"POT-Creation-Date: 2017-07-27 00:42-0700\n"
+"PO-Revision-Date: 2017-08-01 21:44+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/endless-mobile-inc/eos-gates/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -24,8 +24,8 @@ msgstr ""
 
 #: ../src/eos_gates.js:101
 msgid ""
-"You can install applications from our <a href='endlessm-app://eos-app-"
-"store'>App Store</a>."
+"You can install applications from our <a href='endlessm-"
+"app://org.gnome.Software'>App Center</a>."
 msgstr ""
 
 #: ../src/eos_gates.js:112

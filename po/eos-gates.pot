@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-09 01:48+0000\n"
+"POT-Creation-Date: 2017-07-27 00:42-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,8 +24,8 @@ msgstr ""
 
 #: ../src/eos_gates.js:101
 msgid ""
-"You can install applications from our <a href='endlessm-app://eos-app-"
-"store'>App Store</a>."
+"You can install applications from our <a href='endlessm-app://org.gnome."
+"Software'>App Center</a>."
 msgstr ""
 
 #: ../src/eos_gates.js:112

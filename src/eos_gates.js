@@ -98,7 +98,7 @@ const Application = new Lang.Class({
                                 use_markup: true,
                                 wrap: true,
                                 max_width_chars: 30,
-                                label: _("You can install applications from our <a href='endlessm-app://eos-app-store'>App Store</a>.") });
+                                label: _("You can install applications from our <a href='endlessm-app://org.gnome.Software'>App Center</a>.") });
         label.get_style_context().add_class('unsupported-subtitle');
         label.connect('activate-link', Lang.bind(this, function() {
             this.quit();
