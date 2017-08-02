@@ -70,6 +70,7 @@ function actionButtonProps(props, application) {
             label: _("Launch %s").format(appName),
             action: function() {
                 launchReplacementApp(props.replacement,
+                                     props.replacementRef,
                                      props.attempt.argv);
                 application.quit();
             }
@@ -100,9 +101,14 @@ const Application = new Lang.Class({
     _init: function(props) {
         this.attempt = props.attempt;
         this.replacement = props.replacement;
+
+        this._replacementRef = null;
+        if (this.replacement && this.replacement.flatpakInfo)
+            this._replacementRef = flatpakAppRef(this.replacement.flatpakInfo.id);
+
         this._alreadyHaveReplacement = (this.replacement &&
                                         ((this.replacement.flatpakInfo &&
-                                         !!flatpakAppRef(this.replacement.flatpakInfo.id)) ||
+                                          this._replacementRef) ||
                                          this.replacement.desktopInfo ||
                                          this.replacement.linkInfo));
 
@@ -153,6 +159,7 @@ const Application = new Lang.Class({
         let props = actionButtonProps({
             attempt: this.attempt,
             replacement: this.replacement,
+            replacementRef: this._replacementRef,
             alreadyHaveReplacement: this._alreadyHaveReplacement
         }, this);
         let button = new Gtk.Button({ visible: true,
@@ -302,15 +309,7 @@ function installAppFromStore(replacement, originalPayload) {
                                         new GLib.Variant('(ss)', [appStoreId, '']));
 }
 
-function launchFlatpakAppForInstallation(installation, replacement) {
-    let ref = null;
-
-    try {
-        ref = installation.get_current_installed_app(replacement.flatpakInfo.id, null);
-    } catch (e) {
-        return false;
-    }
-
+function launchFlatpakRef(ref, replacement) {
     // HACK: this is a workaround for
     // https://github.com/flatpak/flatpak/issues/946. We're going to assume
     // that the desktop ID for this application is the one provided by the
@@ -319,26 +318,18 @@ function launchFlatpakAppForInstallation(installation, replacement) {
     let desktopInfo = Gio.DesktopAppInfo.new(desktopId);
 
     if (!desktopInfo)
-        return false;
+        return;
 
-    try {
-        desktopInfo.launch([], null);
-    } catch (e) {
-        logError(e, 'Something went wrong in launching %s'.format(desktopId));
-        return false;
-    }
-
-    return true;
+    desktopInfo.launch([], null);
 }
 
-function launchFlatpakApp(replacement, originalPayload) {
+function launchFlatpakApp(replacement, replacementRef, originalPayload) {
     try {
         recordMetrics(replacement.replacementInfo ?
                       EVENT_LAUNCHED_EQUIVALENT_EXISTING_FLATPAK :
                       EVENT_LAUNCHED_EXISTING_FLATPAK,
                       new GLib.Variant('(sas)', [replacement.flatpakInfo.id, originalPayload]));
-        if (!launchFlatpakAppForInstallation(Flatpak.Installation.new_user(null), replacement))
-            launchFlatpakAppForInstallation(Flatpak.Installation.new_system(null), replacement);
+        launchFlatpakRef(replacementRef, replacement);
     } catch (e) {
         logError(e, 'Something went wrong in launching %s'.format(replacement.flatpakInfo.id));
     }
@@ -368,7 +359,7 @@ function launchLink(replacement, originalPayload) {
     }
 }
 
-function launchReplacementApp(replacement, originalPayload) {
+function launchReplacementApp(replacement, replacementRef, originalPayload) {
     if (replacement.desktopInfo) {
         launchDesktopApp(replacement, originalPayload);
         return;
@@ -380,19 +371,19 @@ function launchReplacementApp(replacement, originalPayload) {
     }
 
     // Assuming that we have a replacement flatpak to launch
-    launchFlatpakApp(replacement, originalPayload);
+    launchFlatpakApp(replacement, replacementRef, originalPayload);
 }
 
 function flatpakAppRef(appId) {
     try {
-        return Flatpak.Installation.new_system(null).get_installed_ref(Flatpak.RefKind.APP,
-                                                                       appId,
-                                                                       null,
-                                                                       null,
-                                                                       null);
+        return Flatpak.Installation.new_user(null).get_current_installed_app(appId, null);
     } catch (e) {
-        // Could not get ref, app is probably not installed
-        return null;
+        try {
+            return Flatpak.Installation.new_system(null).get_current_installed_app(appId, null);
+        } catch (e) {
+            // Could not get ref, app is probably not installed
+            return null;
+        }
     }
 }
 
