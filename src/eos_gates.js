@@ -57,7 +57,9 @@ function actionButtonProps(props, application) {
     if (!props.replacement || (!props.replacement.flatpakInfo && !props.alreadyHaveReplacement))
         return {
             label: _("OK"),
-            action: Lang.bind(application, application.quit)
+            action: function() {
+                application.quit();
+            }
         };
 
     let appName = !!props.replacement.replacementInfo ?
