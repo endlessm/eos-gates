@@ -34,6 +34,7 @@ js_sources = \
 	src/eos_gates.js \
 	src/eos_gates_windows.js \
 	src/eos_gates_linux_package.js \
+	src/replacements.js \
 	$(NULL)
 
 nobase_pkgdata_DATA = \

@@ -6,16 +6,11 @@ const Gio = imports.gi.Gio;
 const EosMetrics = imports.gi.EosMetrics;
 
 const EosGates = imports.eos_gates;
+const Replacements = imports.replacements;
 
 // Happens when a .rpm or .deb is opened. Contains the filename of
 // the package.
 const LINUX_PACKAGE_OPENED = '0bba3340-52e3-41a2-854f-e6ed36621379';
-
-function recordMetrics(packageFile) {
-    let recorder = EosMetrics.EventRecorder.get_default();
-    let data = new GLib.Variant('s', packageFile.packagePath);
-    recorder.record_event(LINUX_PACKAGE_OPENED, data);
-}
 
 const EosGatesLinuxPackage = new Lang.Class({
     Name: 'EosGatesLinuxPackage',
@@ -24,9 +19,9 @@ const EosGatesLinuxPackage = new Lang.Class({
     APP_ID: 'com.endlessm.Gates.LinuxPackage',
 
     _getMainErrorMessage: function() {
-        let escapedDisplayName = GLib.markup_escape_text(this._launchedFile.displayName, -1);
-        return _("Sorry, you can't install <b>%s</b> on Endless.").format(escapedDisplayName);
-    },
+        let escapedDisplayName = GLib.markup_escape_text(this.attempt.displayName, -1);
+        return _("Sorry, you can't install %s on Endless.").format(EosGates.bold(escapedDisplayName));
+    }
 });
 
 function getPackageFile(argv) {
@@ -40,7 +35,8 @@ function getPackageFile(argv) {
     // information.
     let displayName = filename;
 
-    return { packagePath: packagePath,
+    return { argv: argv,
+             path: packagePath,
              filename: filename,
              displayName: displayName };
 }
@@ -50,12 +46,18 @@ function main(argv) {
 
     let packageFile = getPackageFile(argv);
     if (!packageFile) {
-	log('No argument provided - exiting');
-	return 1;
+        log('No argument provided - exiting');
+        return 1;
     }
 
-    recordMetrics(packageFile);
+    EosGates.recordMetrics(LINUX_PACKAGE_OPENED,
+                           new GLib.Variant('as', packageFile.argv));
 
-    let app = new EosGatesLinuxPackage(packageFile);
+    let app = new EosGatesLinuxPackage({
+        attempt: packageFile,
+        replacement: EosGates.findReplacementApp(packageFile.filename,
+                                                 'linux',
+                                                 Replacements.definitions())
+    });
     return app.run(null);
 }

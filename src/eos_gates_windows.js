@@ -3,9 +3,10 @@ const Lang = imports.lang;
 
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
-const EosMetrics = imports.gi.EosMetrics;
+const Gtk = imports.gi.Gtk;
 
 const EosGates = imports.eos_gates;
+const Replacements = imports.replacements;
 
 const WHITELISTED_APPS = [
     // This is an unlikely binary name to run into, so just add it
@@ -16,12 +17,6 @@ const WHITELISTED_APPS = [
 // Happens when a .exe or .msi file is opened. Contains the
 // argv that was passed to the application.
 const WINDOWS_APP_OPENED = 'cf09194a-3090-4782-ab03-87b2f1515aed';
-
-function recordMetrics(process) {
-    let recorder = EosMetrics.EventRecorder.get_default();
-    let data = new GLib.Variant('as', process.argv);
-    recorder.record_event(WINDOWS_APP_OPENED, data);
-}
 
 function spawnUnderWine(process) {
     let argv = ['wine', 'start', '/unix'].concat(process.argv);
@@ -38,19 +33,20 @@ function loadJSON(path) {
 }
 
 function readWhitelist() {
-    let dataDirs = GLib.get_system_data_dirs();
-    dataDirs.forEach(function(dataDir) {
+    for (let dataDir of GLib.get_system_data_dirs()) {
         let path = GLib.build_filenamev([dataDir, 'eos-gates', 'whitelist.json']);
         let data = loadJSON(path);
         if (!data || !data.length)
-            return;
+            continue;
 
-        Lang.copyProperties(data, WHITELISTED_APPS);
-    });
+        return data;
+    }
+
+    return [];
 }
 
 function matchWhitelist(process, entry) {
-    if (process.processName == entry.processName)
+    if (process.filename == entry.processName)
         return true;
 
     // TODO: match on PE metadata, like process name,
@@ -59,8 +55,8 @@ function matchWhitelist(process, entry) {
     return false;
 }
 
-function isWhitelisted(process) {
-    return WHITELISTED_APPS.some(function(entry) {
+function isWhitelisted(process, whitelist) {
+    return whitelist.some(function(entry) {
         return matchWhitelist(process, entry);
     });
 }
@@ -72,19 +68,19 @@ const EosGatesWindows = new Lang.Class({
     APP_ID: 'com.endlessm.Gates.Windows',
 
     _launchNormally: function() {
-        spawnUnderWine(this._launchedFile);
+        spawnUnderWine(this.attempt);
     },
 
     _getMainErrorMessage: function() {
-        let escapedDisplayName = GLib.markup_escape_text(this._launchedFile.displayName, -1);
-        return _("Sorry, you can't run <b>%s</b> on Endless.").format(escapedDisplayName);
-    },
+        let escapedDisplayName = GLib.markup_escape_text(this.attempt.displayName, -1);
+        return _("Sorry, you can't run %s on Endless.").format(EosGates.bold(escapedDisplayName));
+    }
 });
 
 function getProcess(argv) {
     let processPath = argv[0];
     if (!processPath)
-	return null;
+        return null;
 
     let processName = GLib.path_get_basename(processPath);
 
@@ -93,27 +89,32 @@ function getProcess(argv) {
     let displayName = processName;
 
     return { argv: argv,
-             processName: processName,
+             path: processPath,
+             filename: processName,
              displayName: displayName };
 }
 
 function main(argv) {
     EosGates.setupEnvironment();
-
     let process = getProcess(argv);
     if (!process) {
-	log('No argument provided - exiting');
-	return 1;
+        log('No argument provided - exiting');
+        return 1;
     }
 
-    recordMetrics(process);
+    EosGates.recordMetrics(WINDOWS_APP_OPENED,
+                           new GLib.Variant('as', process.argv));
 
-    readWhitelist();
-    if (isWhitelisted(process)) {
+    let whitelist = readWhitelist();
+    if (isWhitelisted(process, whitelist)) {
         spawnUnderWine(process);
         return 0;
-    } else {
-        let app = new EosGatesWindows(process);
-        return app.run(null);
     }
+
+    return (new EosGatesWindows({
+        attempt: process,
+        replacement: EosGates.findReplacementApp(process.filename,
+                                                 'windows',
+                                                 Replacements.definitions())
+    })).run(null);
 }
