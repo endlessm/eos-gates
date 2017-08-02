@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 00:42-0700\n"
-"PO-Revision-Date: 2017-08-01 21:44+0000\n"
+"POT-Creation-Date: 2017-08-02 11:14-0700\n"
+"PO-Revision-Date: 2017-08-02 18:20+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Limburgian (http://www.transifex.com/endless-mobile-inc/eos-gates/language/li/)\n"
 "MIME-Version: 1.0\n"
@@ -17,24 +17,8 @@ msgstr ""
 "Language: li\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../src/eos_gates.js:68
-#, javascript-format
-msgid "%s is unsupported"
-msgstr ""
-
-#: ../src/eos_gates.js:101
-msgid ""
-"You can install applications from our <a href='endlessm-"
-"app://org.gnome.Software'>App Center</a>."
-msgstr ""
-
-#: ../src/eos_gates.js:112
-msgid "OK"
-msgstr ""
-
-#: ../src/eos_gates_windows.js:80
-#, javascript-format
-msgid "Sorry, you can't run <b>%s</b> on Endless."
+#: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
+msgid "Install Linux Applications"
 msgstr ""
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
@@ -45,11 +29,173 @@ msgstr ""
 msgid "Launch Windows Applications"
 msgstr ""
 
-#: ../src/eos_gates_linux_package.js:28
-#, javascript-format
-msgid "Sorry, you can't install <b>%s</b> on Endless."
+#: ../src/eos_gates.js:59
+msgid "OK"
 msgstr ""
 
-#: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
-msgid "Install Linux Applications"
+#: ../src/eos_gates.js:70
+#, javascript-format
+msgid "Launch %s"
+msgstr ""
+
+#: ../src/eos_gates.js:80
+#, javascript-format
+msgid "Install %s"
+msgstr ""
+
+#: ../src/eos_gates.js:133
+#, javascript-format
+msgid "You can install applications from our %s."
+msgstr ""
+
+#: ../src/eos_gates.js:133
+msgid "App Center"
+msgstr ""
+
+#: ../src/eos_gates.js:144
+#, javascript-format
+msgid "However, you already have %s installed"
+msgstr ""
+
+#: ../src/eos_gates.js:146
+#, javascript-format
+msgid "However, you can install %s on the Endless App Center"
+msgstr ""
+
+#: ../src/eos_gates.js:173
+#, javascript-format
+msgid "%s is unsupported"
+msgstr ""
+
+#: ../src/eos_gates_linux_package.js:23
+#, javascript-format
+msgid "Sorry, you can't install %s on Endless."
+msgstr ""
+
+#: ../src/eos_gates_windows.js:76
+#, javascript-format
+msgid "Sorry, you can't run %s on Endless."
+msgstr ""
+
+#: ../src/replacements.js:9
+msgid "You are already running Endless OS"
+msgstr ""
+
+#: ../src/replacements.js:16
+msgid "You are already running Endless OS from live media"
+msgstr ""
+
+#: ../src/replacements.js:19
+msgid "Reformat with Endless OS"
+msgstr ""
+
+#: ../src/replacements.js:20
+msgid ""
+"You can reformat your computer with Endless OS. If you have Windows "
+"installed and want to keep it, reboot to Windows and run the Endless "
+"Installer under Windows."
+msgstr ""
+
+#: ../src/replacements.js:33 ../src/replacements.js:90
+msgid "Spotify"
+msgstr ""
+
+#: ../src/replacements.js:41
+msgid "Firefox"
+msgstr ""
+
+#: ../src/replacements.js:49
+msgid "Google Chrome "
+msgstr ""
+
+#: ../src/replacements.js:57
+msgid "Skype"
+msgstr ""
+
+#: ../src/replacements.js:65
+msgid "Dropbox"
+msgstr ""
+
+#: ../src/replacements.js:73
+msgid "Steam"
+msgstr ""
+
+#: ../src/replacements.js:80
+msgid "WhatsApp"
+msgstr ""
+
+#: ../src/replacements.js:87
+msgid "Apple iTunes"
+msgstr ""
+
+#: ../src/replacements.js:91
+msgid "Spotify is a streaming music service"
+msgstr ""
+
+#: ../src/replacements.js:99 ../src/replacements.js:102
+#: ../src/replacements.js:125 ../src/replacements.js:147
+msgid "VLC"
+msgstr ""
+
+#: ../src/replacements.js:103 ../src/replacements.js:126
+#: ../src/replacements.js:148
+msgid "VLC is a media player that can play most media files"
+msgstr ""
+
+#: ../src/replacements.js:111 ../src/replacements.js:114
+msgid "FrostTorrent"
+msgstr ""
+
+#: ../src/replacements.js:115
+msgid "FrostTorrent is a file-sharing application like LimeWire"
+msgstr ""
+
+#: ../src/replacements.js:122
+msgid "K-Lite Mega Codec Pack"
+msgstr ""
+
+#: ../src/replacements.js:133
+msgid "uTorrent"
+msgstr ""
+
+#: ../src/replacements.js:136
+msgid "Transmission"
+msgstr ""
+
+#: ../src/replacements.js:137
+msgid "Transmission is a BitTorrent client, like uTorrent"
+msgstr ""
+
+#: ../src/replacements.js:144
+msgid "DivX Codecs"
+msgstr ""
+
+#: ../src/replacements.js:155
+msgid "LINE"
+msgstr ""
+
+#: ../src/replacements.js:157
+msgid "You can install and use LINE through the Google Chrome Web Store"
+msgstr ""
+
+#: ../src/replacements.js:164
+msgid ""
+"But do not worry. With Endless OS you are already safe from viruses that "
+"only affect Windows"
+msgstr ""
+
+#: ../src/replacements.js:171
+#, javascript-format
+msgid ""
+"Adobe Flash is downloaded and installed automatically by your browser on "
+"Endless OS. Please visit %s to check whether it has been installed correctly"
+" and contact the %s for support if you still have problems"
+msgstr ""
+
+#: ../src/replacements.js:171
+msgid "the Adobe Flash test page"
+msgstr ""
+
+#: ../src/replacements.js:171
+msgid "Endless OS Community"
 msgstr ""
