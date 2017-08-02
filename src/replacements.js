@@ -16,8 +16,8 @@ function generateEndlessInstallerEntry() {
         entry.overrideHelpMessage = _("You are already running Endless OS from live media");
         entry.desktopInfo = desktopInfo,
         entry.replacementInfo = {
-            appName: _("Endless OS Installer"),
-            description: _("You can install Endless OS by running the Endless OS Installer.")
+            appName: _("Reformat with Endless OS"),
+            description: _("You can reformat this computer with Endless OS by running Reformat")
         }
     }
 
