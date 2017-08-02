@@ -130,7 +130,7 @@ const Application = new Lang.Class({
 
     getHelpMessage: function() {
         if (!this.replacement)
-            return _("You can install applications from our %s.").format(link(_("App Store"),
+            return _("You can install applications from our %s.").format(link(_("App Center"),
                                                                               'endlessm-app://org.gnome.Software'));
 
         if (this.replacement.overrideHelpMessage)
