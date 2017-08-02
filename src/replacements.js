@@ -17,7 +17,7 @@ function generateEndlessInstallerEntry() {
         entry.desktopInfo = desktopInfo,
         entry.replacementInfo = {
             appName: _("Reformat with Endless OS"),
-            description: _("You can reformat your computer with Endless OS. If you have Windows installed and want to keep it, reboot to Windows and download the Endless Installer for Windows.")
+            description: _("You can reformat your computer with Endless OS. If you have Windows installed and want to keep it, reboot to Windows and run the Endless Installer under Windows.")
         }
     }
 
