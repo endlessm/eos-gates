@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-02 13:48+0100\n"
+"POT-Creation-Date: 2017-08-02 13:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgid "You can install applications from our %s."
 msgstr ""
 
 #: ../src/eos_gates.js:133
-msgid "App Store"
+msgid "App Center"
 msgstr ""
 
 #: ../src/eos_gates.js:144
