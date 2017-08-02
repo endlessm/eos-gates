@@ -311,11 +311,22 @@ function launchFlatpakAppForInstallation(installation, replacement) {
         return false;
     }
 
-    installation.launch(replacement.flatpakInfo.id,
-                        null,
-                        'master',
-                        ref.get_latest_commit(),
-                        null);
+    // HACK: this is a workaround for
+    // https://github.com/flatpak/flatpak/issues/946. We're going to assume
+    // that the desktop ID for this application is the one provided by the
+    // flatpak installation
+    let desktopId = replacement.flatpakInfo.id + '.desktop';
+    let desktopInfo = Gio.DesktopAppInfo.new(desktopId);
+
+    if (!desktopInfo)
+        return false;
+
+    try {
+        desktopInfo.launch([], null);
+    } catch (e) {
+        logError(e, 'Something went wrong in launching %s'.format(desktopId));
+        return false;
+    }
 
     return true;
 }
