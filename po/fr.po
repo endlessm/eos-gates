@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-02 11:14-0700\n"
-"PO-Revision-Date: 2017-08-02 18:20+0000\n"
+"PO-Revision-Date: 2017-08-02 19:00+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: French (http://www.transifex.com/endless-mobile-inc/eos-gates/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -37,31 +37,31 @@ msgstr "OK"
 #: ../src/eos_gates.js:70
 #, javascript-format
 msgid "Launch %s"
-msgstr ""
+msgstr "Lancer %s"
 
 #: ../src/eos_gates.js:80
 #, javascript-format
 msgid "Install %s"
-msgstr ""
+msgstr "Installer %s"
 
 #: ../src/eos_gates.js:133
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "Vous pouvez installer des applications depuis notre %s."
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr ""
+msgstr "Centre d'applis"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
 msgid "However, you already have %s installed"
-msgstr ""
+msgstr "Cependant, %s est déjà installé"
 
 #: ../src/eos_gates.js:146
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
-msgstr ""
+msgstr "Vous pouvez cependant installer %s sur le centre d'applis Endless"
 
 #: ../src/eos_gates.js:173
 #, javascript-format
@@ -71,119 +71,119 @@ msgstr "%s n'est pas pris en charge"
 #: ../src/eos_gates_linux_package.js:23
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
-msgstr ""
+msgstr "Désolé, vous ne pouvez pas installer %s sur Endless."
 
 #: ../src/eos_gates_windows.js:76
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
-msgstr ""
+msgstr "Désolé, vous ne pouvez pas exécuter %s sur Endless."
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"
-msgstr ""
+msgstr "Vous exécutez déjà Endless OS"
 
 #: ../src/replacements.js:16
 msgid "You are already running Endless OS from live media"
-msgstr ""
+msgstr "Vous exécutez déjà Endless OS à partir du fichier multimédia en direct"
 
 #: ../src/replacements.js:19
 msgid "Reformat with Endless OS"
-msgstr ""
+msgstr "Reformater avec Endless OS"
 
 #: ../src/replacements.js:20
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
-msgstr ""
+msgstr "Vous pouvez reformater votre ordinateur avec Endless OS. Si Windows est installé et que vous souhaitez le conserver, redémarrez sur Windows et lancez l'installateur d'Endless sous Windows."
 
 #: ../src/replacements.js:33 ../src/replacements.js:90
 msgid "Spotify"
-msgstr ""
+msgstr "Spotify"
 
 #: ../src/replacements.js:41
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 #: ../src/replacements.js:49
 msgid "Google Chrome "
-msgstr ""
+msgstr "Google Chrome"
 
 #: ../src/replacements.js:57
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: ../src/replacements.js:65
 msgid "Dropbox"
-msgstr ""
+msgstr "Dropbox"
 
 #: ../src/replacements.js:73
 msgid "Steam"
-msgstr ""
+msgstr "Steam"
 
 #: ../src/replacements.js:80
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 #: ../src/replacements.js:87
 msgid "Apple iTunes"
-msgstr ""
+msgstr "Apple iTunes"
 
 #: ../src/replacements.js:91
 msgid "Spotify is a streaming music service"
-msgstr ""
+msgstr "Spotify est un service de streaming musical"
 
 #: ../src/replacements.js:99 ../src/replacements.js:102
 #: ../src/replacements.js:125 ../src/replacements.js:147
 msgid "VLC"
-msgstr ""
+msgstr "VLC"
 
 #: ../src/replacements.js:103 ../src/replacements.js:126
 #: ../src/replacements.js:148
 msgid "VLC is a media player that can play most media files"
-msgstr ""
+msgstr "VLS est un lecteur multimédia qui peut lire la plupart des fichiers multimédia"
 
 #: ../src/replacements.js:111 ../src/replacements.js:114
 msgid "FrostTorrent"
-msgstr ""
+msgstr "FrostTorrent"
 
 #: ../src/replacements.js:115
 msgid "FrostTorrent is a file-sharing application like LimeWire"
-msgstr ""
+msgstr "FrostTorrent est une application de partage de fichiers comme LimeWire"
 
 #: ../src/replacements.js:122
 msgid "K-Lite Mega Codec Pack"
-msgstr ""
+msgstr "Pack de codecs Mega K-Lite"
 
 #: ../src/replacements.js:133
 msgid "uTorrent"
-msgstr ""
+msgstr "uTorrent"
 
 #: ../src/replacements.js:136
 msgid "Transmission"
-msgstr ""
+msgstr "Transmission"
 
 #: ../src/replacements.js:137
 msgid "Transmission is a BitTorrent client, like uTorrent"
-msgstr ""
+msgstr "Transmission est un client BitTorrent, comme uTorrent"
 
 #: ../src/replacements.js:144
 msgid "DivX Codecs"
-msgstr ""
+msgstr "Codecs DivX"
 
 #: ../src/replacements.js:155
 msgid "LINE"
-msgstr ""
+msgstr "LINE"
 
 #: ../src/replacements.js:157
 msgid "You can install and use LINE through the Google Chrome Web Store"
-msgstr ""
+msgstr "Vous pouvez installer et utiliser LINE depuis le Google Chrome Web Store"
 
 #: ../src/replacements.js:164
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
-msgstr ""
+msgstr "Mais ne vous inquiétez pas. Avec Endless OS, vous êtes déjà protégé des virus qui n'affectent que Windows."
 
 #: ../src/replacements.js:171
 #, javascript-format
@@ -191,12 +191,12 @@ msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
 "Endless OS. Please visit %s to check whether it has been installed correctly"
 " and contact the %s for support if you still have problems"
-msgstr ""
+msgstr "Adobe Flash est téléchargé et installé automatiquement par votre navigateur sur Endless OS. Veuillez visiter %s pour vérifier s'il a été installé correctement et contactez le %s pour obtenir de l'aide si vous rencontrez toujours des difficultés."
 
 #: ../src/replacements.js:171
 msgid "the Adobe Flash test page"
-msgstr ""
+msgstr "la page de test Adobe Flash"
 
 #: ../src/replacements.js:171
 msgid "Endless OS Community"
-msgstr ""
+msgstr "Communauté Endless OS"

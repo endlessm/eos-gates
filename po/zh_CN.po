@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# e2f_cn c5 <jarvisn@ecinnovations.com>, 2017
 # liuxuejiao <liuxuejiao_endless@126.com>, 2016
 # Roddy Shuler <roddy@endlessm.com>, 2017
 msgid ""
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-02 11:14-0700\n"
-"PO-Revision-Date: 2017-08-02 18:20+0000\n"
-"Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
+"PO-Revision-Date: 2017-08-03 04:23+0000\n"
+"Last-Translator: e2f_cn c5 <jarvisn@ecinnovations.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/endless-mobile-inc/eos-gates/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,31 +39,31 @@ msgstr "好的"
 #: ../src/eos_gates.js:70
 #, javascript-format
 msgid "Launch %s"
-msgstr ""
+msgstr "启动 %s"
 
 #: ../src/eos_gates.js:80
 #, javascript-format
 msgid "Install %s"
-msgstr ""
+msgstr "安装 %s"
 
 #: ../src/eos_gates.js:133
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "您可以从我们的 %s 中安装应用。"
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr ""
+msgstr "应用中心"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
 msgid "However, you already have %s installed"
-msgstr ""
+msgstr "但是，您已经安装了 %s"
 
 #: ../src/eos_gates.js:146
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
-msgstr ""
+msgstr "但是，您可以在 Endless 应用中心上安装 %s"
 
 #: ../src/eos_gates.js:173
 #, javascript-format
@@ -72,119 +73,119 @@ msgstr "不支持%s"
 #: ../src/eos_gates_linux_package.js:23
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
-msgstr ""
+msgstr "抱歉，您无法在 Endless 上安装 %s。"
 
 #: ../src/eos_gates_windows.js:76
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
-msgstr ""
+msgstr "抱歉，您无法在 Endless 上运行 %s。"
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"
-msgstr ""
+msgstr "您已经运行 Endless 操作系统"
 
 #: ../src/replacements.js:16
 msgid "You are already running Endless OS from live media"
-msgstr ""
+msgstr "您已经从直播媒体运行 Endless 操作系统"
 
 #: ../src/replacements.js:19
 msgid "Reformat with Endless OS"
-msgstr ""
+msgstr "使用 Endless 操作系统重新设置格式"
 
 #: ../src/replacements.js:20
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
-msgstr ""
+msgstr "可以使用 Endless 操作系统重新设置电脑的格式。如果您已安装 Windows 并希望保留该系统，则重启 Windows 并在该系统下运行 Endless 安装程序。"
 
 #: ../src/replacements.js:33 ../src/replacements.js:90
 msgid "Spotify"
-msgstr ""
+msgstr "Spotify"
 
 #: ../src/replacements.js:41
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 #: ../src/replacements.js:49
 msgid "Google Chrome "
-msgstr ""
+msgstr "Google Chrome "
 
 #: ../src/replacements.js:57
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: ../src/replacements.js:65
 msgid "Dropbox"
-msgstr ""
+msgstr "Dropbox"
 
 #: ../src/replacements.js:73
 msgid "Steam"
-msgstr ""
+msgstr "Steam"
 
 #: ../src/replacements.js:80
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 #: ../src/replacements.js:87
 msgid "Apple iTunes"
-msgstr ""
+msgstr "Apple iTunes"
 
 #: ../src/replacements.js:91
 msgid "Spotify is a streaming music service"
-msgstr ""
+msgstr "Spotify 是一款流式音乐服务"
 
 #: ../src/replacements.js:99 ../src/replacements.js:102
 #: ../src/replacements.js:125 ../src/replacements.js:147
 msgid "VLC"
-msgstr ""
+msgstr "VLC"
 
 #: ../src/replacements.js:103 ../src/replacements.js:126
 #: ../src/replacements.js:148
 msgid "VLC is a media player that can play most media files"
-msgstr ""
+msgstr "VLC 是一款媒体播放器，可以播放大多数的媒体文件"
 
 #: ../src/replacements.js:111 ../src/replacements.js:114
 msgid "FrostTorrent"
-msgstr ""
+msgstr "FrostTorrent"
 
 #: ../src/replacements.js:115
 msgid "FrostTorrent is a file-sharing application like LimeWire"
-msgstr ""
+msgstr "FrostTorrent 是一款类似于 LimeWire 的文件共享应用"
 
 #: ../src/replacements.js:122
 msgid "K-Lite Mega Codec Pack"
-msgstr ""
+msgstr "K-Lite Mega Codec Pack"
 
 #: ../src/replacements.js:133
 msgid "uTorrent"
-msgstr ""
+msgstr "uTorrent"
 
 #: ../src/replacements.js:136
 msgid "Transmission"
-msgstr ""
+msgstr "Transmission"
 
 #: ../src/replacements.js:137
 msgid "Transmission is a BitTorrent client, like uTorrent"
-msgstr ""
+msgstr "Transmission 是一个 BitTorrent 客户端，类似于 uTorrent"
 
 #: ../src/replacements.js:144
 msgid "DivX Codecs"
-msgstr ""
+msgstr "DivX Codecs"
 
 #: ../src/replacements.js:155
 msgid "LINE"
-msgstr ""
+msgstr "LINE"
 
 #: ../src/replacements.js:157
 msgid "You can install and use LINE through the Google Chrome Web Store"
-msgstr ""
+msgstr "可以通过 Google Chrome Web Store 安装并使用 LINE"
 
 #: ../src/replacements.js:164
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
-msgstr ""
+msgstr "但请不必担心。使用 Endless 操作系统已将您安全隔绝于仅影响 Windows 系统的病毒"
 
 #: ../src/replacements.js:171
 #, javascript-format
@@ -192,12 +193,12 @@ msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
 "Endless OS. Please visit %s to check whether it has been installed correctly"
 " and contact the %s for support if you still have problems"
-msgstr ""
+msgstr "您的浏览器已自动下载 Adobe Flash 并将其安装在 Endless 操作系统上。请访问 %s 以检查该软件是否已正确安装，如果仍有问题，请联系 %s 寻求帮助"
 
 #: ../src/replacements.js:171
 msgid "the Adobe Flash test page"
-msgstr ""
+msgstr "Adobe Flash 测试页面"
 
 #: ../src/replacements.js:171
 msgid "Endless OS Community"
-msgstr ""
+msgstr "Endless 操作系统社区"

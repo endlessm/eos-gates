@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# e2f_in c7 <e2f_in_c7@outlook.com>, 2016
+# e2f_in c7 <e2f_in_c7@outlook.com>, 2016-2017
 # Roddy Shuler <roddy@endlessm.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-02 11:14-0700\n"
-"PO-Revision-Date: 2017-08-02 18:20+0000\n"
-"Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
+"PO-Revision-Date: 2017-08-03 09:31+0000\n"
+"Last-Translator: e2f_in c7 <e2f_in_c7@outlook.com>\n"
 "Language-Team: Hindi (http://www.transifex.com/endless-mobile-inc/eos-gates/language/hi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,31 +38,31 @@ msgstr "ठीक"
 #: ../src/eos_gates.js:70
 #, javascript-format
 msgid "Launch %s"
-msgstr ""
+msgstr "%sलॉन्च करें"
 
 #: ../src/eos_gates.js:80
 #, javascript-format
 msgid "Install %s"
-msgstr ""
+msgstr "%s इंस्टॉल करें"
 
 #: ../src/eos_gates.js:133
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "आप हमारे %s से ऐप्लिकेशन इंस्टॉल कर सकते हैं."
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr ""
+msgstr "ऐप्लिकेशन केंद्र"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
 msgid "However, you already have %s installed"
-msgstr ""
+msgstr "हालाँकि, आपके पास पहले से%s स्थापित है"
 
 #: ../src/eos_gates.js:146
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
-msgstr ""
+msgstr "हालाँकि, आप एंड्लेस ऐप्लिकेशन केंद्र से %s को इंस्टॉल कर सकते हैं"
 
 #: ../src/eos_gates.js:173
 #, javascript-format
@@ -72,119 +72,119 @@ msgstr "%s असमर्थित है"
 #: ../src/eos_gates_linux_package.js:23
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
-msgstr ""
+msgstr "क्षमा करें, आप %s को एंड्लेस पर इंस्टॉल नहीं कर सकते हैं."
 
 #: ../src/eos_gates_windows.js:76
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
-msgstr ""
+msgstr "क्षमा करें, आप %s को  एंड्लेस पर नहीं चला सकते हैं."
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"
-msgstr ""
+msgstr "आप पहले से ही एंड्लेस ओ एस चला रहे हैं"
 
 #: ../src/replacements.js:16
 msgid "You are already running Endless OS from live media"
-msgstr ""
+msgstr "आप पहले से ही लाइव मीडिया से एंड्लेस ओ एस चला रहे हैं"
 
 #: ../src/replacements.js:19
 msgid "Reformat with Endless OS"
-msgstr ""
+msgstr "एंड्लेस ओ एस से पुनः फ़ॉर्मेट करें"
 
 #: ../src/replacements.js:20
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
-msgstr ""
+msgstr "आप एंड्लेस ओ एस से अपना कंप्यूटर पुनः फ़ॉर्मेट कर सकते हैं. यदि आपके पास Windows इंस्टॉल है और इसे बनाए रखना चाहते है, तो Windows को रीबूट करें और Windows के अंतर्गत एंड्लेस इंस्टॉलर चलाएँ."
 
 #: ../src/replacements.js:33 ../src/replacements.js:90
 msgid "Spotify"
-msgstr ""
+msgstr "Spotify"
 
 #: ../src/replacements.js:41
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 #: ../src/replacements.js:49
 msgid "Google Chrome "
-msgstr ""
+msgstr "Google Chrome "
 
 #: ../src/replacements.js:57
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: ../src/replacements.js:65
 msgid "Dropbox"
-msgstr ""
+msgstr "Dropbox"
 
 #: ../src/replacements.js:73
 msgid "Steam"
-msgstr ""
+msgstr "Steam"
 
 #: ../src/replacements.js:80
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 #: ../src/replacements.js:87
 msgid "Apple iTunes"
-msgstr ""
+msgstr "Apple iTunes"
 
 #: ../src/replacements.js:91
 msgid "Spotify is a streaming music service"
-msgstr ""
+msgstr "Spotify एक स्ट्रीमिंग संगीत सेवा है"
 
 #: ../src/replacements.js:99 ../src/replacements.js:102
 #: ../src/replacements.js:125 ../src/replacements.js:147
 msgid "VLC"
-msgstr ""
+msgstr "VLC"
 
 #: ../src/replacements.js:103 ../src/replacements.js:126
 #: ../src/replacements.js:148
 msgid "VLC is a media player that can play most media files"
-msgstr ""
+msgstr "VLC एक मीडिया प्लेयर है जो अधिकतर मीडिया फ़ाइलों को चला सकता है"
 
 #: ../src/replacements.js:111 ../src/replacements.js:114
 msgid "FrostTorrent"
-msgstr ""
+msgstr "FrostTorren"
 
 #: ../src/replacements.js:115
 msgid "FrostTorrent is a file-sharing application like LimeWire"
-msgstr ""
+msgstr "FrostTorrent, LimeWire की तरह एक फ़ाइल-साझाकरण ऐप्लिकेशन है "
 
 #: ../src/replacements.js:122
 msgid "K-Lite Mega Codec Pack"
-msgstr ""
+msgstr "K-Lite Mega Codec Pack"
 
 #: ../src/replacements.js:133
 msgid "uTorrent"
-msgstr ""
+msgstr "uTorrent"
 
 #: ../src/replacements.js:136
 msgid "Transmission"
-msgstr ""
+msgstr "Transmission"
 
 #: ../src/replacements.js:137
 msgid "Transmission is a BitTorrent client, like uTorrent"
-msgstr ""
+msgstr "Transmission, uTorrent की तरह BitTorrent का क्लायंट है"
 
 #: ../src/replacements.js:144
 msgid "DivX Codecs"
-msgstr ""
+msgstr "DivX Codecs"
 
 #: ../src/replacements.js:155
 msgid "LINE"
-msgstr ""
+msgstr "LINE"
 
 #: ../src/replacements.js:157
 msgid "You can install and use LINE through the Google Chrome Web Store"
-msgstr ""
+msgstr "आप Google Chrome वेब स्टोर के माध्यम से LINE को इंस्टॉल और उपयोग कर सकते हैं"
 
 #: ../src/replacements.js:164
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
-msgstr ""
+msgstr "लेकिन चिंता न करें. एंड्लेस ओ एस से आप उन वायरस से पहले ही सुरक्षित हैं जो केवल Windows को प्रभावित करते हैं"
 
 #: ../src/replacements.js:171
 #, javascript-format
@@ -192,12 +192,12 @@ msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
 "Endless OS. Please visit %s to check whether it has been installed correctly"
 " and contact the %s for support if you still have problems"
-msgstr ""
+msgstr "एंड्लेस ओ एस पर आपके ब्राउज़र द्वारा Adobe Flash को स्वचालित रूप से डाउनलोड और इंस्टॉल किया जाता है. यह देखने के लिए कि इसे सही तरीके से इंस्टॉल किया गया है या नहीं, कृपया %s पर जाएँ और अगर आपको अभी भी समस्याएँ हैं तो सहायता के लिए %sसे संपर्क करें"
 
 #: ../src/replacements.js:171
 msgid "the Adobe Flash test page"
-msgstr ""
+msgstr "Adobe Flash परीक्षण पेज"
 
 #: ../src/replacements.js:171
 msgid "Endless OS Community"
-msgstr ""
+msgstr "एंड्लेस ओ एस समुदाय"

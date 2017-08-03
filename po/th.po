@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-02 11:14-0700\n"
-"PO-Revision-Date: 2017-08-02 18:20+0000\n"
+"PO-Revision-Date: 2017-08-03 02:01+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Thai (http://www.transifex.com/endless-mobile-inc/eos-gates/language/th/)\n"
 "MIME-Version: 1.0\n"
@@ -37,31 +37,31 @@ msgstr "ตกลง"
 #: ../src/eos_gates.js:70
 #, javascript-format
 msgid "Launch %s"
-msgstr ""
+msgstr "เปิดใช้ %s"
 
 #: ../src/eos_gates.js:80
 #, javascript-format
 msgid "Install %s"
-msgstr ""
+msgstr "ติดตั้ง %s"
 
 #: ../src/eos_gates.js:133
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "คุณสามารถติดตั้งแอปพลิเคชันต่างๆ จาก %s ของเรา"
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr ""
+msgstr "App Center"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
 msgid "However, you already have %s installed"
-msgstr ""
+msgstr "อย่างไรก็ตาม คุณได้ติดตั้ง %s ไว้แล้ว"
 
 #: ../src/eos_gates.js:146
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
-msgstr ""
+msgstr "อย่างไรก็ตาม คุณสามารถติดตั้ง %s บน Endless App Center"
 
 #: ../src/eos_gates.js:173
 #, javascript-format
@@ -71,119 +71,119 @@ msgstr "ไม่สนับสนุน %s "
 #: ../src/eos_gates_linux_package.js:23
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
-msgstr ""
+msgstr "ขออภัย คุณไม่สามารถติดตั้ง %s บน Endless ได้"
 
 #: ../src/eos_gates_windows.js:76
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
-msgstr ""
+msgstr "ขออภัย คุณไม่สามารถเรียกใช้ %s บน Endless ได้"
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"
-msgstr ""
+msgstr "คุณกำลังเรียกใช้ Endless OS อยู่แล้ว"
 
 #: ../src/replacements.js:16
 msgid "You are already running Endless OS from live media"
-msgstr ""
+msgstr "คุณกำลังเรียกใช้ Endless OS จากไลฟ์มีเดียอยู่แล้ว"
 
 #: ../src/replacements.js:19
 msgid "Reformat with Endless OS"
-msgstr ""
+msgstr "จัดรูปแบบใหม่ด้วย Endless OS"
 
 #: ../src/replacements.js:20
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
-msgstr ""
+msgstr "คุณสามารถจัดรูปแบบคอมพิวเตอร์ของคุณใหม่ด้วย Endless OS หากคุณติดตั้งระบบปฏิบัติการ Windows และต้องการเก็บไว้ ให้เริ่มต้นระบบใหม่ใน Windows และเรียกใช้ Endless Installer ขณะที่อยู่ใน Windows"
 
 #: ../src/replacements.js:33 ../src/replacements.js:90
 msgid "Spotify"
-msgstr ""
+msgstr "Spotify"
 
 #: ../src/replacements.js:41
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 #: ../src/replacements.js:49
 msgid "Google Chrome "
-msgstr ""
+msgstr "Google Chrome"
 
 #: ../src/replacements.js:57
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: ../src/replacements.js:65
 msgid "Dropbox"
-msgstr ""
+msgstr "Dropbox"
 
 #: ../src/replacements.js:73
 msgid "Steam"
-msgstr ""
+msgstr "Steam"
 
 #: ../src/replacements.js:80
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 #: ../src/replacements.js:87
 msgid "Apple iTunes"
-msgstr ""
+msgstr "Apple iTunes"
 
 #: ../src/replacements.js:91
 msgid "Spotify is a streaming music service"
-msgstr ""
+msgstr "Spotify เป็นบริการสตรีมเพลง"
 
 #: ../src/replacements.js:99 ../src/replacements.js:102
 #: ../src/replacements.js:125 ../src/replacements.js:147
 msgid "VLC"
-msgstr ""
+msgstr "VLC"
 
 #: ../src/replacements.js:103 ../src/replacements.js:126
 #: ../src/replacements.js:148
 msgid "VLC is a media player that can play most media files"
-msgstr ""
+msgstr "VLC เป็นโปรแกรมเล่นสื่อที่สามารถเล่นไฟล์สื่อได้แทบทุกประเภท"
 
 #: ../src/replacements.js:111 ../src/replacements.js:114
 msgid "FrostTorrent"
-msgstr ""
+msgstr "FrostTorrent"
 
 #: ../src/replacements.js:115
 msgid "FrostTorrent is a file-sharing application like LimeWire"
-msgstr ""
+msgstr "FrostTorrent เป็นแอปพลิเคชันสำหรับแชร์ไฟล์เช่นเดียวกับ LimeWire"
 
 #: ../src/replacements.js:122
 msgid "K-Lite Mega Codec Pack"
-msgstr ""
+msgstr "K-Lite Mega Codec Pack"
 
 #: ../src/replacements.js:133
 msgid "uTorrent"
-msgstr ""
+msgstr "uTorrent"
 
 #: ../src/replacements.js:136
 msgid "Transmission"
-msgstr ""
+msgstr "Transmission"
 
 #: ../src/replacements.js:137
 msgid "Transmission is a BitTorrent client, like uTorrent"
-msgstr ""
+msgstr "Transmission เป็นไคลเอ็นต์ BitTorrent เช่นเดียวกับ uTorrent"
 
 #: ../src/replacements.js:144
 msgid "DivX Codecs"
-msgstr ""
+msgstr "DivX Codecs"
 
 #: ../src/replacements.js:155
 msgid "LINE"
-msgstr ""
+msgstr "LINE"
 
 #: ../src/replacements.js:157
 msgid "You can install and use LINE through the Google Chrome Web Store"
-msgstr ""
+msgstr "คุณสามารถติดตั้งและใช้งาน LINE ผ่าน Google Chrome เว็บสโตร์"
 
 #: ../src/replacements.js:164
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
-msgstr ""
+msgstr "แต่ไม่ต้องกังวล เมื่อมี Endless OS คุณก็ปลอดภัยจากไวรัสต่างๆ ที่ส่งผลกระทบต่อ Windows เท่านั้นแล้ว"
 
 #: ../src/replacements.js:171
 #, javascript-format
@@ -191,12 +191,12 @@ msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
 "Endless OS. Please visit %s to check whether it has been installed correctly"
 " and contact the %s for support if you still have problems"
-msgstr ""
+msgstr "Adobe Flash ถูกดาวน์โหลดและติดตั้งโดยอัตโนมัติโดยเบราว์เซอร์ของคุณบน Endless OS โปรดเข้าไปที่ %s เพื่อตรวจสอบดูว่าโปรแกรมดังกล่าวได้รับการติดตั้งอย่างถูกต้องหรือไม่ และติดต่อ %s เพื่อรับการสนับสนุนหากคุณยังคงพบปัญหา"
 
 #: ../src/replacements.js:171
 msgid "the Adobe Flash test page"
-msgstr ""
+msgstr "หน้าทดสอบ Adobe Flash"
 
 #: ../src/replacements.js:171
 msgid "Endless OS Community"
-msgstr ""
+msgstr "ชุมชน Endless OS"
