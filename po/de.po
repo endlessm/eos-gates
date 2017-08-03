@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-02 11:14-0700\n"
-"PO-Revision-Date: 2017-08-02 18:20+0000\n"
+"PO-Revision-Date: 2017-08-03 19:12+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: German (http://www.transifex.com/endless-mobile-inc/eos-gates/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -48,11 +48,11 @@ msgstr ""
 #: ../src/eos_gates.js:133
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "Programme werden mit dem %s installiert "
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr ""
+msgstr "App-Center"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
@@ -72,12 +72,12 @@ msgstr "%s wird nicht unterstützt"
 #: ../src/eos_gates_linux_package.js:23
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
-msgstr ""
+msgstr "Tut mir leid, aber %s kann nicht auf Endless installiert werden."
 
 #: ../src/eos_gates_windows.js:76
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
-msgstr ""
+msgstr "Tut mir leid, aber %s funktioniert nicht mit Endless"
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-02 11:14-0700\n"
-"PO-Revision-Date: 2017-08-02 21:10+0000\n"
+"PO-Revision-Date: 2017-08-03 17:37+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/endless-mobile-inc/eos-gates/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "你可以安裝來自我們 %s 的應用程式。"
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr "應用程式中心"
+msgstr "應用中心"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
@@ -61,7 +61,7 @@ msgstr "但你已經安裝了 %s"
 #: ../src/eos_gates.js:146
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
-msgstr "但是你可以在 Endless 應用程式中心安裝 %s"
+msgstr "但是你可以在 Endless 應用中心安裝 %s"
 
 #: ../src/eos_gates.js:173
 #, javascript-format

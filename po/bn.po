@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-02 11:14-0700\n"
-"PO-Revision-Date: 2017-08-02 18:20+0000\n"
+"PO-Revision-Date: 2017-08-03 17:51+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Bengali (http://www.transifex.com/endless-mobile-inc/eos-gates/language/bn/)\n"
 "MIME-Version: 1.0\n"
@@ -48,11 +48,11 @@ msgstr ""
 #: ../src/eos_gates.js:133
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "আমাদের %s থেকে আপনি এ্যাপ্লিকেশন সংস্থাপন করতে পারেন।"
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr ""
+msgstr "অ্যাপ সেন্টার"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
@@ -72,12 +72,12 @@ msgstr "%s অসমর্থিত"
 #: ../src/eos_gates_linux_package.js:23
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
-msgstr ""
+msgstr "দুঃখিত, আপনি %s এন্ডলেস-এ সংস্থাপন করতে পারবেন না।"
 
 #: ../src/eos_gates_windows.js:76
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
-msgstr ""
+msgstr "দুঃখিত, আপনি %s এন্ডলেস-এ চালাতে পারবেন না।"
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"

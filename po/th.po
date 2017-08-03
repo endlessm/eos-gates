@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-02 11:14-0700\n"
-"PO-Revision-Date: 2017-08-03 02:01+0000\n"
+"PO-Revision-Date: 2017-08-03 19:15+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Thai (http://www.transifex.com/endless-mobile-inc/eos-gates/language/th/)\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "คุณสามารถติดตั้งแอปพลิเค
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr "App Center"
+msgstr "แอพเซ็นเตอร์"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
@@ -61,7 +61,7 @@ msgstr "อย่างไรก็ตาม คุณได้ติดตั�
 #: ../src/eos_gates.js:146
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
-msgstr "อย่างไรก็ตาม คุณสามารถติดตั้ง %s บน Endless App Center"
+msgstr "อย่างไรก็ตาม คุณสามารถติดตั้ง %s บน Endless แอพเซ็นเตอร์"
 
 #: ../src/eos_gates.js:173
 #, javascript-format

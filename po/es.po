@@ -6,13 +6,13 @@
 # Eddy Alegria <eddy@endlessm.com>, 2014
 # Joel Gil León <joel@endlessm.com>, 2014
 # Joel Gil León <joel@endlessm.com>, 2014
-# Roddy Shuler <roddy@endlessm.com>, 2014
+# Roddy Shuler <roddy@endlessm.com>, 2014,2017
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-02 11:14-0700\n"
-"PO-Revision-Date: 2017-08-02 18:20+0000\n"
+"PO-Revision-Date: 2017-08-03 17:45+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/endless-mobile-inc/eos-gates/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -40,21 +40,21 @@ msgstr "Aceptar"
 #: ../src/eos_gates.js:70
 #, javascript-format
 msgid "Launch %s"
-msgstr ""
+msgstr "Ejecutar %s"
 
 #: ../src/eos_gates.js:80
 #, javascript-format
 msgid "Install %s"
-msgstr ""
+msgstr "Instalar %s"
 
 #: ../src/eos_gates.js:133
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "Puedes instalar programas desde nuestro %s."
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr ""
+msgstr "Centro de programas"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
@@ -74,12 +74,12 @@ msgstr "%s no es soportado"
 #: ../src/eos_gates_linux_package.js:23
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
-msgstr ""
+msgstr "Lo sentimos, no puedes instalar %s en Endless."
 
 #: ../src/eos_gates_windows.js:76
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
-msgstr ""
+msgstr "Lo sentimos, no puedes ejecutar %s en Endless."
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"
@@ -102,35 +102,35 @@ msgstr ""
 
 #: ../src/replacements.js:33 ../src/replacements.js:90
 msgid "Spotify"
-msgstr ""
+msgstr "Spotify"
 
 #: ../src/replacements.js:41
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 #: ../src/replacements.js:49
 msgid "Google Chrome "
-msgstr ""
+msgstr "Google Chrome "
 
 #: ../src/replacements.js:57
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: ../src/replacements.js:65
 msgid "Dropbox"
-msgstr ""
+msgstr "Dropbox"
 
 #: ../src/replacements.js:73
 msgid "Steam"
-msgstr ""
+msgstr "Steam"
 
 #: ../src/replacements.js:80
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 #: ../src/replacements.js:87
 msgid "Apple iTunes"
-msgstr ""
+msgstr "Apple iTunes"
 
 #: ../src/replacements.js:91
 msgid "Spotify is a streaming music service"
@@ -139,7 +139,7 @@ msgstr ""
 #: ../src/replacements.js:99 ../src/replacements.js:102
 #: ../src/replacements.js:125 ../src/replacements.js:147
 msgid "VLC"
-msgstr ""
+msgstr "VLC"
 
 #: ../src/replacements.js:103 ../src/replacements.js:126
 #: ../src/replacements.js:148
@@ -148,7 +148,7 @@ msgstr ""
 
 #: ../src/replacements.js:111 ../src/replacements.js:114
 msgid "FrostTorrent"
-msgstr ""
+msgstr "FrostTorrent"
 
 #: ../src/replacements.js:115
 msgid "FrostTorrent is a file-sharing application like LimeWire"
@@ -160,11 +160,11 @@ msgstr ""
 
 #: ../src/replacements.js:133
 msgid "uTorrent"
-msgstr ""
+msgstr "uTorrent"
 
 #: ../src/replacements.js:136
 msgid "Transmission"
-msgstr ""
+msgstr "Transmission"
 
 #: ../src/replacements.js:137
 msgid "Transmission is a BitTorrent client, like uTorrent"
@@ -176,7 +176,7 @@ msgstr ""
 
 #: ../src/replacements.js:155
 msgid "LINE"
-msgstr ""
+msgstr "LINE"
 
 #: ../src/replacements.js:157
 msgid "You can install and use LINE through the Google Chrome Web Store"

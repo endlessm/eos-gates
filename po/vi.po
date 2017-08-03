@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-02 11:14-0700\n"
-"PO-Revision-Date: 2017-08-02 18:20+0000\n"
+"PO-Revision-Date: 2017-08-03 16:21+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: Vietnamese (http://www.transifex.com/endless-mobile-inc/eos-gates/language/vi/)\n"
 "MIME-Version: 1.0\n"
@@ -37,31 +37,31 @@ msgstr "Ok"
 #: ../src/eos_gates.js:70
 #, javascript-format
 msgid "Launch %s"
-msgstr ""
+msgstr "Khởi chạy %s"
 
 #: ../src/eos_gates.js:80
 #, javascript-format
 msgid "Install %s"
-msgstr ""
+msgstr "Cài đặt %s"
 
 #: ../src/eos_gates.js:133
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "Bạn có thể cài đặt các ứng dụng từ %s của chúng tôi."
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr ""
+msgstr "Trung tâm Ứng dụng"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
 msgid "However, you already have %s installed"
-msgstr ""
+msgstr "Tuy nhiên, bạn đã cài đặt %s"
 
 #: ../src/eos_gates.js:146
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
-msgstr ""
+msgstr "Tuy nhiên ban có thể cài đặt %s trong Trung tâm Ứng dụng Endless"
 
 #: ../src/eos_gates.js:173
 #, javascript-format
@@ -71,119 +71,119 @@ msgstr "%s is unsupported không được hỗ trợ"
 #: ../src/eos_gates_linux_package.js:23
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
-msgstr ""
+msgstr "Rất tiếc, bạn không thể cài đặt %s trên Endless."
 
 #: ../src/eos_gates_windows.js:76
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
-msgstr ""
+msgstr "Rất tiếc, bạn không thể chạy %s trên Endless."
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"
-msgstr ""
+msgstr "Bạn đã đang chạy Endless OS"
 
 #: ../src/replacements.js:16
 msgid "You are already running Endless OS from live media"
-msgstr ""
+msgstr "Bạn đã đang chạy Endless OS từ phương tiện truyền thông trực tiếp"
 
 #: ../src/replacements.js:19
 msgid "Reformat with Endless OS"
-msgstr ""
+msgstr "Định dạng lại với Endless OS"
 
 #: ../src/replacements.js:20
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
-msgstr ""
+msgstr "Bạn có thể định dạng lại máy tính của mình với Endless OS. Nếu bạn đã cài đặt Windows và muốn giữ nó, hãy khởi động lại vào Windows và chạy Trình cài đặt Endless trong Windows."
 
 #: ../src/replacements.js:33 ../src/replacements.js:90
 msgid "Spotify"
-msgstr ""
+msgstr "Spotify"
 
 #: ../src/replacements.js:41
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 #: ../src/replacements.js:49
 msgid "Google Chrome "
-msgstr ""
+msgstr "Google Chrome"
 
 #: ../src/replacements.js:57
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: ../src/replacements.js:65
 msgid "Dropbox"
-msgstr ""
+msgstr "Dropbox"
 
 #: ../src/replacements.js:73
 msgid "Steam"
-msgstr ""
+msgstr "Stream"
 
 #: ../src/replacements.js:80
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 #: ../src/replacements.js:87
 msgid "Apple iTunes"
-msgstr ""
+msgstr "Apple iTunes"
 
 #: ../src/replacements.js:91
 msgid "Spotify is a streaming music service"
-msgstr ""
+msgstr "Spotify là một dịch vụ streaming âm nhạc"
 
 #: ../src/replacements.js:99 ../src/replacements.js:102
 #: ../src/replacements.js:125 ../src/replacements.js:147
 msgid "VLC"
-msgstr ""
+msgstr "VLC"
 
 #: ../src/replacements.js:103 ../src/replacements.js:126
 #: ../src/replacements.js:148
 msgid "VLC is a media player that can play most media files"
-msgstr ""
+msgstr "VLC là một trình phát phương tiện truyền thông có thể phát hầu hết các tập tin media"
 
 #: ../src/replacements.js:111 ../src/replacements.js:114
 msgid "FrostTorrent"
-msgstr ""
+msgstr "FrostTorrent"
 
 #: ../src/replacements.js:115
 msgid "FrostTorrent is a file-sharing application like LimeWire"
-msgstr ""
+msgstr "FrostTorrent là một ứng dụng chia sẻ tập tin như LimeWire"
 
 #: ../src/replacements.js:122
 msgid "K-Lite Mega Codec Pack"
-msgstr ""
+msgstr "K-Lite Mega Codec Pack"
 
 #: ../src/replacements.js:133
 msgid "uTorrent"
-msgstr ""
+msgstr "uTorrent"
 
 #: ../src/replacements.js:136
 msgid "Transmission"
-msgstr ""
+msgstr "Transmission"
 
 #: ../src/replacements.js:137
 msgid "Transmission is a BitTorrent client, like uTorrent"
-msgstr ""
+msgstr "Transmission là một máy khách BitTorrent như uTorrent"
 
 #: ../src/replacements.js:144
 msgid "DivX Codecs"
-msgstr ""
+msgstr "FrostTorrent"
 
 #: ../src/replacements.js:155
 msgid "LINE"
-msgstr ""
+msgstr "LINE"
 
 #: ../src/replacements.js:157
 msgid "You can install and use LINE through the Google Chrome Web Store"
-msgstr ""
+msgstr "Bạn có thể cài đặt và sử dụng LINE qua Cửa hàng Trực tuyến Google Chrome"
 
 #: ../src/replacements.js:164
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
-msgstr ""
+msgstr "Nhưng đừng lo lắng. Với Endless OS bạn đã an toàn từ những virus chỉ gây ảnh hưởng đến Windows"
 
 #: ../src/replacements.js:171
 #, javascript-format
@@ -191,12 +191,12 @@ msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
 "Endless OS. Please visit %s to check whether it has been installed correctly"
 " and contact the %s for support if you still have problems"
-msgstr ""
+msgstr "Adobe Flash đã được tải xuống và cài đặt tự động bởi trình duyệt của bạn trong Endless OS. Vui lòng truy cập %s để kiểm tra xem nó đã được cài đặt đúng chưa và liên hệ với %s để được hỗ trợ nếu bạn vẫn gặp vấn đề"
 
 #: ../src/replacements.js:171
 msgid "the Adobe Flash test page"
-msgstr ""
+msgstr "trang thử nghiệm Adobe Flash"
 
 #: ../src/replacements.js:171
 msgid "Endless OS Community"
-msgstr ""
+msgstr "Cộng đồng Endless OS"

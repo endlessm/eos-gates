@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-02 11:14-0700\n"
-"PO-Revision-Date: 2017-08-02 19:00+0000\n"
+"PO-Revision-Date: 2017-08-03 17:52+0000\n"
 "Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
 "Language-Team: French (http://www.transifex.com/endless-mobile-inc/eos-gates/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "Vous pouvez installer des applications depuis notre %s."
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr "Centre d'applis"
+msgstr "App Center"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
@@ -61,7 +61,7 @@ msgstr "Cependant, %s est déjà installé"
 #: ../src/eos_gates.js:146
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
-msgstr "Vous pouvez cependant installer %s sur le centre d'applis Endless"
+msgstr "Vous pouvez cependant installer %s sur le App Center Endless"
 
 #: ../src/eos_gates.js:173
 #, javascript-format
