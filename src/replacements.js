@@ -168,7 +168,7 @@ function definitions() {
                 windows: /.*\bflash.*player.*.exe/i,
                 linux: /flash-player.*/i
             },
-            overrideHelpMessage: _("Adobe Flash is downloaded and installed automatically by your browser on Endless OS. Please visit %s to check whether it has been installed correctly and contact the %s for support if you still have problems").format(EosGates.link(_("the Adobe Flash test page"), "https://www.adobe.com/software/flash/about"), EosGates.link(_("Endless OS Community"), "https://community.endlessos.com"))
+            overrideHelpMessage: _("Adobe Flash is downloaded and installed automatically by your browser on Endless OS. Please visit %s to check whether it has been installed correctly and contact the %s for support if you still have problems").format(EosGates.link(_("the Adobe Flash test page"), "https://www.adobe.com/software/flash/about"), EosGates.link(_("Endless Community"), "https://community.endlessos.com"))
         }
         /*,
          * Commented out until we have a GNOME Boxes Flatpak
