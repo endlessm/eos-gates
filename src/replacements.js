@@ -71,7 +71,7 @@ function definitions() {
                  linux: /steam.*/i
             },
             appName: _("Steam"),
-            flatpakInfo: { remote: 'eos-apps', id: 'com.valvesoftware.Steam' }
+            flatpakInfo: { remote: 'flathub', id: 'com.valvesoftware.Steam' }
         },
         {
             regex: {
