@@ -31,7 +31,7 @@ function definitions() {
                 windows: /spotifysetup.*.exe/i
             },
             appName: _("Spotify"),
-            flatpakInfo: { remote: 'eos-apps', id: 'com.spotify.Client' }
+            flatpakInfo: { remote: 'flathub', id: 'com.spotify.Client' }
         },
         {
             regex: {
@@ -85,7 +85,7 @@ function definitions() {
                 windows: /itunes.*.exe/i
             },
             appName: _("Apple iTunes"),
-            flatpakInfo: { remote: 'eos-apps', id: 'com.spotify.Client' },
+            flatpakInfo: { remote: 'flathub', id: 'com.spotify.Client' },
             replacementInfo: {
                 appName: _("Spotify"),
                 description: _("Spotify is a streaming music service")
@@ -97,7 +97,7 @@ function definitions() {
                 linux: /vlc.*/i
             },
             appName: _("VLC"),
-            flatpakInfo: { remote: 'eos-apps', id: 'org.videolan.VLC' },
+            flatpakInfo: { remote: 'flathub', id: 'org.videolan.VLC' },
             replacementInfo: {
                 appName: _("VLC"),
                 description: _("VLC is a media player that can play most media files")
@@ -120,7 +120,7 @@ function definitions() {
                 windows: /k-lite-mega-codec-pack.*.exe/i
             },
             appName: _("K-Lite Mega Codec Pack"),
-            flatpakInfo: { remote: 'eos-apps', id: 'org.videolan.VLC' },
+            flatpakInfo: { remote: 'flathub', id: 'org.videolan.VLC' },
             replacementInfo: {
                 appName: _("VLC"),
                 description: _("VLC is a media player that can play most media files")
@@ -131,7 +131,7 @@ function definitions() {
                 windows: /.*utorrent.*.exe/i
             },
             appName: _("uTorrent"),
-            flatpakInfo: { remote: 'eos-apps', id: 'com.transmissionbt.Transmission' },
+            flatpakInfo: { remote: 'flathub', id: 'com.transmissionbt.Transmission' },
             replacementInfo: {
                 appName: _("Transmission"),
                 description: _("Transmission is a BitTorrent client, like uTorrent")
@@ -142,7 +142,7 @@ function definitions() {
                 windows: /divx.*.exe/i
             },
             appName: _("DivX Codecs"),
-            flatpakInfo: { remote: 'eos-apps', id: 'org.videolan.VLC' },
+            flatpakInfo: { remote: 'flathub', id: 'org.videolan.VLC' },
             replacementInfo: {
                 appName: _("VLC"),
                 description: _("VLC is a media player that can play most media files")
