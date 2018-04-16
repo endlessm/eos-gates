@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Zoltan Hoppar <hopparz@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-06 20:20-0700\n"
-"PO-Revision-Date: 2017-09-07 03:21+0000\n"
-"Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
-"Language-Team: Hungarian (http://www.transifex.com/endless-mobile-inc/eos-gates/language/hu/)\n"
+"PO-Revision-Date: 2018-02-11 14:59+0000\n"
+"Last-Translator: Zoltan Hoppar <hopparz@gmail.com>\n"
+"Language-Team: Hungarian (http://www.transifex.com/endless-os/eos-gates/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,170 +20,170 @@ msgstr ""
 
 #: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
 msgid "Install Linux Applications"
-msgstr ""
+msgstr "Linux alkalmazások telepítése"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
 msgid "Launch Windows Application"
-msgstr ""
+msgstr "Windows alkalmazás indítása"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:2
 msgid "Launch Windows Applications"
-msgstr ""
+msgstr "Windows alkalmazások indítása"
 
 #: ../src/eos_gates.js:59
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../src/eos_gates.js:70
 #, javascript-format
 msgid "Launch %s"
-msgstr ""
+msgstr "%s indítása"
 
 #: ../src/eos_gates.js:80
 #, javascript-format
 msgid "Install %s"
-msgstr ""
+msgstr "%s telepítése"
 
 #: ../src/eos_gates.js:133
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "Telepítsen alkalmazásokat %s forrásunkból."
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr ""
+msgstr "App Center"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
 msgid "However, you already have %s installed"
-msgstr ""
+msgstr "Egyébként, már telepítette %s alkalmazást"
 
 #: ../src/eos_gates.js:146
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
-msgstr ""
+msgstr "Egyébként, telepítheti %s az Endless App Centerből"
 
 #: ../src/eos_gates.js:173
 #, javascript-format
 msgid "%s is unsupported"
-msgstr ""
+msgstr "%s nem támogatott"
 
 #: ../src/eos_gates_linux_package.js:23
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
-msgstr ""
+msgstr "Elnézést, nem tudja telepíteni %s az Endless rendszerére."
 
 #: ../src/eos_gates_windows.js:76
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
-msgstr ""
+msgstr "Elnézést, nem tudja futtatni %s az Endless rendszeren."
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"
-msgstr ""
+msgstr "Már futtatja az Endless OS-t."
 
 #: ../src/replacements.js:16
 msgid "You are already running Endless OS from live media"
-msgstr ""
+msgstr "Már futtatja az Endless OS-t live médiáról."
 
 #: ../src/replacements.js:19
 msgid "Reformat with Endless OS"
-msgstr ""
+msgstr "Újraformázás Endless OS rendszerrel"
 
 #: ../src/replacements.js:20
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
-msgstr ""
+msgstr "Újraformázhatja számítógépét az Endless OS segítségével. Ha már telepített egy Windows rendszert korábban, és meg szeretné tartani, indítson újra Windowsba, és futtassa újra az Endless telepítőt Windows alatt."
 
 #: ../src/replacements.js:33 ../src/replacements.js:90
 msgid "Spotify"
-msgstr ""
+msgstr "Spotify"
 
 #: ../src/replacements.js:41
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 #: ../src/replacements.js:49
 msgid "Google Chrome "
-msgstr ""
+msgstr "Google Chrome "
 
 #: ../src/replacements.js:57
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: ../src/replacements.js:65
 msgid "Dropbox"
-msgstr ""
+msgstr "Dropbox"
 
 #: ../src/replacements.js:73
 msgid "Steam"
-msgstr ""
+msgstr "Steam"
 
 #: ../src/replacements.js:80
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 #: ../src/replacements.js:87
 msgid "Apple iTunes"
-msgstr ""
+msgstr "Apple iTunes"
 
 #: ../src/replacements.js:91
 msgid "Spotify is a streaming music service"
-msgstr ""
+msgstr "Spotify egy műsorsugárzó zene szolgáltatás"
 
 #: ../src/replacements.js:99 ../src/replacements.js:102
 #: ../src/replacements.js:125 ../src/replacements.js:147
 msgid "VLC"
-msgstr ""
+msgstr "VLC"
 
 #: ../src/replacements.js:103 ../src/replacements.js:126
 #: ../src/replacements.js:148
 msgid "VLC is a media player that can play most media files"
-msgstr ""
+msgstr "VLC egy média lejátszó ami lejátssza a legtöbb média fájlt"
 
 #: ../src/replacements.js:111 ../src/replacements.js:114
 msgid "FrostTorrent"
-msgstr ""
+msgstr "FrostTorrent"
 
 #: ../src/replacements.js:115
 msgid "FrostTorrent is a file-sharing application like LimeWire"
-msgstr ""
+msgstr "FrostTorrent egy fájlmegosztó alkalmazás, mint a LimeWire"
 
 #: ../src/replacements.js:122
 msgid "K-Lite Mega Codec Pack"
-msgstr ""
+msgstr "K-Lite Mega Codec Pack"
 
 #: ../src/replacements.js:133
 msgid "uTorrent"
-msgstr ""
+msgstr "uTorrent"
 
 #: ../src/replacements.js:136
 msgid "Transmission"
-msgstr ""
+msgstr "Transmission"
 
 #: ../src/replacements.js:137
 msgid "Transmission is a BitTorrent client, like uTorrent"
-msgstr ""
+msgstr "Transmission egy BitTorrent kliens, mint uTorrent"
 
 #: ../src/replacements.js:144
 msgid "DivX Codecs"
-msgstr ""
+msgstr "DivX Codecs"
 
 #: ../src/replacements.js:155
 msgid "LINE"
-msgstr ""
+msgstr "LINE"
 
 #: ../src/replacements.js:157
 msgid "You can install and use LINE through the Google Chrome Web Store"
-msgstr ""
+msgstr "Telepítheti és használja a LINE-t a Goolgle Chrome Web Store-ján keresztül."
 
 #: ../src/replacements.js:164
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
-msgstr ""
+msgstr "Azonban ne aggódjon. Az Endless OS segítségével már biztonságban van azoktól a vírusoktól, amik csak Windowson hatásosak."
 
 #: ../src/replacements.js:171
 #, javascript-format
@@ -190,12 +191,12 @@ msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
 "Endless OS. Please visit %s to check whether it has been installed correctly"
 " and contact the %s for support if you still have problems"
-msgstr ""
+msgstr "Adobe Flash már letöltésre és telepítésre került az Endless OS böngészőjében. Kérem látogassa meg ezt az oldalt: %s hogy ellenőrizhesse a sikeres telepítést,  és vegye fel a kapcsolatot velük: %s támogatásért, amennyiben továbbra is problémái lennének."
 
 #: ../src/replacements.js:171
 msgid "the Adobe Flash test page"
-msgstr ""
+msgstr "az Adobe Flash teszt oldala"
 
 #: ../src/replacements.js:171
 msgid "Endless Community"
-msgstr ""
+msgstr "Endless Közösség"

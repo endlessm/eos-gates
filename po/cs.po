@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Martin Jelen <marty.jelen@seznam.cz>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-06 20:20-0700\n"
-"PO-Revision-Date: 2017-09-07 03:21+0000\n"
-"Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
-"Language-Team: Czech (http://www.transifex.com/endless-mobile-inc/eos-gates/language/cs/)\n"
+"PO-Revision-Date: 2018-01-18 21:45+0000\n"
+"Last-Translator: Martin Jelen <marty.jelen@seznam.cz>\n"
+"Language-Team: Czech (http://www.transifex.com/endless-os/eos-gates/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,38 +20,38 @@ msgstr ""
 
 #: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
 msgid "Install Linux Applications"
-msgstr ""
+msgstr "Nainstalovat aplikace pro Linux"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
 msgid "Launch Windows Application"
-msgstr ""
+msgstr "Spustit aplikaci pro Windows"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:2
 msgid "Launch Windows Applications"
-msgstr ""
+msgstr "Spustit aplikace pro Windows"
 
 #: ../src/eos_gates.js:59
 msgid "OK"
-msgstr ""
+msgstr "Ok"
 
 #: ../src/eos_gates.js:70
 #, javascript-format
 msgid "Launch %s"
-msgstr ""
+msgstr "Spustit %s"
 
 #: ../src/eos_gates.js:80
 #, javascript-format
 msgid "Install %s"
-msgstr ""
+msgstr "Nainstalovat %s"
 
 #: ../src/eos_gates.js:133
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "Můžete nainstalovat aplikace z naší %s."
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr ""
+msgstr "Centrum aplikací"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
