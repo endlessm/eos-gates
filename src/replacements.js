@@ -63,7 +63,7 @@ function definitions() {
                  linux: /dropbox.*/i
             },
             appName: _("Dropbox"),
-            flatpakInfo: { remote: 'eos-apps', id: 'com.dropbox.Client' }
+            flatpakInfo: { remote: 'flathub', id: 'com.dropbox.Client' }
         },
         {
             regex: {
