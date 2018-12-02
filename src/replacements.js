@@ -55,7 +55,7 @@ function definitions() {
                  linux: /skype.*/i
             },
             appName: _("Skype"),
-            flatpakInfo: { remote: 'eos-apps', id: 'com.microsoft.Skype' }
+            flatpakInfo: { remote: 'flathub', id: 'com.skype.Client' }
         },
         {
             regex: {
