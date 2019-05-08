@@ -168,6 +168,14 @@ function definitions() {
                 appName: _("GNOME Boxes"),
                 description: _("GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and run it alongside Endless OS")
             }
+        },
+        {
+            regex: {
+                windows: /minecraft.*\.(exe|msi)/i,
+                linux: /minecraft.*/i
+            },
+            appName: _("Minecraft"),
+            flatpakInfo: { remote: 'flathub', id: 'com.mojang.Minecraft' }
         }
     ];
 }
