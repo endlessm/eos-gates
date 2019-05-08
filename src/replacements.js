@@ -105,18 +105,6 @@ function definitions() {
         },
         {
             regex: {
-                windows: /(lime|frost)wire.*.exe/i,
-                linux: /frostwire.*/i
-            },
-            appName: _("FrostTorrent"),
-            flatpakInfo: { remote: 'eos-apps', id: 'net.sourceforge.Frostwire' },
-            replacementInfo: {
-                appName: _("FrostTorrent"),
-                description: _("FrostTorrent is a file-sharing application like LimeWire")
-            }
-        },
-        {
-            regex: {
                 windows: /k-lite-mega-codec-pack.*.exe/i
             },
             appName: _("K-Lite Mega Codec Pack"),
