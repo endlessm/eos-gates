@@ -157,20 +157,17 @@ function definitions() {
                 linux: /flash-player.*/i
             },
             overrideHelpMessage: _("Adobe Flash is downloaded and installed automatically by your browser on Endless OS. Please visit %s to check whether it has been installed correctly and contact the %s for support if you still have problems").format(EosGates.link(_("the Adobe Flash test page"), "https://www.adobe.com/software/flash/about"), EosGates.link(_("Endless Community"), "https://community.endlessos.com"))
+        },
+        {
+            regex: {
+                windows: /[Ww]indows.*[Ss]etup.*.exe/i
+            },
+            appName: _("Microsoft Windows"),
+            flatpakInfo: { remote: 'flathub', id: 'org.gnome.Boxes' },
+            replacementInfo: {
+                appName: _("GNOME Boxes"),
+                description: _("GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and run it alongside Endless OS")
+            }
         }
-        /*,
-         * Commented out until we have a GNOME Boxes Flatpak
-         * {
-         *    regex: {
-         *        windows: /[Ww]indows.*[Ss]etup.*.exe/i
-         *    },
-         *    appName: _("Microsoft Windows"),
-         *    flatpakInfo: { remote: 'gnome-apps', id: 'org.gnome.Boxes' },
-         *    replacementInfo: {
-         *        appName: _("GNOME Boxes"),
-         *        description: _("GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and run it alongside Endless OS")
-         *    }
-         * },
-         */
     ];
 }
