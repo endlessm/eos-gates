@@ -105,18 +105,6 @@ function definitions() {
         },
         {
             regex: {
-                windows: /(lime|frost)wire.*.exe/i,
-                linux: /frostwire.*/i
-            },
-            appName: _("FrostTorrent"),
-            flatpakInfo: { remote: 'eos-apps', id: 'net.sourceforge.Frostwire' },
-            replacementInfo: {
-                appName: _("FrostTorrent"),
-                description: _("FrostTorrent is a file-sharing application like LimeWire")
-            }
-        },
-        {
-            regex: {
                 windows: /k-lite-mega-codec-pack.*.exe/i
             },
             appName: _("K-Lite Mega Codec Pack"),
@@ -169,20 +157,25 @@ function definitions() {
                 linux: /flash-player.*/i
             },
             overrideHelpMessage: _("Adobe Flash is downloaded and installed automatically by your browser on Endless OS. Please visit %s to check whether it has been installed correctly and contact the %s for support if you still have problems").format(EosGates.link(_("the Adobe Flash test page"), "https://www.adobe.com/software/flash/about"), EosGates.link(_("Endless Community"), "https://community.endlessos.com"))
+        },
+        {
+            regex: {
+                windows: /[Ww]indows.*[Ss]etup.*.exe/i
+            },
+            appName: _("Microsoft Windows"),
+            flatpakInfo: { remote: 'flathub', id: 'org.gnome.Boxes' },
+            replacementInfo: {
+                appName: _("GNOME Boxes"),
+                description: _("GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and run it alongside Endless OS")
+            }
+        },
+        {
+            regex: {
+                windows: /minecraft.*\.(exe|msi)/i,
+                linux: /minecraft.*/i
+            },
+            appName: _("Minecraft"),
+            flatpakInfo: { remote: 'flathub', id: 'com.mojang.Minecraft' }
         }
-        /*,
-         * Commented out until we have a GNOME Boxes Flatpak
-         * {
-         *    regex: {
-         *        windows: /[Ww]indows.*[Ss]etup.*.exe/i
-         *    },
-         *    appName: _("Microsoft Windows"),
-         *    flatpakInfo: { remote: 'gnome-apps', id: 'org.gnome.Boxes' },
-         *    replacementInfo: {
-         *        appName: _("GNOME Boxes"),
-         *        description: _("GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and run it alongside Endless OS")
-         *    }
-         * },
-         */
     ];
 }
