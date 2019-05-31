@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-06 20:20-0700\n"
-"PO-Revision-Date: 2018-05-26 10:49+0000\n"
-"Last-Translator: Jordan Nenov <alabalistic@gmail.com>\n"
+"POT-Creation-Date: 2019-05-31 17:28+0100\n"
+"PO-Revision-Date: 2019-05-31 16:30+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/endless-os/eos-gates/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -134,58 +134,50 @@ msgid "Spotify is a streaming music service"
 msgstr "Със Spotify можете да слушате музика от интернет."
 
 #: ../src/replacements.js:99 ../src/replacements.js:102
-#: ../src/replacements.js:125 ../src/replacements.js:147
+#: ../src/replacements.js:113 ../src/replacements.js:135
 msgid "VLC"
 msgstr "VLC"
 
-#: ../src/replacements.js:103 ../src/replacements.js:126
-#: ../src/replacements.js:148
+#: ../src/replacements.js:103 ../src/replacements.js:114
+#: ../src/replacements.js:136
 msgid "VLC is a media player that can play most media files"
 msgstr "Със VLC можете да гледате повечето филмови  формати."
 
-#: ../src/replacements.js:111 ../src/replacements.js:114
-msgid "FrostTorrent"
-msgstr "FrostTorrent"
-
-#: ../src/replacements.js:115
-msgid "FrostTorrent is a file-sharing application like LimeWire"
-msgstr "FrostTorrent е програма за споделяне на файлове като LimeWire"
-
-#: ../src/replacements.js:122
+#: ../src/replacements.js:110
 msgid "K-Lite Mega Codec Pack"
 msgstr "K-lite Mega Codec Pack"
 
-#: ../src/replacements.js:133
+#: ../src/replacements.js:121
 msgid "uTorrent"
 msgstr "uTorrent"
 
-#: ../src/replacements.js:136
+#: ../src/replacements.js:124
 msgid "Transmission"
 msgstr "Transmission"
 
-#: ../src/replacements.js:137
+#: ../src/replacements.js:125
 msgid "Transmission is a BitTorrent client, like uTorrent"
 msgstr "Transmission e BitTorrent клиент като uTorrent"
 
-#: ../src/replacements.js:144
+#: ../src/replacements.js:132
 msgid "DivX Codecs"
 msgstr "DivX Codecs"
 
-#: ../src/replacements.js:155
+#: ../src/replacements.js:143
 msgid "LINE"
 msgstr "LINE"
 
-#: ../src/replacements.js:157
+#: ../src/replacements.js:145
 msgid "You can install and use LINE through the Google Chrome Web Store"
 msgstr "Можете да инсталирате и ползвате LINE през Google Chrome Web Store"
 
-#: ../src/replacements.js:164
+#: ../src/replacements.js:152
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
 msgstr "Но не се тревожете. Със Endless OS вие сте защитени от виросите за Windows."
 
-#: ../src/replacements.js:171
+#: ../src/replacements.js:159
 #, javascript-format
 msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
@@ -193,10 +185,28 @@ msgid ""
 " and contact the %s for support if you still have problems"
 msgstr "Adobe Flash е автоматично инсталиран във вашият браузър под Endless OS. Моля посетете %s за да проверите дали е коректно инсталиран и се свържете с %s за помощ ако все още имате проблеми."
 
-#: ../src/replacements.js:171
+#: ../src/replacements.js:159
 msgid "the Adobe Flash test page"
 msgstr "Тестовата страница на Adobe Flash"
 
-#: ../src/replacements.js:171
+#: ../src/replacements.js:159
 msgid "Endless Community"
 msgstr "Общността на Endless"
+
+#: ../src/replacements.js:165
+msgid "Microsoft Windows"
+msgstr ""
+
+#: ../src/replacements.js:168
+msgid "GNOME Boxes"
+msgstr ""
+
+#: ../src/replacements.js:169
+msgid ""
+"GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
+" run it alongside Endless OS"
+msgstr ""
+
+#: ../src/replacements.js:177
+msgid "Minecraft"
+msgstr ""

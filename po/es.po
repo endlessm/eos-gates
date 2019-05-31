@@ -7,14 +7,14 @@
 # Joel Gil León <joel@endlessm.com>, 2014
 # Joel Gil León <joel@endlessm.com>, 2014
 # Nuritzi Sanchez <ns@endlessm.com>, 2017
-# Roddy Shuler <roddy@endlessm.com>, 2014,2017
+# Roddy Shuler <roddy@stanfordalumni.org>, 2014,2017
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-06 20:20-0700\n"
-"PO-Revision-Date: 2017-09-23 20:15+0000\n"
-"Last-Translator: Roddy Shuler <roddy@endlessm.com>\n"
+"POT-Creation-Date: 2019-05-31 17:28+0100\n"
+"PO-Revision-Date: 2019-05-31 16:30+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/endless-os/eos-gates/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -138,58 +138,50 @@ msgid "Spotify is a streaming music service"
 msgstr "Spotify es un servicio de transmisión de música"
 
 #: ../src/replacements.js:99 ../src/replacements.js:102
-#: ../src/replacements.js:125 ../src/replacements.js:147
+#: ../src/replacements.js:113 ../src/replacements.js:135
 msgid "VLC"
 msgstr "VLC"
 
-#: ../src/replacements.js:103 ../src/replacements.js:126
-#: ../src/replacements.js:148
+#: ../src/replacements.js:103 ../src/replacements.js:114
+#: ../src/replacements.js:136
 msgid "VLC is a media player that can play most media files"
 msgstr "VLC es un reproductor que es compatible con la mayoría de  archivos de multimedia"
 
-#: ../src/replacements.js:111 ../src/replacements.js:114
-msgid "FrostTorrent"
-msgstr "FrostTorrent"
-
-#: ../src/replacements.js:115
-msgid "FrostTorrent is a file-sharing application like LimeWire"
-msgstr "FrostTorrent es un programa para compartir archivos, como LimeWire"
-
-#: ../src/replacements.js:122
+#: ../src/replacements.js:110
 msgid "K-Lite Mega Codec Pack"
 msgstr "Mega paquete de codecs para K-Lite"
 
-#: ../src/replacements.js:133
+#: ../src/replacements.js:121
 msgid "uTorrent"
 msgstr "uTorrent"
 
-#: ../src/replacements.js:136
+#: ../src/replacements.js:124
 msgid "Transmission"
 msgstr "Transmission"
 
-#: ../src/replacements.js:137
+#: ../src/replacements.js:125
 msgid "Transmission is a BitTorrent client, like uTorrent"
 msgstr "Transmisión es un cliente para BitTorrent, como uTorrent"
 
-#: ../src/replacements.js:144
+#: ../src/replacements.js:132
 msgid "DivX Codecs"
 msgstr "Codecs DivX"
 
-#: ../src/replacements.js:155
+#: ../src/replacements.js:143
 msgid "LINE"
 msgstr "LINE"
 
-#: ../src/replacements.js:157
+#: ../src/replacements.js:145
 msgid "You can install and use LINE through the Google Chrome Web Store"
 msgstr "Puedes instalar y utilizar LINE a través de la tienda web de Google Chrome"
 
-#: ../src/replacements.js:164
+#: ../src/replacements.js:152
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
 msgstr "Pero no te preocupes. Usar Endless OS te protege de los virus que sólo afectan a Windows."
 
-#: ../src/replacements.js:171
+#: ../src/replacements.js:159
 #, javascript-format
 msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
@@ -197,10 +189,28 @@ msgid ""
 " and contact the %s for support if you still have problems"
 msgstr "Adobe Flash se descarga e instala automáticamente por tu navegador en Endless OS. Por favor visita %s para comprobar si se ha instalado correctamente y contacta el %s para recibir ayuda si todavía te encuentras con problemas."
 
-#: ../src/replacements.js:171
+#: ../src/replacements.js:159
 msgid "the Adobe Flash test page"
 msgstr "la página para probar Adobe Flash"
 
-#: ../src/replacements.js:171
+#: ../src/replacements.js:159
 msgid "Endless Community"
 msgstr "Comunidad de Endless"
+
+#: ../src/replacements.js:165
+msgid "Microsoft Windows"
+msgstr ""
+
+#: ../src/replacements.js:168
+msgid "GNOME Boxes"
+msgstr ""
+
+#: ../src/replacements.js:169
+msgid ""
+"GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
+" run it alongside Endless OS"
+msgstr ""
+
+#: ../src/replacements.js:177
+msgid "Minecraft"
+msgstr ""
