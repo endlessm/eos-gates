@@ -176,6 +176,13 @@ function definitions() {
             },
             appName: _("Minecraft"),
             flatpakInfo: { remote: 'flathub', id: 'com.mojang.Minecraft' }
+        },
+        {
+            regex: {
+                windows: /Scratch\sDesktop\sSetup\s.*\.(exe|msi)/i,
+            },
+            appName: _("Scratch"),
+            flatpakInfo: { remote: 'flathub', id: 'edu.mit.Scratch' }
         }
     ];
 }
