@@ -171,7 +171,6 @@ const Application = new Lang.Class({
     _buildUI: function() {
         this._window = new Gtk.ApplicationWindow({ application: this,
                                                    title: _("%s is unsupported").format(this.attempt.displayName),
-                                                   skip_taskbar_hint: true,
                                                    resizable: false,
                                                    width_request: 640,
                                                    height_request: 360 });
