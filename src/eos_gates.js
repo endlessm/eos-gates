@@ -94,7 +94,7 @@ function link(text, href) {
     return '<a href="%s">%s</a>'.format(href, text);
 }
 
-const Application = new Lang.Class({
+var Application = new Lang.Class({
     Name: 'Application',
     Extends: Gtk.Application,
 
