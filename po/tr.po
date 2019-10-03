@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-31 17:28+0100\n"
-"PO-Revision-Date: 2019-05-31 16:30+0000\n"
+"POT-Creation-Date: 2019-10-03 08:20+0100\n"
+"PO-Revision-Date: 2019-10-03 07:21+0000\n"
 "Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/endless-os/eos-gates/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -71,101 +71,101 @@ msgstr "%s desteklenmiyor"
 #: ../src/eos_gates_linux_package.js:23
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
-msgstr ""
+msgstr "Üzgünüz, Endless’e %s kuramazsınız."
 
 #: ../src/eos_gates_windows.js:76
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
-msgstr ""
+msgstr "Üzgünüz, %s Endless'de çalıştıramazsınız."
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"
-msgstr ""
+msgstr "Zaten Endless kullanıyorsunuz"
 
 #: ../src/replacements.js:16
 msgid "You are already running Endless OS from live media"
-msgstr ""
+msgstr "Endless'i zaten canlı medyadan çalıştırıyorsunuz"
 
 #: ../src/replacements.js:19
 msgid "Reformat with Endless OS"
-msgstr ""
+msgstr "Endless ile Yeniden Biçimlendir"
 
 #: ../src/replacements.js:20
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
-msgstr ""
+msgstr "Endless ile bilgisayarınızı yeniden biçimlendirebilirsiniz. Yüklü işletim sistemini korumak istiyorsanız, Windows'u yeniden başlatın ve Windows altında Endless Kurucu'yu çalıştırın."
 
 #: ../src/replacements.js:33 ../src/replacements.js:90
 msgid "Spotify"
-msgstr ""
+msgstr "Spotify"
 
 #: ../src/replacements.js:41
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 #: ../src/replacements.js:49
 msgid "Google Chrome "
-msgstr ""
+msgstr "Google Chrome "
 
 #: ../src/replacements.js:57
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: ../src/replacements.js:65
 msgid "Dropbox"
-msgstr ""
+msgstr "Dropbox"
 
 #: ../src/replacements.js:73
 msgid "Steam"
-msgstr ""
+msgstr "Steam"
 
 #: ../src/replacements.js:80
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 #: ../src/replacements.js:87
 msgid "Apple iTunes"
-msgstr ""
+msgstr "Apple iTunes"
 
 #: ../src/replacements.js:91
 msgid "Spotify is a streaming music service"
-msgstr ""
+msgstr "Spotify bir müzik servisidir"
 
 #: ../src/replacements.js:99 ../src/replacements.js:102
 #: ../src/replacements.js:113 ../src/replacements.js:135
 msgid "VLC"
-msgstr ""
+msgstr "VLC"
 
 #: ../src/replacements.js:103 ../src/replacements.js:114
 #: ../src/replacements.js:136
 msgid "VLC is a media player that can play most media files"
-msgstr ""
+msgstr "VLC çoğu medya dosyasını çalabilen bir medya oynatıcısıdır"
 
 #: ../src/replacements.js:110
 msgid "K-Lite Mega Codec Pack"
-msgstr ""
+msgstr "K-Lite Mega Codec Pack"
 
 #: ../src/replacements.js:121
 msgid "uTorrent"
-msgstr ""
+msgstr "uTorrent"
 
 #: ../src/replacements.js:124
 msgid "Transmission"
-msgstr ""
+msgstr "Transmission"
 
 #: ../src/replacements.js:125
 msgid "Transmission is a BitTorrent client, like uTorrent"
-msgstr ""
+msgstr "Transmission, uTorrent gibi bir BitTorrent istemcisidir."
 
 #: ../src/replacements.js:132
 msgid "DivX Codecs"
-msgstr ""
+msgstr "DivX Codecs"
 
 #: ../src/replacements.js:143
 msgid "LINE"
-msgstr ""
+msgstr "LINE"
 
 #: ../src/replacements.js:145
 msgid "You can install and use LINE through the Google Chrome Web Store"
@@ -175,7 +175,7 @@ msgstr "Google Chrome Web Mağazası üzerinden LINE’ı kurabilir ve kullanabi
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
-msgstr ""
+msgstr "Ama merak etmeyin. Endless ile zaten yalnızca Windows'u etkileyen zararlılardan korunuyorsunuz"
 
 #: ../src/replacements.js:159
 #, javascript-format
@@ -195,18 +195,22 @@ msgstr "Endless Topluluğu"
 
 #: ../src/replacements.js:165
 msgid "Microsoft Windows"
-msgstr ""
+msgstr "Microsoft Windows"
 
 #: ../src/replacements.js:168
 msgid "GNOME Boxes"
-msgstr ""
+msgstr "GNOME Boxes"
 
 #: ../src/replacements.js:169
 msgid ""
 "GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
 " run it alongside Endless OS"
-msgstr ""
+msgstr "GNOME Boxes, Microsoft Windows'u kurabileceğiniz ve Endless ile birlikte çalıştırabileceğiniz bir Sanal Makine yöneticisidir"
 
 #: ../src/replacements.js:177
 msgid "Minecraft"
+msgstr "Minecraft"
+
+#: ../src/replacements.js:184
+msgid "Scratch"
 msgstr ""

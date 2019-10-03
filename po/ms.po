@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# abuyop <abuyop@gmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-31 17:28+0100\n"
-"PO-Revision-Date: 2019-05-31 16:30+0000\n"
+"POT-Creation-Date: 2019-10-03 08:20+0100\n"
+"PO-Revision-Date: 2019-10-03 07:21+0000\n"
 "Last-Translator: Will Thompson <wjt@endlessm.com>\n"
 "Language-Team: Malay (http://www.transifex.com/endless-os/eos-gates/language/ms/)\n"
 "MIME-Version: 1.0\n"
@@ -19,162 +20,162 @@ msgstr ""
 
 #: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
 msgid "Install Linux Applications"
-msgstr ""
+msgstr "Pasang Aplikasi-Aplikasi Linux"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
 msgid "Launch Windows Application"
-msgstr ""
+msgstr "Lancar Aplikasi Windows"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:2
 msgid "Launch Windows Applications"
-msgstr ""
+msgstr "Lancar Aplikasi-Aplikasi Windows"
 
 #: ../src/eos_gates.js:59
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../src/eos_gates.js:70
 #, javascript-format
 msgid "Launch %s"
-msgstr ""
+msgstr "Lancar %s"
 
 #: ../src/eos_gates.js:80
 #, javascript-format
 msgid "Install %s"
-msgstr ""
+msgstr "Pasang %s"
 
 #: ../src/eos_gates.js:133
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "Anda boleh memasang aplikasi-aplikasi melalui %s kami."
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr ""
+msgstr "Pusat Apl"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
 msgid "However, you already have %s installed"
-msgstr ""
+msgstr "Sebenarnya, anda sudah pun memasang %s"
 
 #: ../src/eos_gates.js:146
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
-msgstr ""
+msgstr "Sebenarnya, anda boleh memasang %s melalui Pusat Apl Endless"
 
 #: ../src/eos_gates.js:173
 #, javascript-format
 msgid "%s is unsupported"
-msgstr ""
+msgstr "%s tidak disokong"
 
 #: ../src/eos_gates_linux_package.js:23
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
-msgstr ""
+msgstr "Maaf, anda tidak boleh memasang %s melalui Endless."
 
 #: ../src/eos_gates_windows.js:76
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
-msgstr ""
+msgstr "Maaf, anda tidak boleh jalankan %s melalui Endless."
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"
-msgstr ""
+msgstr "Anda sudah pun menjalankan Endless OS"
 
 #: ../src/replacements.js:16
 msgid "You are already running Endless OS from live media"
-msgstr ""
+msgstr "Anda sudah pun menjalankan Endless OS melalui media langsung"
 
 #: ../src/replacements.js:19
 msgid "Reformat with Endless OS"
-msgstr ""
+msgstr "Format semula dengan Endless OS"
 
 #: ../src/replacements.js:20
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
-msgstr ""
+msgstr "Anda boleh memformat semula komputer anda dengan Endless OS. Jika anda mempunyai Windows dan mahukannya kekal, but semula ke Windows dan jalankan Pemasang Endless di dalam Windows."
 
 #: ../src/replacements.js:33 ../src/replacements.js:90
 msgid "Spotify"
-msgstr ""
+msgstr "Spotify"
 
 #: ../src/replacements.js:41
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 #: ../src/replacements.js:49
 msgid "Google Chrome "
-msgstr ""
+msgstr "Google Chrome "
 
 #: ../src/replacements.js:57
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: ../src/replacements.js:65
 msgid "Dropbox"
-msgstr ""
+msgstr "Dropbox"
 
 #: ../src/replacements.js:73
 msgid "Steam"
-msgstr ""
+msgstr "Steam"
 
 #: ../src/replacements.js:80
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 #: ../src/replacements.js:87
 msgid "Apple iTunes"
-msgstr ""
+msgstr "Apple iTunes"
 
 #: ../src/replacements.js:91
 msgid "Spotify is a streaming music service"
-msgstr ""
+msgstr "Spotify merupakan perkhidmatan muzik penstriman"
 
 #: ../src/replacements.js:99 ../src/replacements.js:102
 #: ../src/replacements.js:113 ../src/replacements.js:135
 msgid "VLC"
-msgstr ""
+msgstr "VLC"
 
 #: ../src/replacements.js:103 ../src/replacements.js:114
 #: ../src/replacements.js:136
 msgid "VLC is a media player that can play most media files"
-msgstr ""
+msgstr "VLC merupakan pemain media yang dapat memainkan banyak fail-fail media"
 
 #: ../src/replacements.js:110
 msgid "K-Lite Mega Codec Pack"
-msgstr ""
+msgstr "Pek Kodeks Mega K-Lite"
 
 #: ../src/replacements.js:121
 msgid "uTorrent"
-msgstr ""
+msgstr "uTorrent"
 
 #: ../src/replacements.js:124
 msgid "Transmission"
-msgstr ""
+msgstr "Transmission"
 
 #: ../src/replacements.js:125
 msgid "Transmission is a BitTorrent client, like uTorrent"
-msgstr ""
+msgstr "Transmission merupakan sebuah klien BitTorrent, seperti uTorrent"
 
 #: ../src/replacements.js:132
 msgid "DivX Codecs"
-msgstr ""
+msgstr "Kodeks DivX"
 
 #: ../src/replacements.js:143
 msgid "LINE"
-msgstr ""
+msgstr "LINE"
 
 #: ../src/replacements.js:145
 msgid "You can install and use LINE through the Google Chrome Web Store"
-msgstr ""
+msgstr "Anda boleh memasang dan menggunakan LINE melalui Kedai Web Google Chrome"
 
 #: ../src/replacements.js:152
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
-msgstr ""
+msgstr "Jangan risau. Dengan Endless OS anda sememangnya bebas dan selamat daripada virus-virus yang hanya menjangkiti Windows"
 
 #: ../src/replacements.js:159
 #, javascript-format
@@ -182,30 +183,34 @@ msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
 "Endless OS. Please visit %s to check whether it has been installed correctly"
 " and contact the %s for support if you still have problems"
-msgstr ""
+msgstr "Adobe Flash dimuat turun dan dipasang secara automatik oleh pelayar anda di Endless OS. Sila lawati %s untuk ketahui sama ada ia telah dipasang dengan betul atau sebaliknya dan hubungi %s untuk dapatkan bantuan sekiranya ada masalah."
 
 #: ../src/replacements.js:159
 msgid "the Adobe Flash test page"
-msgstr ""
+msgstr "Halaman pengujian Adobe Flash"
 
 #: ../src/replacements.js:159
 msgid "Endless Community"
-msgstr ""
+msgstr "Komuniti Endless"
 
 #: ../src/replacements.js:165
 msgid "Microsoft Windows"
-msgstr ""
+msgstr "Microsoft Windows"
 
 #: ../src/replacements.js:168
 msgid "GNOME Boxes"
-msgstr ""
+msgstr "GNOME Boxes"
 
 #: ../src/replacements.js:169
 msgid ""
 "GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
 " run it alongside Endless OS"
-msgstr ""
+msgstr "GNOME Boxes merupakan sebuah Mesin Maya yang mana anda boleh memasang Microsoft Windows dan jalankannya bersama-sama Endless OS"
 
 #: ../src/replacements.js:177
 msgid "Minecraft"
+msgstr "Minecraft"
+
+#: ../src/replacements.js:184
+msgid "Scratch"
 msgstr ""
