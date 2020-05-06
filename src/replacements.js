@@ -39,7 +39,7 @@ function definitions() {
                 linux: /firefox.*/i
             },
             appName: _("Firefox"),
-            flatpakInfo: { remote: 'eos-apps', id: 'org.mozilla.Firefox' }
+            flatpakInfo: { remote: 'flathub', id: 'org.mozilla.firefox' }
         },
         {
             regex: {
