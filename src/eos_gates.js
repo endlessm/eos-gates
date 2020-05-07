@@ -241,7 +241,7 @@ var Application = new Lang.Class({
         this._konami.connect('code-entered', Lang.bind(this, this._onKonamiCodeEntered));
 
         let action = new Gio.SimpleAction({ name: 'quit' });
-        action.connect('activate', Lang.bind(this, this.quit));
+        action.connect('activate', () => { this.quit() });
         this.add_accelerator('Escape', 'app.quit', null);
         this.add_action(action);
 
