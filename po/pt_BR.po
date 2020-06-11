@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Leandro Stanger <leandrostanger@hotmail.com>, 2019
+# Leandro Stanger <leandrostanger@hotmail.com>, 2019-2020
 # Mariana Barbosa <mariana@endlessm.com>, 2017
 # Richard Vignais, 2014
 # Roddy Shuler <roddy@stanfordalumni.org>, 2017
@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-28 11:06+0000\n"
-"PO-Revision-Date: 2019-10-03 12:30+0000\n"
+"POT-Creation-Date: 2020-06-11 11:08+0000\n"
+"PO-Revision-Date: 2020-06-05 22:06+0000\n"
 "Last-Translator: Leandro Stanger <leandrostanger@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/endless-os/eos-gates/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -80,7 +80,7 @@ msgstr "Infelizmente, não é possível instalar %s no Endless."
 #: ../src/eos_gates_windows.js:76
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
-msgstr "Infelizmente, não é possível rodar %sno Endless."
+msgstr "Infelizmente, não é possível rodar %s no Endless."
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"
