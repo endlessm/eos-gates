@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-06 11:06+0000\n"
-"PO-Revision-Date: 2019-10-03 07:21+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
+"POT-Creation-Date: 2020-10-27 23:09+0000\n"
+"PO-Revision-Date: 2020-10-28 23:13+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessos.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/endless-os/eos-gates/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -199,22 +199,22 @@ msgstr "Comunidad de Endless"
 
 #: ../src/replacements.js:165
 msgid "Microsoft Windows"
-msgstr ""
+msgstr "Microsoft Windows"
 
 #: ../src/replacements.js:168
 msgid "GNOME Boxes"
-msgstr ""
+msgstr "GNOME Boxes"
 
 #: ../src/replacements.js:169
 msgid ""
 "GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
 " run it alongside Endless OS"
-msgstr ""
+msgstr "GNOME Boxes es una máquina virtual en la que puedes instalar Microsoft Windows y ejecutarlo junto con el sistema operativo Endless"
 
 #: ../src/replacements.js:177
 msgid "Minecraft"
-msgstr ""
+msgstr "Minecraft"
 
 #: ../src/replacements.js:184
 msgid "Scratch"
-msgstr ""
+msgstr "Scratch"
