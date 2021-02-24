@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Muha Aliss <muhaaliss@gmail.com>, 2019
+# Muha Aliss <muhaaliss@gmail.com>, 2019,2021
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-27 23:09+0000\n"
-"PO-Revision-Date: 2019-10-03 07:21+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessos.org>\n"
+"POT-Creation-Date: 2021-02-24 00:10+0000\n"
+"PO-Revision-Date: 2021-02-20 01:03+0000\n"
+"Last-Translator: Muha Aliss <muhaaliss@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/endless-os/eos-gates/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,7 +47,7 @@ msgstr "%s kur"
 #: ../src/eos_gates.js:133
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "Uygulamalarımızı sitemizden yükleyebilirsiniz%s."
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
