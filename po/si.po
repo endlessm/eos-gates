@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Hela Basa, 2021
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-24 00:10+0000\n"
-"PO-Revision-Date: 2019-10-03 07:21+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessos.org>\n"
+"POT-Creation-Date: 2021-03-30 23:09+0000\n"
+"PO-Revision-Date: 2021-03-30 11:04+0000\n"
+"Last-Translator: Hela Basa\n"
 "Language-Team: Sinhala (http://www.transifex.com/endless-os/eos-gates/language/si/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,38 +20,38 @@ msgstr ""
 
 #: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
 msgid "Install Linux Applications"
-msgstr ""
+msgstr "ලිනක්ස් යෙදුම් ස්ථාපනය කරන්න"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
 msgid "Launch Windows Application"
-msgstr ""
+msgstr "වින්ඩෝස් යෙදුම දියත් කරන්න"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:2
 msgid "Launch Windows Applications"
-msgstr ""
+msgstr "වින්ඩෝස් යෙදුම් දියත් කරන්න"
 
 #: ../src/eos_gates.js:59
 msgid "OK"
-msgstr ""
+msgstr "හරි"
 
 #: ../src/eos_gates.js:70
 #, javascript-format
 msgid "Launch %s"
-msgstr ""
+msgstr "%s දියත් කරන්න"
 
 #: ../src/eos_gates.js:80
 #, javascript-format
 msgid "Install %s"
-msgstr ""
+msgstr "%s ස්ථාපනය කරන්න"
 
 #: ../src/eos_gates.js:133
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "ඔබට අපගේ %sන් යෙදුම් ස්ථාපනය කළ හැකිය"
 
 #: ../src/eos_gates.js:133
 msgid "App Center"
-msgstr ""
+msgstr "යෙදුම් මධ්‍යස්ථානය"
 
 #: ../src/eos_gates.js:144
 #, javascript-format
@@ -65,7 +66,7 @@ msgstr ""
 #: ../src/eos_gates.js:173
 #, javascript-format
 msgid "%s is unsupported"
-msgstr ""
+msgstr "%s සහය නොදක්වයි"
 
 #: ../src/eos_gates_linux_package.js:23
 #, javascript-format
@@ -79,7 +80,7 @@ msgstr ""
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"
-msgstr ""
+msgstr "ඔබ දැනටමත් එන්ඩ්ලස් ඕඑස් ධාවනය කරමින් පවතී"
 
 #: ../src/replacements.js:16
 msgid "You are already running Endless OS from live media"
@@ -98,39 +99,39 @@ msgstr ""
 
 #: ../src/replacements.js:33 ../src/replacements.js:90
 msgid "Spotify"
-msgstr ""
+msgstr "ස්පොටිෆයි"
 
 #: ../src/replacements.js:41
 msgid "Firefox"
-msgstr ""
+msgstr "ෆයර්ෆොක්ස්"
 
 #: ../src/replacements.js:49
 msgid "Google Chrome "
-msgstr ""
+msgstr "ගූගල් ක්‍රෝම්"
 
 #: ../src/replacements.js:57
 msgid "Skype"
-msgstr ""
+msgstr "ස්කයිප්"
 
 #: ../src/replacements.js:65
 msgid "Dropbox"
-msgstr ""
+msgstr "ඩ්‍රොප්බොක්ස්"
 
 #: ../src/replacements.js:73
 msgid "Steam"
-msgstr ""
+msgstr "ස්ටීම්"
 
 #: ../src/replacements.js:80
 msgid "WhatsApp"
-msgstr ""
+msgstr "වට්ස්ඇප්"
 
 #: ../src/replacements.js:87
 msgid "Apple iTunes"
-msgstr ""
+msgstr "ඇපල් අයිටියුන්ස්"
 
 #: ../src/replacements.js:91
 msgid "Spotify is a streaming music service"
-msgstr ""
+msgstr "ස්පොටිෆයි යනු ප්‍රවාහ සංගීත සේවාවකි"
 
 #: ../src/replacements.js:99 ../src/replacements.js:102
 #: ../src/replacements.js:113 ../src/replacements.js:135
@@ -148,11 +149,11 @@ msgstr ""
 
 #: ../src/replacements.js:121
 msgid "uTorrent"
-msgstr ""
+msgstr "යූටොරන්ට්"
 
 #: ../src/replacements.js:124
 msgid "Transmission"
-msgstr ""
+msgstr "ට්‍රාන්ස්මිෂන්"
 
 #: ../src/replacements.js:125
 msgid "Transmission is a BitTorrent client, like uTorrent"
@@ -164,11 +165,11 @@ msgstr ""
 
 #: ../src/replacements.js:143
 msgid "LINE"
-msgstr ""
+msgstr "ලයින්"
 
 #: ../src/replacements.js:145
 msgid "You can install and use LINE through the Google Chrome Web Store"
-msgstr ""
+msgstr "ඔබට ගූගල් ක්‍රෝම් වියමන ගබඩාව හරහා *ලයින්* ස්ථාපනය කර භාවිතා කළ හැකිය"
 
 #: ../src/replacements.js:152
 msgid ""
@@ -186,19 +187,19 @@ msgstr ""
 
 #: ../src/replacements.js:159
 msgid "the Adobe Flash test page"
-msgstr ""
+msgstr "ඇඩෝබි ෆ්ලෑෂ් පරීක්ෂණ පිටුව"
 
 #: ../src/replacements.js:159
 msgid "Endless Community"
-msgstr ""
+msgstr "එන්ඩ්ලස් ප්‍රජාව"
 
 #: ../src/replacements.js:165
 msgid "Microsoft Windows"
-msgstr ""
+msgstr "මයික්‍රොසොෆ්ට් වින්ඩෝස්"
 
 #: ../src/replacements.js:168
 msgid "GNOME Boxes"
-msgstr ""
+msgstr "ග්නොම් බොක්සස්"
 
 #: ../src/replacements.js:169
 msgid ""
@@ -208,7 +209,7 @@ msgstr ""
 
 #: ../src/replacements.js:177
 msgid "Minecraft"
-msgstr ""
+msgstr "මිනෙක්‍රාෆ්ට්"
 
 #: ../src/replacements.js:184
 msgid "Scratch"
