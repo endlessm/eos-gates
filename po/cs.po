@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Martin Jelen <marty.jelen@seznam.cz>, 2018
-# Pavel Borecki <pavel.borecki@gmail.com>, 2020
+# Pavel Borecki <pavel.borecki@gmail.com>, 2020-2021
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-30 23:09+0000\n"
-"PO-Revision-Date: 2020-05-23 14:52+0000\n"
+"POT-Creation-Date: 2021-09-25 11:10+0000\n"
+"PO-Revision-Date: 2021-09-24 08:31+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/endless-os/eos-gates/language/cs/)\n"
 "MIME-Version: 1.0\n"
@@ -89,14 +89,14 @@ msgstr "Už provozujete Endless OS, spuštěný z instalačního média"
 
 #: ../src/replacements.js:19
 msgid "Reformat with Endless OS"
-msgstr "Naformátovat s Endless OS"
+msgstr "Přeformátovat na Endless OS"
 
 #: ../src/replacements.js:20
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
-msgstr "Můžete přeformátovat váš počítač s Endless OS. Pokud máte nainstalované Windows a chcete si je ponechat, nastartujte do Windows a spusťte instalátor Endless pod Windows."
+msgstr "Můžete přeformátovat váš počítač na Endless OS. Pokud máte nainstalované Windows a chcete si je ponechat, nastartujte do Windows a spusťte instalátor Endless pod Windows."
 
 #: ../src/replacements.js:33 ../src/replacements.js:90
 msgid "Spotify"
