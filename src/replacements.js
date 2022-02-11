@@ -13,7 +13,6 @@ function generateEndlessInstallerEntry() {
     // the user on how to actually install Endless OS.
     let desktopInfo = Gio.DesktopAppInfo.new('com.endlessm.Installer.desktop');
     if (desktopInfo && !desktopInfo.get_nodisplay()) {
-        entry.overrideHelpMessage = _("You are already running Endless OS from live media");
         entry.desktopInfo = desktopInfo,
         entry.replacementInfo = {
             appName: _("Reformat with Endless OS"),
