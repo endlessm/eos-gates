@@ -4,6 +4,9 @@ const Gettext = imports.gettext;
 const Lang = imports.lang;
 const Signals = imports.signals;
 
+imports.gi.versions.Gtk = "3.0";
+imports.gi.versions.Gdk = "3.0";
+
 const Config = imports.config;
 const EosMetrics = imports.gi.EosMetrics;
 const Flatpak = imports.gi.Flatpak;
