@@ -3,7 +3,6 @@ const Lang = imports.lang;
 
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
-const Gtk = imports.gi.Gtk;
 
 const EosGates = imports.eos_gates;
 const Replacements = imports.replacements;
