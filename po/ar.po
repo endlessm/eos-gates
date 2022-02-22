@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-27 12:10+0000\n"
-"PO-Revision-Date: 2020-10-29 05:17+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessos.org>\n"
+"POT-Creation-Date: 2022-02-22 11:28+0000\n"
+"PO-Revision-Date: 2022-02-22 11:29+0000\n"
+"Last-Translator: endlessmobile_build <admin@endlessos.org>\n"
 "Language-Team: Arabic (http://www.transifex.com/endless-os/eos-gates/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,40 +30,40 @@ msgstr "إطلاق تطبيق Windows"
 msgid "Launch Windows Applications"
 msgstr "إطلاق تطبيقات Windows"
 
-#: ../src/eos_gates.js:59
+#: ../src/eos_gates.js:62
 msgid "OK"
 msgstr "موافق"
 
-#: ../src/eos_gates.js:70
+#: ../src/eos_gates.js:73
 #, javascript-format
 msgid "Launch %s"
 msgstr "بدء تشغيل %s"
 
-#: ../src/eos_gates.js:80
+#: ../src/eos_gates.js:83
 #, javascript-format
 msgid "Install %s"
 msgstr "تثبيت %s"
 
-#: ../src/eos_gates.js:133
+#: ../src/eos_gates.js:136
 #, javascript-format
 msgid "You can install applications from our %s."
 msgstr "يمكنك تثبيت التطبيقات من خلال %s الخاصة بنا. "
 
-#: ../src/eos_gates.js:133
+#: ../src/eos_gates.js:136
 msgid "App Center"
 msgstr "مركز التطبيقات "
 
-#: ../src/eos_gates.js:144
+#: ../src/eos_gates.js:147
 #, javascript-format
 msgid "However, you already have %s installed"
 msgstr "على أية حال، لقد قمت بتثبيت %s بالفعل"
 
-#: ../src/eos_gates.js:146
+#: ../src/eos_gates.js:149
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
 msgstr "على أية حال، يمكنك تثبيت %s بواسطة مركز تطبيقات Endless "
 
-#: ../src/eos_gates.js:173
+#: ../src/eos_gates.js:176
 #, javascript-format
 msgid "%s is unsupported"
 msgstr "%s غير مدعوم"
@@ -73,7 +73,7 @@ msgstr "%s غير مدعوم"
 msgid "Sorry, you can't install %s on Endless."
 msgstr "عذراً، لا يمكنك تثبيت %s على Endless."
 
-#: ../src/eos_gates_windows.js:76
+#: ../src/eos_gates_windows.js:75
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
 msgstr "عذراً، لا يمكنك تشغيل %s على نظام Endless. "
@@ -82,102 +82,98 @@ msgstr "عذراً، لا يمكنك تشغيل %s على نظام Endless. "
 msgid "You are already running Endless OS"
 msgstr "أنت تقوم بتشغيل نظام تشغيل Endless بالفعل"
 
-#: ../src/replacements.js:16
-msgid "You are already running Endless OS from live media"
-msgstr "أنت تقوم بتشغيل نظام تشغيل Endless من الوسائط الحيّة بالفعل"
-
-#: ../src/replacements.js:19
+#: ../src/replacements.js:18
 msgid "Reformat with Endless OS"
 msgstr "إعادة التهيئة بواسطة نظام تشغيل Endless"
 
-#: ../src/replacements.js:20
+#: ../src/replacements.js:19
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
 msgstr "يمكنك إعادة تهيئة الكمبيوتر الخاص بك بواسطة نظام Endless OS. إذا كان لديك نظام ويندوز مُثبت وترغب في الإبقاء عليه، أعد تشغيل جهازك على نظام ويندوز وقم بتشغيل مُثبت Endless داخل نظام ويندوز. "
 
-#: ../src/replacements.js:33 ../src/replacements.js:90
+#: ../src/replacements.js:32 ../src/replacements.js:89
 msgid "Spotify"
 msgstr "خدمة Spotify"
 
-#: ../src/replacements.js:41
+#: ../src/replacements.js:40
 msgid "Firefox"
 msgstr "متصفح فايرفوكس "
 
-#: ../src/replacements.js:49
+#: ../src/replacements.js:48
 msgid "Google Chrome "
 msgstr "متصفح جوجل كروم "
 
-#: ../src/replacements.js:57
+#: ../src/replacements.js:56
 msgid "Skype"
 msgstr "تطبيق سكايب"
 
-#: ../src/replacements.js:65
+#: ../src/replacements.js:64
 msgid "Dropbox"
 msgstr "دروب بوكس (Dropbox)"
 
-#: ../src/replacements.js:73
+#: ../src/replacements.js:72
 msgid "Steam"
 msgstr "بث"
 
-#: ../src/replacements.js:80
+#: ../src/replacements.js:79
 msgid "WhatsApp"
 msgstr "تطبيق WhatsApp"
 
-#: ../src/replacements.js:87
+#: ../src/replacements.js:86
 msgid "Apple iTunes"
 msgstr "آبل آي تيونز"
 
-#: ../src/replacements.js:91
+#: ../src/replacements.js:90
 msgid "Spotify is a streaming music service"
 msgstr "إن Spotify هو خدمة تشغيل موسيقى "
 
-#: ../src/replacements.js:99 ../src/replacements.js:102
-#: ../src/replacements.js:113 ../src/replacements.js:135
+#: ../src/replacements.js:98 ../src/replacements.js:101
+#: ../src/replacements.js:112 ../src/replacements.js:134
 msgid "VLC"
 msgstr "مشغل VLC"
 
-#: ../src/replacements.js:103 ../src/replacements.js:114
-#: ../src/replacements.js:136
+#: ../src/replacements.js:102 ../src/replacements.js:113
+#: ../src/replacements.js:135
 msgid "VLC is a media player that can play most media files"
 msgstr "إن VLC هو مشغل وسائط والذي يمكنه تشغيل معظم ملفات الوسائط "
 
-#: ../src/replacements.js:110
+#: ../src/replacements.js:109
 msgid "K-Lite Mega Codec Pack"
 msgstr "حزمة ترميز K-Lite Mega"
 
-#: ../src/replacements.js:121
+#: ../src/replacements.js:120
 msgid "uTorrent"
 msgstr "تطبيق uTorrent"
 
-#: ../src/replacements.js:124
+#: ../src/replacements.js:123
 msgid "Transmission"
 msgstr "تطبيق Transmission"
 
-#: ../src/replacements.js:125
+#: ../src/replacements.js:124
 msgid "Transmission is a BitTorrent client, like uTorrent"
 msgstr "إن Transmission هو تطبيق عميل بت تورنت مثل uTorrent "
 
-#: ../src/replacements.js:132
+#: ../src/replacements.js:131
 msgid "DivX Codecs"
 msgstr "برامج ترميزات DivX"
 
-#: ../src/replacements.js:143
+#: ../src/replacements.js:142
 msgid "LINE"
 msgstr "تطبيق LINE"
 
-#: ../src/replacements.js:145
+#: ../src/replacements.js:144
 msgid "You can install and use LINE through the Google Chrome Web Store"
 msgstr "يمكنك تثبيت واستخدام تطبيق LINE من خلال متجر الويب الخاص بجوجل كروم"
 
-#: ../src/replacements.js:152
+#: ../src/replacements.js:151
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
 msgstr "لكن لا تقلق. علي نظام تشغيل Endless أنت بالفعل آمن من الفيروسات التي تؤثر فقط على نظام ويندوز"
 
-#: ../src/replacements.js:159
+#: ../src/replacements.js:158
 #, javascript-format
 msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
@@ -185,32 +181,32 @@ msgid ""
 " and contact the %s for support if you still have problems"
 msgstr "يتم تنزيل تطبيق أدوبي فلاش وتثبيته تلقائياً بواسطة متصفحك على نظام تشغيل Endless. يُرجى زيارة %s للتحقق مما إذا كان قد تم تثبيته بشكلٍ صحيح وقم بالاتصال ب %s للحصول على الدعم إذا استمرت لديك مشاكل"
 
-#: ../src/replacements.js:159
+#: ../src/replacements.js:158
 msgid "the Adobe Flash test page"
 msgstr "صفحة اختبار أدوبي فلاش"
 
-#: ../src/replacements.js:159
+#: ../src/replacements.js:158
 msgid "Endless Community"
 msgstr "مجتمع Endless"
 
-#: ../src/replacements.js:165
+#: ../src/replacements.js:164
 msgid "Microsoft Windows"
 msgstr "مايكروسوفت ويندوز"
 
-#: ../src/replacements.js:168
+#: ../src/replacements.js:167
 msgid "GNOME Boxes"
 msgstr "مربعات جنوم"
 
-#: ../src/replacements.js:169
+#: ../src/replacements.js:168
 msgid ""
 "GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
 " run it alongside Endless OS"
 msgstr "جنوم بوكس أو مربعات جنوم هي آلة افتراضية حيث يمكنك تثبيت مايكروسوفت ويندوز وتشغيله جنباً إلى جنب مع نظام تشغيل Endless OS"
 
-#: ../src/replacements.js:177
+#: ../src/replacements.js:176
 msgid "Minecraft"
 msgstr "ماين كرافت"
 
-#: ../src/replacements.js:184
+#: ../src/replacements.js:183
 msgid "Scratch"
 msgstr "خدش"

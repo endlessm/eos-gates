@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-27 12:10+0000\n"
-"PO-Revision-Date: 2019-10-03 07:21+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessos.org>\n"
+"POT-Creation-Date: 2022-02-22 11:28+0000\n"
+"PO-Revision-Date: 2022-02-22 11:29+0000\n"
+"Last-Translator: endlessmobile_build <admin@endlessos.org>\n"
 "Language-Team: Thai (http://www.transifex.com/endless-os/eos-gates/language/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,40 +30,40 @@ msgstr "เริ่มวินโดว์แอพลิเคชัน"
 msgid "Launch Windows Applications"
 msgstr "เริ่มวินโดว์แอพลิเคชัน"
 
-#: ../src/eos_gates.js:59
+#: ../src/eos_gates.js:62
 msgid "OK"
 msgstr "ตกลง"
 
-#: ../src/eos_gates.js:70
+#: ../src/eos_gates.js:73
 #, javascript-format
 msgid "Launch %s"
 msgstr "เปิดใช้ %s"
 
-#: ../src/eos_gates.js:80
+#: ../src/eos_gates.js:83
 #, javascript-format
 msgid "Install %s"
 msgstr "ติดตั้ง %s"
 
-#: ../src/eos_gates.js:133
+#: ../src/eos_gates.js:136
 #, javascript-format
 msgid "You can install applications from our %s."
 msgstr "คุณสามารถติดตั้งแอปพลิเคชันต่างๆ จาก %s ของเรา"
 
-#: ../src/eos_gates.js:133
+#: ../src/eos_gates.js:136
 msgid "App Center"
 msgstr "แอพเซ็นเตอร์"
 
-#: ../src/eos_gates.js:144
+#: ../src/eos_gates.js:147
 #, javascript-format
 msgid "However, you already have %s installed"
 msgstr "อย่างไรก็ตาม คุณได้ติดตั้ง %s ไว้แล้ว"
 
-#: ../src/eos_gates.js:146
+#: ../src/eos_gates.js:149
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
 msgstr "อย่างไรก็ตาม คุณสามารถติดตั้ง %s บน Endless แอพเซ็นเตอร์"
 
-#: ../src/eos_gates.js:173
+#: ../src/eos_gates.js:176
 #, javascript-format
 msgid "%s is unsupported"
 msgstr "ไม่สนับสนุน %s "
@@ -73,7 +73,7 @@ msgstr "ไม่สนับสนุน %s "
 msgid "Sorry, you can't install %s on Endless."
 msgstr "ขออภัย คุณไม่สามารถติดตั้ง %s บน Endless ได้"
 
-#: ../src/eos_gates_windows.js:76
+#: ../src/eos_gates_windows.js:75
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
 msgstr "ขออภัย คุณไม่สามารถเรียกใช้ %s บน Endless ได้"
@@ -82,102 +82,98 @@ msgstr "ขออภัย คุณไม่สามารถเรียก�
 msgid "You are already running Endless OS"
 msgstr "คุณกำลังเรียกใช้ Endless OS อยู่แล้ว"
 
-#: ../src/replacements.js:16
-msgid "You are already running Endless OS from live media"
-msgstr "คุณกำลังเรียกใช้ Endless OS จากไลฟ์มีเดียอยู่แล้ว"
-
-#: ../src/replacements.js:19
+#: ../src/replacements.js:18
 msgid "Reformat with Endless OS"
 msgstr "จัดรูปแบบใหม่ด้วย Endless OS"
 
-#: ../src/replacements.js:20
+#: ../src/replacements.js:19
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
 msgstr "คุณสามารถจัดรูปแบบคอมพิวเตอร์ของคุณใหม่ด้วย Endless OS หากคุณติดตั้งระบบปฏิบัติการ Windows และต้องการเก็บไว้ ให้เริ่มต้นระบบใหม่ใน Windows และเรียกใช้ Endless Installer ขณะที่อยู่ใน Windows"
 
-#: ../src/replacements.js:33 ../src/replacements.js:90
+#: ../src/replacements.js:32 ../src/replacements.js:89
 msgid "Spotify"
 msgstr "Spotify"
 
-#: ../src/replacements.js:41
+#: ../src/replacements.js:40
 msgid "Firefox"
 msgstr "Firefox"
 
-#: ../src/replacements.js:49
+#: ../src/replacements.js:48
 msgid "Google Chrome "
 msgstr "Google Chrome"
 
-#: ../src/replacements.js:57
+#: ../src/replacements.js:56
 msgid "Skype"
 msgstr "Skype"
 
-#: ../src/replacements.js:65
+#: ../src/replacements.js:64
 msgid "Dropbox"
 msgstr "Dropbox"
 
-#: ../src/replacements.js:73
+#: ../src/replacements.js:72
 msgid "Steam"
 msgstr "Steam"
 
-#: ../src/replacements.js:80
+#: ../src/replacements.js:79
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
-#: ../src/replacements.js:87
+#: ../src/replacements.js:86
 msgid "Apple iTunes"
 msgstr "Apple iTunes"
 
-#: ../src/replacements.js:91
+#: ../src/replacements.js:90
 msgid "Spotify is a streaming music service"
 msgstr "Spotify เป็นบริการสตรีมเพลง"
 
-#: ../src/replacements.js:99 ../src/replacements.js:102
-#: ../src/replacements.js:113 ../src/replacements.js:135
+#: ../src/replacements.js:98 ../src/replacements.js:101
+#: ../src/replacements.js:112 ../src/replacements.js:134
 msgid "VLC"
 msgstr "VLC"
 
-#: ../src/replacements.js:103 ../src/replacements.js:114
-#: ../src/replacements.js:136
+#: ../src/replacements.js:102 ../src/replacements.js:113
+#: ../src/replacements.js:135
 msgid "VLC is a media player that can play most media files"
 msgstr "VLC เป็นโปรแกรมเล่นสื่อที่สามารถเล่นไฟล์สื่อได้แทบทุกประเภท"
 
-#: ../src/replacements.js:110
+#: ../src/replacements.js:109
 msgid "K-Lite Mega Codec Pack"
 msgstr "K-Lite Mega Codec Pack"
 
-#: ../src/replacements.js:121
+#: ../src/replacements.js:120
 msgid "uTorrent"
 msgstr "uTorrent"
 
-#: ../src/replacements.js:124
+#: ../src/replacements.js:123
 msgid "Transmission"
 msgstr "Transmission"
 
-#: ../src/replacements.js:125
+#: ../src/replacements.js:124
 msgid "Transmission is a BitTorrent client, like uTorrent"
 msgstr "Transmission เป็นไคลเอ็นต์ BitTorrent เช่นเดียวกับ uTorrent"
 
-#: ../src/replacements.js:132
+#: ../src/replacements.js:131
 msgid "DivX Codecs"
 msgstr "DivX Codecs"
 
-#: ../src/replacements.js:143
+#: ../src/replacements.js:142
 msgid "LINE"
 msgstr "LINE"
 
-#: ../src/replacements.js:145
+#: ../src/replacements.js:144
 msgid "You can install and use LINE through the Google Chrome Web Store"
 msgstr "คุณสามารถติดตั้งและใช้งาน LINE ผ่าน Google Chrome เว็บสโตร์"
 
-#: ../src/replacements.js:152
+#: ../src/replacements.js:151
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
 msgstr "แต่ไม่ต้องกังวล เมื่อมี Endless OS คุณก็ปลอดภัยจากไวรัสต่างๆ ที่ส่งผลกระทบต่อ Windows เท่านั้นแล้ว"
 
-#: ../src/replacements.js:159
+#: ../src/replacements.js:158
 #, javascript-format
 msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
@@ -185,32 +181,32 @@ msgid ""
 " and contact the %s for support if you still have problems"
 msgstr "Adobe Flash ถูกดาวน์โหลดและติดตั้งโดยอัตโนมัติโดยเบราว์เซอร์ของคุณบน Endless OS โปรดเข้าไปที่ %s เพื่อตรวจสอบดูว่าโปรแกรมดังกล่าวได้รับการติดตั้งอย่างถูกต้องหรือไม่ และติดต่อ %s เพื่อรับการสนับสนุนหากคุณยังคงพบปัญหา"
 
-#: ../src/replacements.js:159
+#: ../src/replacements.js:158
 msgid "the Adobe Flash test page"
 msgstr "หน้าทดสอบ Adobe Flash"
 
-#: ../src/replacements.js:159
+#: ../src/replacements.js:158
 msgid "Endless Community"
 msgstr "ชุมชน Endless"
 
-#: ../src/replacements.js:165
+#: ../src/replacements.js:164
 msgid "Microsoft Windows"
 msgstr ""
 
-#: ../src/replacements.js:168
+#: ../src/replacements.js:167
 msgid "GNOME Boxes"
 msgstr ""
 
-#: ../src/replacements.js:169
+#: ../src/replacements.js:168
 msgid ""
 "GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
 " run it alongside Endless OS"
 msgstr ""
 
-#: ../src/replacements.js:177
+#: ../src/replacements.js:176
 msgid "Minecraft"
 msgstr ""
 
-#: ../src/replacements.js:184
+#: ../src/replacements.js:183
 msgid "Scratch"
 msgstr ""
