@@ -27,6 +27,14 @@ function definitions() {
     return [
         {
             regex: {
+                windows: /^zoom.*\.exe$/i,
+                linux: /^zoom/i
+            },
+            appName: _("Zoom"),
+            flatpakInfo: { remote: 'flathub', id: 'us.zoom.Zoom' }
+        },
+        {
+            regex: {
                 windows: /spotifysetup.*.exe/i
             },
             appName: _("Spotify"),
