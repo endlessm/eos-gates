@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-22 11:28+0000\n"
-"PO-Revision-Date: 2022-02-22 11:29+0000\n"
-"Last-Translator: endlessmobile_build <admin@endlessos.org>\n"
+"POT-Creation-Date: 2022-04-09 11:10+0000\n"
+"PO-Revision-Date: 2014-09-30 05:02+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>, 2020-2021\n"
 "Language-Team: Czech (http://www.transifex.com/endless-os/eos-gates/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -94,87 +94,91 @@ msgid ""
 "Installer under Windows."
 msgstr "Můžete přeformátovat váš počítač na Endless OS. Pokud máte nainstalované Windows a chcete si je ponechat, nastartujte do Windows a spusťte instalátor Endless pod Windows."
 
-#: ../src/replacements.js:32 ../src/replacements.js:89
+#: ../src/replacements.js:33
+msgid "Zoom"
+msgstr ""
+
+#: ../src/replacements.js:40 ../src/replacements.js:97
 msgid "Spotify"
 msgstr "Spotify"
 
-#: ../src/replacements.js:40
+#: ../src/replacements.js:48
 msgid "Firefox"
 msgstr "Firefox"
 
-#: ../src/replacements.js:48
+#: ../src/replacements.js:56
 msgid "Google Chrome "
 msgstr "Google Chrome "
 
-#: ../src/replacements.js:56
+#: ../src/replacements.js:64
 msgid "Skype"
 msgstr "Skype"
 
-#: ../src/replacements.js:64
+#: ../src/replacements.js:72
 msgid "Dropbox"
 msgstr "Dropbox"
 
-#: ../src/replacements.js:72
+#: ../src/replacements.js:80
 msgid "Steam"
 msgstr "Steam"
 
-#: ../src/replacements.js:79
+#: ../src/replacements.js:87
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
-#: ../src/replacements.js:86
+#: ../src/replacements.js:94
 msgid "Apple iTunes"
 msgstr "Apple iTunes"
 
-#: ../src/replacements.js:90
+#: ../src/replacements.js:98
 msgid "Spotify is a streaming music service"
 msgstr "Spotify je služba pro streamování hudby"
 
-#: ../src/replacements.js:98 ../src/replacements.js:101
-#: ../src/replacements.js:112 ../src/replacements.js:134
+#: ../src/replacements.js:106 ../src/replacements.js:109
+#: ../src/replacements.js:120 ../src/replacements.js:142
 msgid "VLC"
 msgstr "VLC"
 
-#: ../src/replacements.js:102 ../src/replacements.js:113
-#: ../src/replacements.js:135
+#: ../src/replacements.js:110 ../src/replacements.js:121
+#: ../src/replacements.js:143
 msgid "VLC is a media player that can play most media files"
 msgstr "VLC je přehrávač multimédií, který umí přehrát většinu souborů s médii"
 
-#: ../src/replacements.js:109
+#: ../src/replacements.js:117
 msgid "K-Lite Mega Codec Pack"
 msgstr "K-Lite Mega Codec Pack"
 
-#: ../src/replacements.js:120
+#: ../src/replacements.js:128
 msgid "uTorrent"
 msgstr "uTorrent"
 
-#: ../src/replacements.js:123
+#: ../src/replacements.js:131
 msgid "Transmission"
 msgstr "Transmission"
 
-#: ../src/replacements.js:124
+#: ../src/replacements.js:132
 msgid "Transmission is a BitTorrent client, like uTorrent"
 msgstr "Transmission je BitTorrent klient, jako uTorrent"
 
-#: ../src/replacements.js:131
+#: ../src/replacements.js:139
 msgid "DivX Codecs"
 msgstr "DivX kodeky"
 
-#: ../src/replacements.js:142
+#: ../src/replacements.js:150
 msgid "LINE"
 msgstr "ŘÁDEK"
 
-#: ../src/replacements.js:144
+#: ../src/replacements.js:152
 msgid "You can install and use LINE through the Google Chrome Web Store"
 msgstr "ŘÁDEK můžete nainstalovat a používat prostřednictvím Google Chrome webového obchodu"
 
-#: ../src/replacements.js:151
+#: ../src/replacements.js:159
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
 msgstr "Ale nemějte obavy. V případě Endless OS už jste v bezpečí před viry, které postihují pouze Windows"
 
-#: ../src/replacements.js:158
+#: ../src/replacements.js:166
 #, javascript-format
 msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
@@ -182,32 +186,32 @@ msgid ""
 " and contact the %s for support if you still have problems"
 msgstr "Na Endless OS je Adobe Flash staženo a nainstalováno webovým prohlížečem. Navštivte %s a zkontrolujte, zda bylo nainstalováno správně a pokud pořád máte problémy, obraťte se na %s o podporu"
 
-#: ../src/replacements.js:158
+#: ../src/replacements.js:166
 msgid "the Adobe Flash test page"
 msgstr "testovací stránka Adobe Flash"
 
-#: ../src/replacements.js:158
+#: ../src/replacements.js:166
 msgid "Endless Community"
 msgstr "Komunita okolo Endless"
 
-#: ../src/replacements.js:164
+#: ../src/replacements.js:172
 msgid "Microsoft Windows"
 msgstr "Microsoft Windows"
 
-#: ../src/replacements.js:167
+#: ../src/replacements.js:175
 msgid "GNOME Boxes"
 msgstr "GNOME Boxy"
 
-#: ../src/replacements.js:168
+#: ../src/replacements.js:176
 msgid ""
 "GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
 " run it alongside Endless OS"
 msgstr "GNOME Boxy je virtuální stroj, do kterého si můžete nainstalovat Microsoft Windows a spouštět ho souběžně s Endless OS"
 
-#: ../src/replacements.js:176
+#: ../src/replacements.js:184
 msgid "Minecraft"
 msgstr "Minecraft"
 
-#: ../src/replacements.js:183
+#: ../src/replacements.js:191
 msgid "Scratch"
 msgstr "Scratch"
