@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Heimen Stoffels <vistausss@fastmail.com>, 2022
 # Heimen Stoffels <vistausss@fastmail.com>, 2018-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-09 11:10+0000\n"
+"POT-Creation-Date: 2022-04-16 11:10+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2018-2019\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2022\n"
 "Language-Team: Dutch (http://www.transifex.com/endless-os/eos-gates/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -95,7 +96,7 @@ msgstr "Je kunt je computer herformatteren met Endless OS. Als je Windows hebt e
 
 #: ../src/replacements.js:33
 msgid "Zoom"
-msgstr ""
+msgstr "Zoomen"
 
 #: ../src/replacements.js:40 ../src/replacements.js:97
 msgid "Spotify"
