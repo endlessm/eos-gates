@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Will Thompson <wjt@endlessos.org>, 2020
-# Shaddai, 2019-2020
+# Shaddai, 2019-2020,2022
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-13 11:10+0000\n"
+"POT-Creation-Date: 2022-10-22 11:11+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
-"Last-Translator: Shaddai, 2019-2020\n"
+"Last-Translator: Shaddai, 2019-2020,2022\n"
 "Language-Team: Slovenian (http://www.transifex.com/endless-os/eos-gates/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,11 +92,11 @@ msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
-msgstr "Računalnik lahko formatirate z Endless OS. Če imate nameščen operacijski sistem Windows in ga želite obdržati, ponovno zaženite sistem Windows in zaženite program Endless Inštaler v sistemu Windows."
+msgstr "Računalnik lahko formatirate z Endless OS. Če imate nameščen operacijski sistem Windows in ga želite obdržati, ponovno zaženite sistem Windows in zaženite program Endless Installer v sistemu Windows."
 
 #: ../src/replacements.js:33
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: ../src/replacements.js:40 ../src/replacements.js:97
 msgid "Spotify"
@@ -206,7 +206,7 @@ msgstr "GNOME Boxes"
 msgid ""
 "GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
 " run it alongside Endless OS"
-msgstr "GNOME Boxes je Virtualna Naprava kjer lahko inštalirate Microsoft Windows poleg opreacijskega sistem Endless OS"
+msgstr "GNOME Boxes je Virtualna Naprava kjer lahko namestite Microsoft Windows in ga zaženete skupaj z operacijskega sistem Endless OS"
 
 #: ../src/replacements.js:184
 msgid "Minecraft"
