@@ -1,8 +1,9 @@
 [main]
 host = https://www.transifex.com
 
-[eos-gates.app]
+[o:endless-os:p:eos-gates:r:app]
+file_filter = po/<lang>.po
 source_file = po/eos-gates.pot
 source_lang = en
-file_filter = po/<lang>.po
-type = PO
+type        = PO
+
