@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-22 11:11+0000\n"
+"POT-Creation-Date: 2022-12-13 10:36+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
 "Last-Translator: Septira Taruna <septira@endlessm.com>, 2017\n"
 "Language-Team: Indonesian (http://www.transifex.com/endless-os/eos-gates/language/id/)\n"
@@ -99,7 +99,7 @@ msgstr "Anda bisa memformat ulang komputer Anda dengan Endless OS. Bila Anda mem
 
 #: ../src/replacements.js:33
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: ../src/replacements.js:40 ../src/replacements.js:97
 msgid "Spotify"
