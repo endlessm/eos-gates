@@ -8,13 +8,14 @@
 # Joel Gil León <joel@endlessm.com>, 2014
 # Nuritzi Sanchez <ns@endlessm.com>, 2017
 # Roddy Shuler <roddy@stanfordalumni.org>, 2014,2017
+# Will Thompson <wjt@endlessos.org>, 2022
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-08 00:08+0000\n"
+"POT-Creation-Date: 2022-12-20 10:36+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
-"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>, 2014,2017\n"
+"Last-Translator: Will Thompson <wjt@endlessos.org>, 2022\n"
 "Language-Team: Spanish (http://www.transifex.com/endless-os/eos-gates/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -99,7 +100,7 @@ msgstr "Puedes formatear tu computadora con Endless OS. Si ya tienes Windows ins
 
 #: ../src/replacements.js:33
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: ../src/replacements.js:40 ../src/replacements.js:97
 msgid "Spotify"
