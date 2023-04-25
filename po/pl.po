@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-24 10:36+0000\n"
+"POT-Creation-Date: 2023-04-25 09:36+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
 "Last-Translator: Waldemar Stoczkowski, 2023\n"
-"Language-Team: Polish (http://www.transifex.com/endless-os/eos-gates/language/pl/)\n"
+"Language-Team: Polish (http://app.transifex.com/endless-os/eos-gates/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -191,7 +191,7 @@ msgstr "strona testowa Adobe Flash"
 
 #: ../src/replacements.js:166
 msgid "Endless Community"
-msgstr ""
+msgstr "Społeczność Endless"
 
 #: ../src/replacements.js:172
 msgid "Microsoft Windows"
