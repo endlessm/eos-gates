@@ -190,6 +190,36 @@ function definitions() {
             },
             appName: _("Scratch"),
             flatpakInfo: { remote: 'flathub', id: 'edu.mit.Scratch' }
-        }
+        },
+        {
+            regex: {
+                windows: /\bmicrosoft-?edge.*\.(exe|msi)$/i,
+            },
+            appName: _('Microsoft Edge'),
+            flatpakInfo: {
+                remote: 'flathub',
+                id: 'com.microsoft.Edge',
+            },
+        },
+        {
+            regex: {
+                windows: /\bopera.*\.exe$/i,
+            },
+            appName: _('Opera'),
+            flatpakInfo: {
+                remote: 'flathub',
+                id: 'com.opera.Opera',
+            },
+        },
+        {
+            regex: {
+                windows: /telegram.*\.exe$/i,
+            },
+            appName: _('Telegram'),
+            flatpakInfo: {
+                remote: 'flathub',
+                id: 'org.telegram.desktop',
+            },
+        },
     ];
 }
