@@ -232,5 +232,19 @@ function definitions() {
                 id: 'org.telegram.desktop',
             },
         },
+        {
+            regex: {
+                windows: /\bflstudio_.*\.exe$/i,
+            },
+            appName: _("FL Studio"),
+            flatpakInfo: {
+                remote: 'flathub',
+                id: 'org.ardour.Ardour',
+            },
+            replacementInfo: {
+                appName: _("Ardour"),
+                description: _("Ardour is a digital audio workstation, like FL Studio"),
+            }
+        },
     ];
 }
