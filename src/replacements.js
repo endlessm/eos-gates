@@ -178,7 +178,7 @@ function definitions() {
         },
         {
             regex: {
-                windows: /[Ww]indows.*[Ss]etup.*.exe/i
+                windows: /(windows.*(setup|install)|mediacreationtool).*.exe/i
             },
             appName: _("Microsoft Windows"),
             flatpakInfo: { remote: 'flathub', id: 'org.gnome.Boxes' },
