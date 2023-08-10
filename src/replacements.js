@@ -125,11 +125,11 @@ function definitions() {
             regex: {
                 windows: /.*utorrent.*.exe/i
             },
-            appName: _("uTorrent"),
+            appName: _("µTorrent"),
             flatpakInfo: { remote: 'flathub', id: 'com.transmissionbt.Transmission' },
             replacementInfo: {
                 appName: _("Transmission"),
-                description: _("Transmission is a BitTorrent client, like uTorrent")
+                description: _("Transmission is a BitTorrent client, like µTorrent")
             }
         },
         {
