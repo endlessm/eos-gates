@@ -134,6 +134,17 @@ function definitions() {
         },
         {
             regex: {
+                windows: /.*utweb_installer.*.exe/i
+            },
+            appName: _("µTorrent Web"),
+            flatpakInfo: { remote: 'flathub', id: 'com.transmissionbt.Transmission' },
+            replacementInfo: {
+                appName: _("Transmission"),
+                description: _("Transmission is a BitTorrent client, like µTorrent Web")
+            }
+        },
+        {
+            regex: {
                 windows: /divx.*.exe/i
             },
             appName: _("DivX Codecs"),
