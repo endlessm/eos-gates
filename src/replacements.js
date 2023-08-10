@@ -148,7 +148,7 @@ function definitions() {
                 windows: /(^|\/)line.*.exe/i
             },
             appName: _("LINE"),
-            linkInfo: { href: 'https://chrome.google.com/webstore/detail/line/menkifleemblimdogmoihpfopnplikde' },
+            linkInfo: { href: 'https://chrome.google.com/webstore/detail/line/ophjlpahpchlmihnnnihgmmeilfjmjjc' },
             overrideHelpMessage: _("You can install and use LINE through the Google Chrome Web Store")
         },
         generateEndlessInstallerEntry(),
