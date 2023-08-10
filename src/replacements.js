@@ -145,7 +145,7 @@ function definitions() {
         },
         {
             regex: {
-                windows: /line.*.exe/i
+                windows: /(^|\/)line.*.exe/i
             },
             appName: _("LINE"),
             linkInfo: { href: 'https://chrome.google.com/webstore/detail/line/menkifleemblimdogmoihpfopnplikde' },
