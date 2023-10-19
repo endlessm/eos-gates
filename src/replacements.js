@@ -125,11 +125,22 @@ function definitions() {
             regex: {
                 windows: /.*utorrent.*.exe/i
             },
-            appName: _("uTorrent"),
+            appName: _("µTorrent"),
             flatpakInfo: { remote: 'flathub', id: 'com.transmissionbt.Transmission' },
             replacementInfo: {
                 appName: _("Transmission"),
-                description: _("Transmission is a BitTorrent client, like uTorrent")
+                description: _("Transmission is a BitTorrent client, like µTorrent")
+            }
+        },
+        {
+            regex: {
+                windows: /.*utweb_installer.*.exe/i
+            },
+            appName: _("µTorrent Web"),
+            flatpakInfo: { remote: 'flathub', id: 'com.transmissionbt.Transmission' },
+            replacementInfo: {
+                appName: _("Transmission"),
+                description: _("Transmission is a BitTorrent client, like µTorrent Web")
             }
         },
         {
@@ -145,10 +156,10 @@ function definitions() {
         },
         {
             regex: {
-                windows: /line.*.exe/i
+                windows: /(^|\/)line.*.exe/i
             },
             appName: _("LINE"),
-            linkInfo: { href: 'https://chrome.google.com/webstore/detail/line/menkifleemblimdogmoihpfopnplikde' },
+            linkInfo: { href: 'https://chrome.google.com/webstore/detail/line/ophjlpahpchlmihnnnihgmmeilfjmjjc' },
             overrideHelpMessage: _("You can install and use LINE through the Google Chrome Web Store")
         },
         generateEndlessInstallerEntry(),
@@ -167,7 +178,7 @@ function definitions() {
         },
         {
             regex: {
-                windows: /[Ww]indows.*[Ss]etup.*.exe/i
+                windows: /(windows.*(setup|install)|mediacreationtool).*.exe/i
             },
             appName: _("Microsoft Windows"),
             flatpakInfo: { remote: 'flathub', id: 'org.gnome.Boxes' },
@@ -190,6 +201,50 @@ function definitions() {
             },
             appName: _("Scratch"),
             flatpakInfo: { remote: 'flathub', id: 'edu.mit.Scratch' }
-        }
+        },
+        {
+            regex: {
+                windows: /\bmicrosoft-?edge.*\.(exe|msi)$/i,
+            },
+            appName: _('Microsoft Edge'),
+            flatpakInfo: {
+                remote: 'flathub',
+                id: 'com.microsoft.Edge',
+            },
+        },
+        {
+            regex: {
+                windows: /\bopera.*\.exe$/i,
+            },
+            appName: _('Opera'),
+            flatpakInfo: {
+                remote: 'flathub',
+                id: 'com.opera.Opera',
+            },
+        },
+        {
+            regex: {
+                windows: /telegram.*\.exe$/i,
+            },
+            appName: _('Telegram'),
+            flatpakInfo: {
+                remote: 'flathub',
+                id: 'org.telegram.desktop',
+            },
+        },
+        {
+            regex: {
+                windows: /\bflstudio_.*\.exe$/i,
+            },
+            appName: _("FL Studio"),
+            flatpakInfo: {
+                remote: 'flathub',
+                id: 'org.ardour.Ardour',
+            },
+            replacementInfo: {
+                appName: _("Ardour"),
+                description: _("Ardour is a digital audio workstation, like FL Studio"),
+            }
+        },
     ];
 }
