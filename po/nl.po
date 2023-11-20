@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-18 09:36+0000\n"
+"POT-Creation-Date: 2023-11-20 14:52+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2022\n"
 "Language-Team: Dutch (http://app.transifex.com/endless-os/eos-gates/language/nl/)\n"
@@ -135,12 +135,12 @@ msgid "Spotify is a streaming music service"
 msgstr "Spotify is een dienst om muziek te streamen"
 
 #: ../src/replacements.js:106 ../src/replacements.js:109
-#: ../src/replacements.js:120 ../src/replacements.js:142
+#: ../src/replacements.js:120 ../src/replacements.js:153
 msgid "VLC"
 msgstr "VLC"
 
 #: ../src/replacements.js:110 ../src/replacements.js:121
-#: ../src/replacements.js:143
+#: ../src/replacements.js:154
 msgid "VLC is a media player that can play most media files"
 msgstr "VLC is een mediaspeler die de meeste bestanden kan afspelen"
 
@@ -149,36 +149,44 @@ msgid "K-Lite Mega Codec Pack"
 msgstr "K-Lite Mega Codec Pack"
 
 #: ../src/replacements.js:128
-msgid "uTorrent"
-msgstr "uTorrent"
+msgid "µTorrent"
+msgstr ""
 
-#: ../src/replacements.js:131
+#: ../src/replacements.js:131 ../src/replacements.js:142
 msgid "Transmission"
 msgstr "Transmission"
 
 #: ../src/replacements.js:132
-msgid "Transmission is a BitTorrent client, like uTorrent"
-msgstr "Transmission lijkt uTorrent en is een BitTorrent-client"
+msgid "Transmission is a BitTorrent client, like µTorrent"
+msgstr ""
 
 #: ../src/replacements.js:139
+msgid "µTorrent Web"
+msgstr ""
+
+#: ../src/replacements.js:143
+msgid "Transmission is a BitTorrent client, like µTorrent Web"
+msgstr ""
+
+#: ../src/replacements.js:150
 msgid "DivX Codecs"
 msgstr "DivX Codecs"
 
-#: ../src/replacements.js:150
+#: ../src/replacements.js:161
 msgid "LINE"
 msgstr "LINE"
 
-#: ../src/replacements.js:152
+#: ../src/replacements.js:163
 msgid "You can install and use LINE through the Google Chrome Web Store"
 msgstr "Je kunt LINE installeren en gebruiken via de Google Chrome Web Store"
 
-#: ../src/replacements.js:159
+#: ../src/replacements.js:170
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
 msgstr "Geen zorgen: met Endless OS kun je geen Windows-virussen oplopen"
 
-#: ../src/replacements.js:166
+#: ../src/replacements.js:177
 #, javascript-format
 msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
@@ -186,32 +194,56 @@ msgid ""
 " and contact the %s for support if you still have problems"
 msgstr "Adobe Flash wordt automatisch gedownload en geïnstalleerd door je webbrowser. Ga naar %s om te controleren of het juist geïnstalleerd is en vraag om hulp in de %s als je problemen ervaart"
 
-#: ../src/replacements.js:166
+#: ../src/replacements.js:177
 msgid "the Adobe Flash test page"
 msgstr "de Adobe Flash-testpagina"
 
-#: ../src/replacements.js:166
+#: ../src/replacements.js:177
 msgid "Endless Community"
 msgstr "Endless-gemeenschap"
 
-#: ../src/replacements.js:172
+#: ../src/replacements.js:183
 msgid "Microsoft Windows"
 msgstr "Microsoft Windows"
 
-#: ../src/replacements.js:175
+#: ../src/replacements.js:186
 msgid "GNOME Boxes"
 msgstr "GNOME Boxes"
 
-#: ../src/replacements.js:176
+#: ../src/replacements.js:187
 msgid ""
 "GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
 " run it alongside Endless OS"
 msgstr "GNOME Boxes is een virtuele machine waarin je Microsoft Windows kunt installeren en naast Endless OS kunt gebruiken"
 
-#: ../src/replacements.js:184
+#: ../src/replacements.js:195
 msgid "Minecraft"
 msgstr "Minecraft"
 
-#: ../src/replacements.js:191
+#: ../src/replacements.js:202
 msgid "Scratch"
 msgstr "Scratch"
+
+#: ../src/replacements.js:209
+msgid "Microsoft Edge"
+msgstr ""
+
+#: ../src/replacements.js:219
+msgid "Opera"
+msgstr ""
+
+#: ../src/replacements.js:229
+msgid "Telegram"
+msgstr ""
+
+#: ../src/replacements.js:239
+msgid "FL Studio"
+msgstr ""
+
+#: ../src/replacements.js:245
+msgid "Ardour"
+msgstr ""
+
+#: ../src/replacements.js:246
+msgid "Ardour is a digital audio workstation, like FL Studio"
+msgstr ""

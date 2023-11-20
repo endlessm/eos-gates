@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-18 09:36+0000\n"
+"POT-Creation-Date: 2023-11-20 14:52+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>, 2017\n"
 "Language-Team: Chinese (Taiwan) (http://app.transifex.com/endless-os/eos-gates/language/zh_TW/)\n"
@@ -135,12 +135,12 @@ msgid "Spotify is a streaming music service"
 msgstr "Spotify 是一項串流音樂服務"
 
 #: ../src/replacements.js:106 ../src/replacements.js:109
-#: ../src/replacements.js:120 ../src/replacements.js:142
+#: ../src/replacements.js:120 ../src/replacements.js:153
 msgid "VLC"
 msgstr "VLC"
 
 #: ../src/replacements.js:110 ../src/replacements.js:121
-#: ../src/replacements.js:143
+#: ../src/replacements.js:154
 msgid "VLC is a media player that can play most media files"
 msgstr "VLC 是個可以播放絕大多數媒體檔案的媒體播放器"
 
@@ -149,36 +149,44 @@ msgid "K-Lite Mega Codec Pack"
 msgstr "K-Lite Mega 影音編解碼包"
 
 #: ../src/replacements.js:128
-msgid "uTorrent"
-msgstr "uTorrent"
+msgid "µTorrent"
+msgstr ""
 
-#: ../src/replacements.js:131
+#: ../src/replacements.js:131 ../src/replacements.js:142
 msgid "Transmission"
 msgstr "Transmission"
 
 #: ../src/replacements.js:132
-msgid "Transmission is a BitTorrent client, like uTorrent"
-msgstr "Transmission 是個 BitTorrent 用戶端，類似 uTorrent"
+msgid "Transmission is a BitTorrent client, like µTorrent"
+msgstr ""
 
 #: ../src/replacements.js:139
+msgid "µTorrent Web"
+msgstr ""
+
+#: ../src/replacements.js:143
+msgid "Transmission is a BitTorrent client, like µTorrent Web"
+msgstr ""
+
+#: ../src/replacements.js:150
 msgid "DivX Codecs"
 msgstr "DivX 編解碼器"
 
-#: ../src/replacements.js:150
+#: ../src/replacements.js:161
 msgid "LINE"
 msgstr "LINE"
 
-#: ../src/replacements.js:152
+#: ../src/replacements.js:163
 msgid "You can install and use LINE through the Google Chrome Web Store"
 msgstr "您可以透過 Google Chrome 線上應用程式商店安裝和使用 LINE"
 
-#: ../src/replacements.js:159
+#: ../src/replacements.js:170
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
 msgstr "不過別擔心，使用 Endless OS 可以確保使用者不受那些僅能影響 Windows 的病毒侵犯"
 
-#: ../src/replacements.js:166
+#: ../src/replacements.js:177
 #, javascript-format
 msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
@@ -186,32 +194,56 @@ msgid ""
 " and contact the %s for support if you still have problems"
 msgstr "Adobe Flash 已透過您的瀏覽器自動下載並安裝到 Endless OS 上。請前往 %s 檢查檔案是否已正確安裝。如果仍然有問題，請與 %s 聯絡取得支援"
 
-#: ../src/replacements.js:166
+#: ../src/replacements.js:177
 msgid "the Adobe Flash test page"
 msgstr "Adobe Flash 測試頁面"
 
-#: ../src/replacements.js:166
+#: ../src/replacements.js:177
 msgid "Endless Community"
 msgstr "Endless 社群"
 
-#: ../src/replacements.js:172
+#: ../src/replacements.js:183
 msgid "Microsoft Windows"
 msgstr "Microsoft Windows"
 
-#: ../src/replacements.js:175
+#: ../src/replacements.js:186
 msgid "GNOME Boxes"
 msgstr "GNOME 機櫃"
 
-#: ../src/replacements.js:176
+#: ../src/replacements.js:187
 msgid ""
 "GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
 " run it alongside Endless OS"
 msgstr "GNOME 機櫃是一台虛擬機器，您可以在其上安裝 Microsoft Windows 並與 Endless OS 一起執行"
 
-#: ../src/replacements.js:184
+#: ../src/replacements.js:195
 msgid "Minecraft"
 msgstr "Minecraft"
 
-#: ../src/replacements.js:191
+#: ../src/replacements.js:202
 msgid "Scratch"
 msgstr "草稿"
+
+#: ../src/replacements.js:209
+msgid "Microsoft Edge"
+msgstr ""
+
+#: ../src/replacements.js:219
+msgid "Opera"
+msgstr ""
+
+#: ../src/replacements.js:229
+msgid "Telegram"
+msgstr ""
+
+#: ../src/replacements.js:239
+msgid "FL Studio"
+msgstr ""
+
+#: ../src/replacements.js:245
+msgid "Ardour"
+msgstr ""
+
+#: ../src/replacements.js:246
+msgid "Ardour is a digital audio workstation, like FL Studio"
+msgstr ""
