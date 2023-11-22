@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Heimen Stoffels <vistausss@fastmail.com>, 2022
+# Heimen Stoffels <vistausss@fastmail.com>, 2022-2023
 # Heimen Stoffels <vistausss@fastmail.com>, 2018-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 14:52+0000\n"
+"POT-Creation-Date: 2023-11-22 09:50+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2022\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2022-2023\n"
 "Language-Team: Dutch (http://app.transifex.com/endless-os/eos-gates/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,7 +150,7 @@ msgstr "K-Lite Mega Codec Pack"
 
 #: ../src/replacements.js:128
 msgid "µTorrent"
-msgstr ""
+msgstr "µTorrent"
 
 #: ../src/replacements.js:131 ../src/replacements.js:142
 msgid "Transmission"
@@ -158,15 +158,15 @@ msgstr "Transmission"
 
 #: ../src/replacements.js:132
 msgid "Transmission is a BitTorrent client, like µTorrent"
-msgstr ""
+msgstr "Transmission is een BitTorrent-client, zoals µTorrent"
 
 #: ../src/replacements.js:139
 msgid "µTorrent Web"
-msgstr ""
+msgstr "µTorrent Web"
 
 #: ../src/replacements.js:143
 msgid "Transmission is a BitTorrent client, like µTorrent Web"
-msgstr ""
+msgstr "Transmission is een BitTorrent-client, zoals µTorrent"
 
 #: ../src/replacements.js:150
 msgid "DivX Codecs"
@@ -226,24 +226,24 @@ msgstr "Scratch"
 
 #: ../src/replacements.js:209
 msgid "Microsoft Edge"
-msgstr ""
+msgstr "Microsoft Edge"
 
 #: ../src/replacements.js:219
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 #: ../src/replacements.js:229
 msgid "Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: ../src/replacements.js:239
 msgid "FL Studio"
-msgstr ""
+msgstr "FL Studio"
 
 #: ../src/replacements.js:245
 msgid "Ardour"
-msgstr ""
+msgstr "Ardour"
 
 #: ../src/replacements.js:246
 msgid "Ardour is a digital audio workstation, like FL Studio"
-msgstr ""
+msgstr "Ardour is een digitaal audiowerkstation, zoals FL Studio"
