@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Leandro Stanger <leandrostanger@hotmail.com>, 2019-2020,2022
+# Leandro Stanger <leandrostanger@hotmail.com>, 2019-2020,2022-2023
 # Mariana Barbosa <mariana@endlessm.com>, 2017
 # Richard Vignais, 2014
 # Roddy Shuler <roddy@stanfordalumni.org>, 2017
@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 14:52+0000\n"
+"POT-Creation-Date: 2023-11-29 09:50+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
-"Last-Translator: Leandro Stanger <leandrostanger@hotmail.com>, 2019-2020,2022\n"
+"Last-Translator: Leandro Stanger <leandrostanger@hotmail.com>, 2019-2020,2022-2023\n"
 "Language-Team: Portuguese (Brazil) (http://app.transifex.com/endless-os/eos-gates/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -153,7 +153,7 @@ msgstr "K-Lite Mega Codec Pack"
 
 #: ../src/replacements.js:128
 msgid "µTorrent"
-msgstr ""
+msgstr "µTorrent"
 
 #: ../src/replacements.js:131 ../src/replacements.js:142
 msgid "Transmission"
@@ -161,15 +161,15 @@ msgstr "Transmission"
 
 #: ../src/replacements.js:132
 msgid "Transmission is a BitTorrent client, like µTorrent"
-msgstr ""
+msgstr "Transmission é um cliente BitTorrent, como µTorrent"
 
 #: ../src/replacements.js:139
 msgid "µTorrent Web"
-msgstr ""
+msgstr "µTorrent Web"
 
 #: ../src/replacements.js:143
 msgid "Transmission is a BitTorrent client, like µTorrent Web"
-msgstr ""
+msgstr "Transmission é um cliente BitTorrent, como o µTorrent Web"
 
 #: ../src/replacements.js:150
 msgid "DivX Codecs"
@@ -229,24 +229,24 @@ msgstr "Scratch"
 
 #: ../src/replacements.js:209
 msgid "Microsoft Edge"
-msgstr ""
+msgstr "Microsoft Edge"
 
 #: ../src/replacements.js:219
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 #: ../src/replacements.js:229
 msgid "Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: ../src/replacements.js:239
 msgid "FL Studio"
-msgstr ""
+msgstr "FL Studio"
 
 #: ../src/replacements.js:245
 msgid "Ardour"
-msgstr ""
+msgstr "Ardour"
 
 #: ../src/replacements.js:246
 msgid "Ardour is a digital audio workstation, like FL Studio"
-msgstr ""
+msgstr "Ardour é uma estação de trabalho de áudio digital, como FL Studio"
