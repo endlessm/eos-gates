@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Victor, 2024
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 14:52+0000\n"
+"POT-Creation-Date: 2024-01-10 09:49+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Victor, 2024\n"
 "Language-Team: Russian (http://app.transifex.com/endless-os/eos-gates/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,67 +20,67 @@ msgstr ""
 
 #: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
 msgid "Install Linux Applications"
-msgstr ""
+msgstr "Установить приложения Linux"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
 msgid "Launch Windows Application"
-msgstr ""
+msgstr "Запустить приложение Windows"
 
 #: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:2
 msgid "Launch Windows Applications"
-msgstr ""
+msgstr "Запустить приложения Windows"
 
 #: ../src/eos_gates.js:62
 msgid "OK"
-msgstr ""
+msgstr "ОК"
 
 #: ../src/eos_gates.js:73
 #, javascript-format
 msgid "Launch %s"
-msgstr ""
+msgstr "Запустить %s"
 
 #: ../src/eos_gates.js:83
 #, javascript-format
 msgid "Install %s"
-msgstr ""
+msgstr "Установить %s"
 
 #: ../src/eos_gates.js:136
 #, javascript-format
 msgid "You can install applications from our %s."
-msgstr ""
+msgstr "Вы можете устанавливать приложения из нашего %s."
 
 #: ../src/eos_gates.js:136
 msgid "App Center"
-msgstr ""
+msgstr "Центр приложений"
 
 #: ../src/eos_gates.js:147
 #, javascript-format
 msgid "However, you already have %s installed"
-msgstr ""
+msgstr "Однако вы уже установили %s"
 
 #: ../src/eos_gates.js:149
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
-msgstr ""
+msgstr "Однако вы можете установить %s в Центре приложений Endless"
 
 #: ../src/eos_gates.js:176
 #, javascript-format
 msgid "%s is unsupported"
-msgstr ""
+msgstr "%s не поддерживается"
 
 #: ../src/eos_gates_linux_package.js:23
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
-msgstr ""
+msgstr "К сожалению, вы не можете установить %s на Endless."
 
 #: ../src/eos_gates_windows.js:75
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
-msgstr ""
+msgstr "К сожалению, вы не можете запустить %s на Endless."
 
 #: ../src/replacements.js:9
 msgid "You are already running Endless OS"
-msgstr ""
+msgstr "Вы уже используете Endless OS"
 
 #: ../src/replacements.js:18
 msgid "Reformat with Endless OS"
@@ -94,89 +95,89 @@ msgstr ""
 
 #: ../src/replacements.js:33
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: ../src/replacements.js:40 ../src/replacements.js:97
 msgid "Spotify"
-msgstr ""
+msgstr "Spotify"
 
 #: ../src/replacements.js:48
 msgid "Firefox"
-msgstr ""
+msgstr "Firefox"
 
 #: ../src/replacements.js:56
 msgid "Google Chrome "
-msgstr ""
+msgstr "Google Chrome "
 
 #: ../src/replacements.js:64
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: ../src/replacements.js:72
 msgid "Dropbox"
-msgstr ""
+msgstr "Dropbox"
 
 #: ../src/replacements.js:80
 msgid "Steam"
-msgstr ""
+msgstr "Steam"
 
 #: ../src/replacements.js:87
 msgid "WhatsApp"
-msgstr ""
+msgstr "WhatsApp"
 
 #: ../src/replacements.js:94
 msgid "Apple iTunes"
-msgstr ""
+msgstr "Apple iTunes"
 
 #: ../src/replacements.js:98
 msgid "Spotify is a streaming music service"
-msgstr ""
+msgstr "Spotify — сервис потоковой передачи музыки"
 
 #: ../src/replacements.js:106 ../src/replacements.js:109
 #: ../src/replacements.js:120 ../src/replacements.js:153
 msgid "VLC"
-msgstr ""
+msgstr "VLC"
 
 #: ../src/replacements.js:110 ../src/replacements.js:121
 #: ../src/replacements.js:154
 msgid "VLC is a media player that can play most media files"
-msgstr ""
+msgstr "VLC — медиаплеер, который может воспроизводить большинство медиафайлов"
 
 #: ../src/replacements.js:117
 msgid "K-Lite Mega Codec Pack"
-msgstr ""
+msgstr "Пакет кодеков K-Lite (Mega)"
 
 #: ../src/replacements.js:128
 msgid "µTorrent"
-msgstr ""
+msgstr "µTorrent"
 
 #: ../src/replacements.js:131 ../src/replacements.js:142
 msgid "Transmission"
-msgstr ""
+msgstr "Transmission"
 
 #: ../src/replacements.js:132
 msgid "Transmission is a BitTorrent client, like µTorrent"
-msgstr ""
+msgstr "Transmission — клиент BitTorrent, наподобие µTorrent"
 
 #: ../src/replacements.js:139
 msgid "µTorrent Web"
-msgstr ""
+msgstr "µTorrent Web"
 
 #: ../src/replacements.js:143
 msgid "Transmission is a BitTorrent client, like µTorrent Web"
-msgstr ""
+msgstr "Transmission — клиент BitTorrent, наподобие µTorrent Web."
 
 #: ../src/replacements.js:150
 msgid "DivX Codecs"
-msgstr ""
+msgstr "Кодеки DivX"
 
 #: ../src/replacements.js:161
 msgid "LINE"
-msgstr ""
+msgstr "LINE"
 
 #: ../src/replacements.js:163
 msgid "You can install and use LINE through the Google Chrome Web Store"
-msgstr ""
+msgstr "Вы можете установить и использовать LINE через Интернет-магазин Google Chrome"
 
 #: ../src/replacements.js:170
 msgid ""
@@ -198,15 +199,15 @@ msgstr ""
 
 #: ../src/replacements.js:177
 msgid "Endless Community"
-msgstr ""
+msgstr "Endless Community"
 
 #: ../src/replacements.js:183
 msgid "Microsoft Windows"
-msgstr ""
+msgstr "Microsoft Windows"
 
 #: ../src/replacements.js:186
 msgid "GNOME Boxes"
-msgstr ""
+msgstr "GNOME Boxes"
 
 #: ../src/replacements.js:187
 msgid ""
@@ -216,32 +217,32 @@ msgstr ""
 
 #: ../src/replacements.js:195
 msgid "Minecraft"
-msgstr ""
+msgstr "Minecraft"
 
 #: ../src/replacements.js:202
 msgid "Scratch"
-msgstr ""
+msgstr "Scratch"
 
 #: ../src/replacements.js:209
 msgid "Microsoft Edge"
-msgstr ""
+msgstr "Microsoft Edge"
 
 #: ../src/replacements.js:219
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 #: ../src/replacements.js:229
 msgid "Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: ../src/replacements.js:239
 msgid "FL Studio"
-msgstr ""
+msgstr "FL Studio"
 
 #: ../src/replacements.js:245
 msgid "Ardour"
-msgstr ""
+msgstr "Ardour"
 
 #: ../src/replacements.js:246
 msgid "Ardour is a digital audio workstation, like FL Studio"
-msgstr ""
+msgstr "Ardor — это рабочая станция для цифрового аудио, наподобие FL Studio."
