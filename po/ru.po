@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-10 09:49+0000\n"
+"POT-Creation-Date: 2024-01-17 09:49+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
 "Last-Translator: Victor, 2024\n"
 "Language-Team: Russian (http://app.transifex.com/endless-os/eos-gates/language/ru/)\n"
@@ -91,7 +91,7 @@ msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
-msgstr ""
+msgstr "Вы можете преобразить свой компьютер с помощью Endless OS. Если у вас установлена ​​Windows и вы хотите ее сохранить, запустите Windows, а затем установщик Endless в Windows."
 
 #: ../src/replacements.js:33
 msgid "Zoom"
@@ -183,7 +183,7 @@ msgstr "Вы можете установить и использовать LINE 
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
-msgstr ""
+msgstr "Но не беспокойтесь. С Endless OS вы уже защищены от вирусов, работающих только в Windows"
 
 #: ../src/replacements.js:177
 #, javascript-format
@@ -191,7 +191,7 @@ msgid ""
 "Adobe Flash is downloaded and installed automatically by your browser on "
 "Endless OS. Please visit %s to check whether it has been installed correctly"
 " and contact the %s for support if you still have problems"
-msgstr ""
+msgstr "Adobe Flash загружается и устанавливается автоматически вашим браузером в Endless OS. Пожалуйста, посетите сайт %s, чтобы проверить, правильно ли он установлен, и обратитесь в поддержку %s, если у вас остались проблемы"
 
 #: ../src/replacements.js:177
 msgid "the Adobe Flash test page"
@@ -213,7 +213,7 @@ msgstr "GNOME Boxes"
 msgid ""
 "GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
 " run it alongside Endless OS"
-msgstr ""
+msgstr "GNOME Boxes — это виртуальная машина, на которую вы можете установить Microsoft Windows и запускать ее вместе с Endless OS"
 
 #: ../src/replacements.js:195
 msgid "Minecraft"
