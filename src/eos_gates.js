@@ -15,6 +15,8 @@ const Gdk = imports.gi.Gdk;
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
 
+const LAUNCH_APP_CENTER_URI = 'x-eos-gates:launch-app-center';
+
 const KONAMI_CODE = '111 111 116 116 113 114 113 114 56 38';
 const KonamiManager = new Lang.Class({
     Name: 'KonamiManager',
@@ -134,7 +136,7 @@ var Application = new Lang.Class({
     getHelpMessage: function() {
         if (!this.replacement)
             return _("You can install applications from our %s.").format(link(_("App Center"),
-                                                                              'endlessm-app://org.gnome.Software'));
+                                                                              LAUNCH_APP_CENTER_URI));
 
         if (this.replacement.overrideHelpMessage)
             return this.replacement.overrideHelpMessage;
@@ -207,10 +209,26 @@ var Application = new Lang.Class({
                                 max_width_chars: 30,
                                 label: this.getHelpMessage() });
         label.get_style_context().add_class('unsupported-subtitle');
-        label.connect('activate-link', Lang.bind(this, function() {
+        label.connect('activate-link', (label, uri) => {
+            if (uri !== LAUNCH_APP_CENTER_URI)
+                return false;
+            const bus = this.get_dbus_connection();
+            const parameters = new GLib.Variant('(sava{sv})', ['set-mode', [GLib.Variant.new_string('overview')], {}]);
+            bus.call(
+                'org.gnome.Software',
+                '/org/gnome/Software',
+                'org.freedesktop.Application',
+                'ActivateAction',
+                parameters,
+                /* reply_type */ null,
+                Gio.DBusCallFlags.NONE,
+                /* timeout_msec */ -1,
+                /* cancellable */ null,
+                /* callback */ null,
+            )
             this.quit();
-            return false;
-        }));
+            return true;
+        });
         errorMessageBox.add(label);
 
         let extraInformationMessage = this.getExtraInformationMessage();
