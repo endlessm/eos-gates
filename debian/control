@@ -1,5 +1,5 @@
 Source: eos-gates
-Section: non-free/utils
+Section: utils
 Priority: extra
 Maintainer: Endless OS Maintainers <maintainers@endlessos.org>
 Build-Depends: debhelper-compat (= 13),
@@ -15,7 +15,7 @@ Standards-Version: 3.9.2
 
 Package: eos-gates
 Architecture: all
-Section: non-free/utils
+Section: utils
 Priority: extra
 Depends: gir1.2-glib-2.0,
          gir1.2-gtk-3.0,
