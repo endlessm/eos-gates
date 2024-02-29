@@ -1,7 +1,7 @@
 Source: eos-gates
 Section: non-free/utils
 Priority: extra
-Maintainer: Cosimo Cecchi <cosimo@endlessm.com>
+Maintainer: Endless OS Maintainers <maintainers@endlessos.org>
 Build-Depends: debhelper-compat (= 13),
                gettext,
                gir1.2-glib-2.0,
