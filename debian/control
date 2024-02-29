@@ -22,4 +22,4 @@ Depends: gir1.2-glib-2.0,
          gjs,
          ${misc:Depends}
 Description: eos-gates
- This is an utility to run Windows applications in EndlessOS
+ Controls how to handle attempts to install Windows applications
