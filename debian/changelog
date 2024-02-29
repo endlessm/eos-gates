@@ -1,0 +1,5 @@
+eos-gates (1.0.0-1) eos; urgency=low
+
+  * Initial release.
+
+ -- Cosimo Cecchi <cosimo@endlessm.com>  Fri, 12 Sep 2014 11:37:58 -0700
