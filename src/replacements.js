@@ -100,7 +100,8 @@ function definitions() {
                 windows: /whatsapp.*.exe/i
             },
             appName: _("WhatsApp"),
-            desktopInfo: Gio.DesktopAppInfo.new("eos-link-whatsapp.desktop")
+            linkInfo: { href: 'https://web.whatsapp.com/' },
+            overrideHelpMessage: _("You can use WhatsApp in your web browser."),
         },
         {
             regex: {
