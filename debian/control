@@ -1,7 +1,7 @@
 Source: eos-gates
-Section: non-free/utils
+Section: utils
 Priority: extra
-Maintainer: Cosimo Cecchi <cosimo@endlessm.com>
+Maintainer: Endless OS Maintainers <maintainers@endlessos.org>
 Build-Depends: debhelper-compat (= 13),
                gettext,
                gir1.2-glib-2.0,
@@ -15,11 +15,11 @@ Standards-Version: 3.9.2
 
 Package: eos-gates
 Architecture: all
-Section: non-free/utils
+Section: utils
 Priority: extra
 Depends: gir1.2-glib-2.0,
          gir1.2-gtk-3.0,
          gjs,
          ${misc:Depends}
 Description: eos-gates
- This is an utility to run Windows applications in EndlessOS
+ Controls how to handle attempts to install Windows applications
