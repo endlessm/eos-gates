@@ -90,10 +90,6 @@ function bold(text) {
     return '<b>%s</b>'.format(text);
 }
 
-function link(text, href) {
-    return '<a href="%s">%s</a>'.format(href, text);
-}
-
 var Application = new Lang.Class({
     Name: 'Application',
     Extends: Gtk.Application,
