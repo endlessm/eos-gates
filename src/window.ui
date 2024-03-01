@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkApplicationWindow" id="window">
+    <property name="default-width">600</property>
+    <property name="default-height">400</property>
+    <property name="resizable">false</property>
+    <property name="title">spotify.deb is unsupported</property>
+    <child type="titlebar">
+      <object class="GtkHeaderBar">
+        <property name="decoration-layout">:close</property>
+        <style>
+          <class name="flat"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkWindowHandle">
+        <child>
+          <object class="AdwClamp">
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="valign">center</property>
+                <property name="spacing">18</property>
+                <child>
+                  <object class="GtkLabel" id="title">
+                    <style>
+                      <class name="large-title"/>
+                    </style>
+                    <property name="label">You can’t install &lt;b&gt;spotify.deb&lt;/b&gt; on Endless OS</property>
+                    <property name="use-markup">true</property>
+                    <property name="wrap">true</property>
+                    <property name="justify">center</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="subtitle">
+                    <style>
+                      <class name="body"/>
+                    </style>
+                    <property name="label">However, you can install &lt;b&gt;Spotify&lt;/b&gt; from the App Center.</property>
+                    <property name="use-markup">true</property>
+                                        <property name="wrap">true</property>
+                    <property name="justify">center</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="extra_information_label">
+                    <style>
+                      <class name="body"/>
+                    </style>
+                    <property name="label">Transmission is a BitTorrent client, like µTorrent.</property>
+                    <property name="wrap">true</property>
+                    <property name="justify">center</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="button">
+                    <property name="halign">center</property>
+                    <property name="label">Install Spotify</property>
+                    <style>
+                      <class name="pill"/>
+                      <class name="suggested-action"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkShortcutController">
+        <property name="scope">managed</property>
+        <child>
+          <object class="GtkShortcut" id="shortcut">
+            <property name="trigger">Escape</property>
+            <property name="action">action(window.close)</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

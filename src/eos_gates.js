@@ -18,16 +18,15 @@ const Gettext = imports.gettext;
 const Lang = imports.lang;
 const Signals = imports.signals;
 
-imports.gi.versions.Gtk = "3.0";
-imports.gi.versions.Gdk = "3.0";
+imports.gi.versions.Gtk = "4.0";
 
 const Config = imports.config;
 const EosMetrics = imports.gi.EosMetrics;
 const Flatpak = imports.gi.Flatpak;
 const GLib = imports.gi.GLib;
-const Gdk = imports.gi.Gdk;
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
+const Adw = imports.gi.Adw;
 
 const LAUNCH_APP_CENTER_URI = 'x-eos-gates:launch-app-center';
 
@@ -131,55 +130,20 @@ var Application = new Lang.Class({
         return this.replacement.replacementInfo.description;
     },
 
-    getActionButton: function() {
-        let props = actionButtonProps({
-            attempt: this.attempt,
-            replacement: this.replacement,
-            replacementRef: this._replacementRef,
-            alreadyHaveReplacement: this._alreadyHaveReplacement
-        }, this);
-        let button = new Gtk.Button({ visible: true,
-                                      label: props.label });
-        button.connect('clicked', props.action);
-        return button;
-    },
-
     _buildUI: function() {
-        this._window = new Gtk.ApplicationWindow({ application: this,
-                                                   title: _("%s is unsupported").format(this.attempt.displayName),
-                                                   resizable: false,
-                                                   width_request: 640,
-                                                   height_request: 360 });
-        this._window.set_position(Gtk.WindowPosition.CENTER);
+        let builder = Gtk.Builder.new_from_resource('/com/endlessm/gates/window.ui');
 
+        this._window = builder.get_object('window');
+        this.add_window(this._window);
 
-        let box = new Gtk.Box({ orientation: Gtk.Orientation.VERTICAL,
-                                margin: 20,
-                                visible: true });
+        this._window.set_title(_("%s is unsupported").format(this.attempt.displayName));
 
-        let errorMessageBox = new Gtk.Box({ orientation: Gtk.Orientation.VERTICAL,
-                                            valign: Gtk.Align.CENTER,
-                                            vexpand: true,
-                                            visible: true,
-                                            spacing: 6 });
-        let label;
+        let title = builder.get_object('title');
+        title.set_markup(this._getMainErrorMessage());
 
-        label = new Gtk.Label({ visible: true,
-                                use_markup: true,
-                                wrap: true,
-                                max_width_chars: 40,
-                                halign: Gtk.Align.CENTER,
-                                label: this._getMainErrorMessage() });
-        label.get_style_context().add_class('unsupported-error');
-        errorMessageBox.add(label);
-
-        label = new Gtk.Label({ visible: true,
-                                use_markup: true,
-                                wrap: true,
-                                max_width_chars: 30,
-                                label: this.getHelpMessage() });
-        label.get_style_context().add_class('unsupported-subtitle');
-        label.connect('activate-link', (label, uri) => {
+        let subtitle = builder.get_object('subtitle');
+        subtitle.set_markup(this.getHelpMessage());
+        subtitle.connect('activate-link', (label, uri) => {
             if (uri !== LAUNCH_APP_CENTER_URI)
                 return false;
             const bus = this.get_dbus_connection();
@@ -199,22 +163,24 @@ var Application = new Lang.Class({
             this.quit();
             return true;
         });
-        errorMessageBox.add(label);
 
         let extraInformationMessage = this.getExtraInformationMessage();
+        let extra_information_label = builder.get_object('extra_information_label');
         if (extraInformationMessage) {
-            label = new Gtk.Label({ visible: true,
-                                    use_markup: true,
-                                    wrap: true,
-                                    max_width_chars: 30,
-                                    label: extraInformationMessage });
-            errorMessageBox.add(label);
+            extra_information_label.set_markup(extraInformationMessage);
+        } else {
+            extra_information_label.hide();
         }
 
-        box.add(errorMessageBox);
-        box.add(this.getActionButton());
-
-        this._window.add(box);
+        let button = builder.get_object('button');
+        let props = actionButtonProps({
+            attempt: this.attempt,
+            replacement: this.replacement,
+            replacementRef: this._replacementRef,
+            alreadyHaveReplacement: this._alreadyHaveReplacement
+        }, this);
+        button.set_label(props.label);
+        button.connect('clicked', props.action);
     },
 
     vfunc_startup: function() {
@@ -223,15 +189,6 @@ var Application = new Lang.Class({
         // Load custom CSS
         let resource = Gio.Resource.load(Config.RESOURCE_DIR + '/eos-gates.gresource');
         resource._register();
-
-        let provider = new Gtk.CssProvider();
-        provider.load_from_file(Gio.File.new_for_uri('resource:///com/endlessm/gates/eos-gates.css'));
-        Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-        let action = new Gio.SimpleAction({ name: 'quit' });
-        action.connect('activate', () => { this.quit() });
-        this.add_accelerator('Escape', 'app.quit', null);
-        this.add_action(action);
 
         this._buildUI();
     },
@@ -383,6 +340,8 @@ function findReplacementApp(filename, platform, replacements) {
 }
 
 function setupEnvironment() {
+    Adw.init();
+
     Gettext.bindtextdomain(Config.GETTEXT_PACKAGE, Config.LOCALE_DIR);
     Gettext.textdomain(Config.GETTEXT_PACKAGE);
 
