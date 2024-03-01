@@ -241,10 +241,6 @@ var Application = new Lang.Class({
     },
 });
 
-function spawnProcess(argv=[]) {
-    return Gio.Subprocess.new(argv, Gio.SubprocessFlags.NONE);
-}
-
 function getAppStoreAppId(remote, appId) {
     let installation = Flatpak.Installation.new_system(null);
     let flatpakRemote = null;
