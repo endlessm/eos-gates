@@ -189,7 +189,11 @@ function definitions() {
                 windows: /.*\bflash.*player.*.exe/i,
                 linux: /flash-player.*/i
             },
-            overrideHelpMessage: _("Adobe Flash is downloaded and installed automatically by your browser on Endless OS. Please visit %s to check whether it has been installed correctly and contact the %s for support if you still have problems").format(EosGates.link(_("the Adobe Flash test page"), "https://www.adobe.com/software/flash/about"), EosGates.link(_("Endless Community"), "https://community.endlessos.com"))
+            replacementInfo: {
+                appName: _("Adobe Flash Player"),
+                description: _("If you need to use a website that requires Flash, try installing the <a href='https://ruffle.rs/'>Ruffle Flash Emulator</a> in your web browser."),
+            },
+            flatpakInfo: { remote: 'flathub', id: 'com.adobe.Flash-Player-Projector' },
         },
         {
             regex: {
