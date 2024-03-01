@@ -334,16 +334,8 @@ function flatpakAppRef(appId) {
     }
 }
 
-function findInArray(array, test) {
-    for (let i = 0; i < array.length; ++i)
-        if (test(array[i]))
-            return array[i];
-
-    return null;
-}
-
 function findReplacementApp(filename, platform, replacements) {
-    return findInArray(replacements, a => a.regex[platform] && a.regex[platform].exec(filename));
+    return replacements.find(a => a.regex[platform] && a.regex[platform].exec(filename));
 }
 
 function setupEnvironment() {
