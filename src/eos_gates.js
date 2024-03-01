@@ -28,8 +28,6 @@ const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
 const Adw = imports.gi.Adw;
 
-const LAUNCH_APP_CENTER_URI = 'x-eos-gates:launch-app-center';
-
 function recordMetrics(event, data) {
     let recorder = EosMetrics.EventRecorder.get_default();
     recorder.record_event(event, data);
@@ -44,8 +42,22 @@ function actionButtonProps(props, application) {
     // application.
     if (!props.replacement || (!props.replacement.flatpakInfo && !props.alreadyHaveReplacement))
         return {
-            label: _("OK"),
+            label: _("Launch %s").format(_("App Center")),
             action: function() {
+                const bus = application.get_dbus_connection();
+                const parameters = new GLib.Variant('(sava{sv})', ['set-mode', [GLib.Variant.new_string('overview')], {}]);
+                bus.call(
+                    'org.gnome.Software',
+                    '/org/gnome/Software',
+                    'org.freedesktop.Application',
+                    'ActivateAction',
+                    parameters,
+                    /* reply_type */ null,
+                    Gio.DBusCallFlags.NONE,
+                    /* timeout_msec */ -1,
+                    /* cancellable */ null,
+                    /* callback */ null,
+                )
                 application.quit();
             }
         };
@@ -105,8 +117,7 @@ var Application = new Lang.Class({
 
     getHelpMessage: function() {
         if (!this.replacement)
-            return _("You can install applications from our %s.").format(link(_("App Center"),
-                                                                              LAUNCH_APP_CENTER_URI));
+            return _("You can install applications from our %s.").format(_("App Center"));
 
         if (this.replacement.overrideHelpMessage)
             return this.replacement.overrideHelpMessage;
