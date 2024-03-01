@@ -31,36 +31,6 @@ const Gtk = imports.gi.Gtk;
 
 const LAUNCH_APP_CENTER_URI = 'x-eos-gates:launch-app-center';
 
-const KONAMI_CODE = '111 111 116 116 113 114 113 114 56 38';
-const KonamiManager = new Lang.Class({
-    Name: 'KonamiManager',
-
-    _init: function() {
-        this.reset();
-    },
-
-    reset: function() {
-        this._combo = '';
-    },
-
-    keyRelease: function(event) {
-        let [success, keycode] = event.get_keycode();
-        this._combo += ' ' + keycode;
-
-        // Trim the string to make sure it doesn't get out of hand.
-        this._combo = this._combo.slice(-KONAMI_CODE.length);
-
-        if (this._combo == KONAMI_CODE) {
-            this.emit('code-entered');
-            this.reset();
-            return true;
-        } else {
-            return false;
-        }
-    },
-});
-Signals.addSignalMethods(KonamiManager.prototype);
-
 function recordMetrics(event, data) {
     let recorder = EosMetrics.EventRecorder.get_default();
     recorder.record_event(event, data);
@@ -134,19 +104,6 @@ var Application = new Lang.Class({
         this.parent({ application_id: this.APP_ID });
     },
 
-    _launchNormally: function() {
-        // Do nothing.
-    },
-
-    _onKonamiCodeEntered: function() {
-        this._launchNormally();
-        this.quit();
-    },
-
-    _onKeyRelease: function(window, event) {
-        return this._konami.keyRelease(event);
-    },
-
     getHelpMessage: function() {
         if (!this.replacement)
             return _("You can install applications from our %s.").format(link(_("App Center"),
@@ -195,7 +152,6 @@ var Application = new Lang.Class({
                                                    height_request: 360 });
         this._window.set_position(Gtk.WindowPosition.CENTER);
 
-        this._window.connect('key-release-event', Lang.bind(this, this._onKeyRelease));
 
         let box = new Gtk.Box({ orientation: Gtk.Orientation.VERTICAL,
                                 margin: 20,
@@ -271,9 +227,6 @@ var Application = new Lang.Class({
         let provider = new Gtk.CssProvider();
         provider.load_from_file(Gio.File.new_for_uri('resource:///com/endlessm/gates/eos-gates.css'));
         Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-        this._konami = new KonamiManager();
-        this._konami.connect('code-entered', Lang.bind(this, this._onKonamiCodeEntered));
 
         let action = new Gio.SimpleAction({ name: 'quit' });
         action.connect('activate', () => { this.quit() });
