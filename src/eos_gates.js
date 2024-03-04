@@ -18,48 +18,15 @@ const Gettext = imports.gettext;
 const Lang = imports.lang;
 const Signals = imports.signals;
 
-imports.gi.versions.Gtk = "3.0";
-imports.gi.versions.Gdk = "3.0";
+imports.gi.versions.Gtk = "4.0";
 
 const Config = imports.config;
 const EosMetrics = imports.gi.EosMetrics;
 const Flatpak = imports.gi.Flatpak;
 const GLib = imports.gi.GLib;
-const Gdk = imports.gi.Gdk;
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
-
-const LAUNCH_APP_CENTER_URI = 'x-eos-gates:launch-app-center';
-
-const KONAMI_CODE = '111 111 116 116 113 114 113 114 56 38';
-const KonamiManager = new Lang.Class({
-    Name: 'KonamiManager',
-
-    _init: function() {
-        this.reset();
-    },
-
-    reset: function() {
-        this._combo = '';
-    },
-
-    keyRelease: function(event) {
-        let [success, keycode] = event.get_keycode();
-        this._combo += ' ' + keycode;
-
-        // Trim the string to make sure it doesn't get out of hand.
-        this._combo = this._combo.slice(-KONAMI_CODE.length);
-
-        if (this._combo == KONAMI_CODE) {
-            this.emit('code-entered');
-            this.reset();
-            return true;
-        } else {
-            return false;
-        }
-    },
-});
-Signals.addSignalMethods(KonamiManager.prototype);
+const Adw = imports.gi.Adw;
 
 function recordMetrics(event, data) {
     let recorder = EosMetrics.EventRecorder.get_default();
@@ -75,8 +42,22 @@ function actionButtonProps(props, application) {
     // application.
     if (!props.replacement || (!props.replacement.flatpakInfo && !props.alreadyHaveReplacement))
         return {
-            label: _("OK"),
+            label: _("Launch %s").format(_("App Center")),
             action: function() {
+                const bus = application.get_dbus_connection();
+                const parameters = new GLib.Variant('(sava{sv})', ['set-mode', [GLib.Variant.new_string('overview')], {}]);
+                bus.call(
+                    'org.gnome.Software',
+                    '/org/gnome/Software',
+                    'org.freedesktop.Application',
+                    'ActivateAction',
+                    parameters,
+                    /* reply_type */ null,
+                    Gio.DBusCallFlags.NONE,
+                    /* timeout_msec */ -1,
+                    /* cancellable */ null,
+                    /* callback */ null,
+                )
                 application.quit();
             }
         };
@@ -109,10 +90,6 @@ function bold(text) {
     return '<b>%s</b>'.format(text);
 }
 
-function link(text, href) {
-    return '<a href="%s">%s</a>'.format(href, text);
-}
-
 var Application = new Lang.Class({
     Name: 'Application',
     Extends: Gtk.Application,
@@ -134,23 +111,9 @@ var Application = new Lang.Class({
         this.parent({ application_id: this.APP_ID });
     },
 
-    _launchNormally: function() {
-        // Do nothing.
-    },
-
-    _onKonamiCodeEntered: function() {
-        this._launchNormally();
-        this.quit();
-    },
-
-    _onKeyRelease: function(window, event) {
-        return this._konami.keyRelease(event);
-    },
-
     getHelpMessage: function() {
         if (!this.replacement)
-            return _("You can install applications from our %s.").format(link(_("App Center"),
-                                                                              LAUNCH_APP_CENTER_URI));
+            return _("You can install applications from our %s.").format(_("App Center"));
 
         if (this.replacement.overrideHelpMessage)
             return this.replacement.overrideHelpMessage;
@@ -174,56 +137,20 @@ var Application = new Lang.Class({
         return this.replacement.replacementInfo.description;
     },
 
-    getActionButton: function() {
-        let props = actionButtonProps({
-            attempt: this.attempt,
-            replacement: this.replacement,
-            replacementRef: this._replacementRef,
-            alreadyHaveReplacement: this._alreadyHaveReplacement
-        }, this);
-        let button = new Gtk.Button({ visible: true,
-                                      label: props.label });
-        button.connect('clicked', props.action);
-        return button;
-    },
-
     _buildUI: function() {
-        this._window = new Gtk.ApplicationWindow({ application: this,
-                                                   title: _("%s is unsupported").format(this.attempt.displayName),
-                                                   resizable: false,
-                                                   width_request: 640,
-                                                   height_request: 360 });
-        this._window.set_position(Gtk.WindowPosition.CENTER);
+        let builder = Gtk.Builder.new_from_resource('/com/endlessm/gates/window.ui');
 
-        this._window.connect('key-release-event', Lang.bind(this, this._onKeyRelease));
+        this._window = builder.get_object('window');
+        this.add_window(this._window);
 
-        let box = new Gtk.Box({ orientation: Gtk.Orientation.VERTICAL,
-                                margin: 20,
-                                visible: true });
+        this._window.set_title(_("%s is unsupported").format(this.attempt.displayName));
 
-        let errorMessageBox = new Gtk.Box({ orientation: Gtk.Orientation.VERTICAL,
-                                            valign: Gtk.Align.CENTER,
-                                            vexpand: true,
-                                            visible: true,
-                                            spacing: 6 });
-        let label;
+        let title = builder.get_object('title');
+        title.set_markup(this._getMainErrorMessage());
 
-        label = new Gtk.Label({ visible: true,
-                                use_markup: true,
-                                wrap: true,
-                                max_width_chars: 40,
-                                halign: Gtk.Align.CENTER,
-                                label: this._getMainErrorMessage() });
-        label.get_style_context().add_class('unsupported-error');
-        errorMessageBox.add(label);
-
-        label = new Gtk.Label({ visible: true,
-                                use_markup: true,
-                                wrap: true,
-                                max_width_chars: 30,
-                                label: this.getHelpMessage() });
-        label.get_style_context().add_class('unsupported-subtitle');
-        label.connect('activate-link', (label, uri) => {
+        let subtitle = builder.get_object('subtitle');
+        subtitle.set_markup(this.getHelpMessage());
+        subtitle.connect('activate-link', (label, uri) => {
             if (uri !== LAUNCH_APP_CENTER_URI)
                 return false;
             const bus = this.get_dbus_connection();
@@ -243,22 +170,24 @@ var Application = new Lang.Class({
             this.quit();
             return true;
         });
-        errorMessageBox.add(label);
 
         let extraInformationMessage = this.getExtraInformationMessage();
+        let extra_information_label = builder.get_object('extra_information_label');
         if (extraInformationMessage) {
-            label = new Gtk.Label({ visible: true,
-                                    use_markup: true,
-                                    wrap: true,
-                                    max_width_chars: 30,
-                                    label: extraInformationMessage });
-            errorMessageBox.add(label);
+            extra_information_label.set_markup(extraInformationMessage);
+        } else {
+            extra_information_label.hide();
         }
 
-        box.add(errorMessageBox);
-        box.add(this.getActionButton());
-
-        this._window.add(box);
+        let button = builder.get_object('button');
+        let props = actionButtonProps({
+            attempt: this.attempt,
+            replacement: this.replacement,
+            replacementRef: this._replacementRef,
+            alreadyHaveReplacement: this._alreadyHaveReplacement
+        }, this);
+        button.set_label(props.label);
+        button.connect('clicked', props.action);
     },
 
     vfunc_startup: function() {
@@ -268,18 +197,6 @@ var Application = new Lang.Class({
         let resource = Gio.Resource.load(Config.RESOURCE_DIR + '/eos-gates.gresource');
         resource._register();
 
-        let provider = new Gtk.CssProvider();
-        provider.load_from_file(Gio.File.new_for_uri('resource:///com/endlessm/gates/eos-gates.css'));
-        Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-        this._konami = new KonamiManager();
-        this._konami.connect('code-entered', Lang.bind(this, this._onKonamiCodeEntered));
-
-        let action = new Gio.SimpleAction({ name: 'quit' });
-        action.connect('activate', () => { this.quit() });
-        this.add_accelerator('Escape', 'app.quit', null);
-        this.add_action(action);
-
         this._buildUI();
     },
 
@@ -287,10 +204,6 @@ var Application = new Lang.Class({
         this._window.present();
     },
 });
-
-function spawnProcess(argv=[]) {
-    return Gio.Subprocess.new(argv, Gio.SubprocessFlags.NONE);
-}
 
 function getAppStoreAppId(remote, appId) {
     let installation = Flatpak.Installation.new_system(null);
@@ -421,19 +334,13 @@ function flatpakAppRef(appId) {
     }
 }
 
-function findInArray(array, test) {
-    for (let i = 0; i < array.length; ++i)
-        if (test(array[i]))
-            return array[i];
-
-    return null;
-}
-
 function findReplacementApp(filename, platform, replacements) {
-    return findInArray(replacements, a => a.regex[platform] && a.regex[platform].exec(filename));
+    return replacements.find(a => a.regex[platform] && a.regex[platform].exec(filename));
 }
 
 function setupEnvironment() {
+    Adw.init();
+
     Gettext.bindtextdomain(Config.GETTEXT_PACKAGE, Config.LOCALE_DIR);
     Gettext.textdomain(Config.GETTEXT_PACKAGE);
 
