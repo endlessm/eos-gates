@@ -212,7 +212,7 @@ function definitions() {
         },
         {
             regex: {
-                windows: /Scratch\sDesktop\sSetup\s.*\.(exe|msi)/i,
+                windows: /Scratch.*\sSetup\.(exe|msi)/i,
             },
             appName: _("Scratch"),
             flatpakInfo: { remote: 'flathub', id: 'edu.mit.Scratch' }
