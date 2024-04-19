@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the eos-gates package.
 # 
 # Translators:
 # Roddy Shuler <roddy@stanfordalumni.org>, 2017
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 09:49+0000\n"
+"POT-Creation-Date: 2024-04-19 07:28+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
 "Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>, 2017\n"
 "Language-Team: Thai (http://app.transifex.com/endless-os/eos-gates/language/th/)\n"
@@ -18,231 +18,225 @@ msgstr ""
 "Language: th\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
+#: data/com.endlessm.Gates.LinuxPackage.desktop.in.in:4
+#: data/com.endlessm.Gates.LinuxPackage.desktop.in.in:5
 msgid "Install Linux Applications"
 msgstr "ติดตั้งแอพลิเคชัน Linux"
 
-#: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
+#: data/com.endlessm.Gates.Windows.desktop.in.in:4
 msgid "Launch Windows Application"
 msgstr "เริ่มวินโดว์แอพลิเคชัน"
 
-#: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:2
+#: data/com.endlessm.Gates.Windows.desktop.in.in:5
 msgid "Launch Windows Applications"
 msgstr "เริ่มวินโดว์แอพลิเคชัน"
 
-#: ../src/eos_gates.js:62
-msgid "OK"
-msgstr "ตกลง"
-
-#: ../src/eos_gates.js:73
+#: src/eos_gates.js:45 src/eos_gates.js:70
 #, javascript-format
 msgid "Launch %s"
 msgstr "เปิดใช้ %s"
 
-#: ../src/eos_gates.js:83
+#: src/eos_gates.js:45 src/eos_gates.js:116
+msgid "App Center"
+msgstr "แอพเซ็นเตอร์"
+
+#: src/eos_gates.js:80
 #, javascript-format
 msgid "Install %s"
 msgstr "ติดตั้ง %s"
 
-#: ../src/eos_gates.js:136
+#: src/eos_gates.js:116
 #, javascript-format
 msgid "You can install applications from our %s."
 msgstr "คุณสามารถติดตั้งแอปพลิเคชันต่างๆ จาก %s ของเรา"
 
-#: ../src/eos_gates.js:136
-msgid "App Center"
-msgstr "แอพเซ็นเตอร์"
-
-#: ../src/eos_gates.js:147
+#: src/eos_gates.js:126
 #, javascript-format
 msgid "However, you already have %s installed"
 msgstr "อย่างไรก็ตาม คุณได้ติดตั้ง %s ไว้แล้ว"
 
-#: ../src/eos_gates.js:149
+#: src/eos_gates.js:128
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
 msgstr "อย่างไรก็ตาม คุณสามารถติดตั้ง %s บน Endless แอพเซ็นเตอร์"
 
-#: ../src/eos_gates.js:176
+#: src/eos_gates.js:146
 #, javascript-format
 msgid "%s is unsupported"
 msgstr "ไม่สนับสนุน %s "
 
-#: ../src/eos_gates_linux_package.js:23
+#: src/eos_gates_linux_package.js:37
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
 msgstr "ขออภัย คุณไม่สามารถติดตั้ง %s บน Endless ได้"
 
-#: ../src/eos_gates_windows.js:75
+#: src/eos_gates_windows.js:36
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
 msgstr "ขออภัย คุณไม่สามารถเรียกใช้ %s บน Endless ได้"
 
-#: ../src/replacements.js:9
+#: src/replacements.js:24
 msgid "You are already running Endless OS"
 msgstr "คุณกำลังเรียกใช้ Endless OS อยู่แล้ว"
 
-#: ../src/replacements.js:18
+#: src/replacements.js:33
 msgid "Reformat with Endless OS"
 msgstr "จัดรูปแบบใหม่ด้วย Endless OS"
 
-#: ../src/replacements.js:19
+#: src/replacements.js:34
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
 msgstr "คุณสามารถจัดรูปแบบคอมพิวเตอร์ของคุณใหม่ด้วย Endless OS หากคุณติดตั้งระบบปฏิบัติการ Windows และต้องการเก็บไว้ ให้เริ่มต้นระบบใหม่ใน Windows และเรียกใช้ Endless Installer ขณะที่อยู่ใน Windows"
 
-#: ../src/replacements.js:33
+#: src/replacements.js:48
 msgid "Zoom"
 msgstr ""
 
-#: ../src/replacements.js:40 ../src/replacements.js:97
+#: src/replacements.js:55 src/replacements.js:113
 msgid "Spotify"
 msgstr "Spotify"
 
-#: ../src/replacements.js:48
+#: src/replacements.js:63
 msgid "Firefox"
 msgstr "Firefox"
 
-#: ../src/replacements.js:56
+#: src/replacements.js:71
 msgid "Google Chrome "
 msgstr "Google Chrome"
 
-#: ../src/replacements.js:64
+#: src/replacements.js:79
 msgid "Skype"
 msgstr "Skype"
 
-#: ../src/replacements.js:72
+#: src/replacements.js:87
 msgid "Dropbox"
 msgstr "Dropbox"
 
-#: ../src/replacements.js:80
+#: src/replacements.js:95
 msgid "Steam"
 msgstr "Steam"
 
-#: ../src/replacements.js:87
+#: src/replacements.js:102
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
-#: ../src/replacements.js:94
+#: src/replacements.js:104
+msgid "You can use WhatsApp in your web browser."
+msgstr ""
+
+#: src/replacements.js:110
 msgid "Apple iTunes"
 msgstr "Apple iTunes"
 
-#: ../src/replacements.js:98
+#: src/replacements.js:114
 msgid "Spotify is a streaming music service"
 msgstr "Spotify เป็นบริการสตรีมเพลง"
 
-#: ../src/replacements.js:106 ../src/replacements.js:109
-#: ../src/replacements.js:120 ../src/replacements.js:153
+#: src/replacements.js:122 src/replacements.js:125 src/replacements.js:136
+#: src/replacements.js:169
 msgid "VLC"
 msgstr "VLC"
 
-#: ../src/replacements.js:110 ../src/replacements.js:121
-#: ../src/replacements.js:154
+#: src/replacements.js:126 src/replacements.js:137 src/replacements.js:170
 msgid "VLC is a media player that can play most media files"
 msgstr "VLC เป็นโปรแกรมเล่นสื่อที่สามารถเล่นไฟล์สื่อได้แทบทุกประเภท"
 
-#: ../src/replacements.js:117
+#: src/replacements.js:133
 msgid "K-Lite Mega Codec Pack"
 msgstr "K-Lite Mega Codec Pack"
 
-#: ../src/replacements.js:128
+#: src/replacements.js:144
 msgid "µTorrent"
 msgstr ""
 
-#: ../src/replacements.js:131 ../src/replacements.js:142
+#: src/replacements.js:147 src/replacements.js:158
 msgid "Transmission"
 msgstr "Transmission"
 
-#: ../src/replacements.js:132
+#: src/replacements.js:148
 msgid "Transmission is a BitTorrent client, like µTorrent"
 msgstr ""
 
-#: ../src/replacements.js:139
+#: src/replacements.js:155
 msgid "µTorrent Web"
 msgstr ""
 
-#: ../src/replacements.js:143
+#: src/replacements.js:159
 msgid "Transmission is a BitTorrent client, like µTorrent Web"
 msgstr ""
 
-#: ../src/replacements.js:150
+#: src/replacements.js:166
 msgid "DivX Codecs"
 msgstr "DivX Codecs"
 
-#: ../src/replacements.js:161
+#: src/replacements.js:177
 msgid "LINE"
 msgstr "LINE"
 
-#: ../src/replacements.js:163
+#: src/replacements.js:179
 msgid "You can install and use LINE through the Google Chrome Web Store"
 msgstr "คุณสามารถติดตั้งและใช้งาน LINE ผ่าน Google Chrome เว็บสโตร์"
 
-#: ../src/replacements.js:170
+#: src/replacements.js:186
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
 msgstr "แต่ไม่ต้องกังวล เมื่อมี Endless OS คุณก็ปลอดภัยจากไวรัสต่างๆ ที่ส่งผลกระทบต่อ Windows เท่านั้นแล้ว"
 
-#: ../src/replacements.js:177
-#, javascript-format
+#: src/replacements.js:194
+msgid "Adobe Flash Player"
+msgstr ""
+
+#: src/replacements.js:195
 msgid ""
-"Adobe Flash is downloaded and installed automatically by your browser on "
-"Endless OS. Please visit %s to check whether it has been installed correctly"
-" and contact the %s for support if you still have problems"
-msgstr "Adobe Flash ถูกดาวน์โหลดและติดตั้งโดยอัตโนมัติโดยเบราว์เซอร์ของคุณบน Endless OS โปรดเข้าไปที่ %s เพื่อตรวจสอบดูว่าโปรแกรมดังกล่าวได้รับการติดตั้งอย่างถูกต้องหรือไม่ และติดต่อ %s เพื่อรับการสนับสนุนหากคุณยังคงพบปัญหา"
+"If you need to use a website that requires Flash, try installing the <a "
+"href='https://ruffle.rs/'>Ruffle Flash Emulator</a> in your web browser."
+msgstr ""
 
-#: ../src/replacements.js:177
-msgid "the Adobe Flash test page"
-msgstr "หน้าทดสอบ Adobe Flash"
-
-#: ../src/replacements.js:177
-msgid "Endless Community"
-msgstr "ชุมชน Endless"
-
-#: ../src/replacements.js:183
+#: src/replacements.js:203
 msgid "Microsoft Windows"
 msgstr ""
 
-#: ../src/replacements.js:186
+#: src/replacements.js:206
 msgid "GNOME Boxes"
 msgstr ""
 
-#: ../src/replacements.js:187
+#: src/replacements.js:207
 msgid ""
 "GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
 " run it alongside Endless OS"
 msgstr ""
 
-#: ../src/replacements.js:195
+#: src/replacements.js:215
 msgid "Minecraft"
 msgstr ""
 
-#: ../src/replacements.js:202
+#: src/replacements.js:222
 msgid "Scratch"
 msgstr ""
 
-#: ../src/replacements.js:209
+#: src/replacements.js:229
 msgid "Microsoft Edge"
 msgstr ""
 
-#: ../src/replacements.js:219
+#: src/replacements.js:239
 msgid "Opera"
 msgstr ""
 
-#: ../src/replacements.js:229
+#: src/replacements.js:249
 msgid "Telegram"
 msgstr ""
 
-#: ../src/replacements.js:239
+#: src/replacements.js:259
 msgid "FL Studio"
 msgstr ""
 
-#: ../src/replacements.js:245
+#: src/replacements.js:265
 msgid "Ardour"
 msgstr ""
 
-#: ../src/replacements.js:246
+#: src/replacements.js:266
 msgid "Ardour is a digital audio workstation, like FL Studio"
 msgstr ""

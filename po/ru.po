@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the eos-gates package.
 # 
 # Translators:
 # Victor, 2024
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-17 09:49+0000\n"
+"POT-Creation-Date: 2024-04-19 07:28+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
 "Last-Translator: Victor, 2024\n"
 "Language-Team: Russian (http://app.transifex.com/endless-os/eos-gates/language/ru/)\n"
@@ -18,231 +18,225 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
+#: data/com.endlessm.Gates.LinuxPackage.desktop.in.in:4
+#: data/com.endlessm.Gates.LinuxPackage.desktop.in.in:5
 msgid "Install Linux Applications"
 msgstr "Установить приложения Linux"
 
-#: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
+#: data/com.endlessm.Gates.Windows.desktop.in.in:4
 msgid "Launch Windows Application"
 msgstr "Запустить приложение Windows"
 
-#: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:2
+#: data/com.endlessm.Gates.Windows.desktop.in.in:5
 msgid "Launch Windows Applications"
 msgstr "Запустить приложения Windows"
 
-#: ../src/eos_gates.js:62
-msgid "OK"
-msgstr "ОК"
-
-#: ../src/eos_gates.js:73
+#: src/eos_gates.js:45 src/eos_gates.js:70
 #, javascript-format
 msgid "Launch %s"
 msgstr "Запустить %s"
 
-#: ../src/eos_gates.js:83
+#: src/eos_gates.js:45 src/eos_gates.js:116
+msgid "App Center"
+msgstr "Центр приложений"
+
+#: src/eos_gates.js:80
 #, javascript-format
 msgid "Install %s"
 msgstr "Установить %s"
 
-#: ../src/eos_gates.js:136
+#: src/eos_gates.js:116
 #, javascript-format
 msgid "You can install applications from our %s."
 msgstr "Вы можете устанавливать приложения из нашего %s."
 
-#: ../src/eos_gates.js:136
-msgid "App Center"
-msgstr "Центр приложений"
-
-#: ../src/eos_gates.js:147
+#: src/eos_gates.js:126
 #, javascript-format
 msgid "However, you already have %s installed"
 msgstr "Однако вы уже установили %s"
 
-#: ../src/eos_gates.js:149
+#: src/eos_gates.js:128
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
 msgstr "Однако вы можете установить %s в Центре приложений Endless"
 
-#: ../src/eos_gates.js:176
+#: src/eos_gates.js:146
 #, javascript-format
 msgid "%s is unsupported"
 msgstr "%s не поддерживается"
 
-#: ../src/eos_gates_linux_package.js:23
+#: src/eos_gates_linux_package.js:37
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
 msgstr "К сожалению, вы не можете установить %s на Endless."
 
-#: ../src/eos_gates_windows.js:75
+#: src/eos_gates_windows.js:36
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
 msgstr "К сожалению, вы не можете запустить %s на Endless."
 
-#: ../src/replacements.js:9
+#: src/replacements.js:24
 msgid "You are already running Endless OS"
 msgstr "Вы уже используете Endless OS"
 
-#: ../src/replacements.js:18
+#: src/replacements.js:33
 msgid "Reformat with Endless OS"
 msgstr ""
 
-#: ../src/replacements.js:19
+#: src/replacements.js:34
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
 msgstr "Вы можете преобразить свой компьютер с помощью Endless OS. Если у вас установлена ​​Windows и вы хотите ее сохранить, запустите Windows, а затем установщик Endless в Windows."
 
-#: ../src/replacements.js:33
+#: src/replacements.js:48
 msgid "Zoom"
 msgstr "Zoom"
 
-#: ../src/replacements.js:40 ../src/replacements.js:97
+#: src/replacements.js:55 src/replacements.js:113
 msgid "Spotify"
 msgstr "Spotify"
 
-#: ../src/replacements.js:48
+#: src/replacements.js:63
 msgid "Firefox"
 msgstr "Firefox"
 
-#: ../src/replacements.js:56
+#: src/replacements.js:71
 msgid "Google Chrome "
 msgstr "Google Chrome "
 
-#: ../src/replacements.js:64
+#: src/replacements.js:79
 msgid "Skype"
 msgstr "Skype"
 
-#: ../src/replacements.js:72
+#: src/replacements.js:87
 msgid "Dropbox"
 msgstr "Dropbox"
 
-#: ../src/replacements.js:80
+#: src/replacements.js:95
 msgid "Steam"
 msgstr "Steam"
 
-#: ../src/replacements.js:87
+#: src/replacements.js:102
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
-#: ../src/replacements.js:94
+#: src/replacements.js:104
+msgid "You can use WhatsApp in your web browser."
+msgstr ""
+
+#: src/replacements.js:110
 msgid "Apple iTunes"
 msgstr "Apple iTunes"
 
-#: ../src/replacements.js:98
+#: src/replacements.js:114
 msgid "Spotify is a streaming music service"
 msgstr "Spotify — сервис потоковой передачи музыки"
 
-#: ../src/replacements.js:106 ../src/replacements.js:109
-#: ../src/replacements.js:120 ../src/replacements.js:153
+#: src/replacements.js:122 src/replacements.js:125 src/replacements.js:136
+#: src/replacements.js:169
 msgid "VLC"
 msgstr "VLC"
 
-#: ../src/replacements.js:110 ../src/replacements.js:121
-#: ../src/replacements.js:154
+#: src/replacements.js:126 src/replacements.js:137 src/replacements.js:170
 msgid "VLC is a media player that can play most media files"
 msgstr "VLC — медиаплеер, который может воспроизводить большинство медиафайлов"
 
-#: ../src/replacements.js:117
+#: src/replacements.js:133
 msgid "K-Lite Mega Codec Pack"
 msgstr "Пакет кодеков K-Lite (Mega)"
 
-#: ../src/replacements.js:128
+#: src/replacements.js:144
 msgid "µTorrent"
 msgstr "µTorrent"
 
-#: ../src/replacements.js:131 ../src/replacements.js:142
+#: src/replacements.js:147 src/replacements.js:158
 msgid "Transmission"
 msgstr "Transmission"
 
-#: ../src/replacements.js:132
+#: src/replacements.js:148
 msgid "Transmission is a BitTorrent client, like µTorrent"
 msgstr "Transmission — клиент BitTorrent, наподобие µTorrent"
 
-#: ../src/replacements.js:139
+#: src/replacements.js:155
 msgid "µTorrent Web"
 msgstr "µTorrent Web"
 
-#: ../src/replacements.js:143
+#: src/replacements.js:159
 msgid "Transmission is a BitTorrent client, like µTorrent Web"
 msgstr "Transmission — клиент BitTorrent, наподобие µTorrent Web."
 
-#: ../src/replacements.js:150
+#: src/replacements.js:166
 msgid "DivX Codecs"
 msgstr "Кодеки DivX"
 
-#: ../src/replacements.js:161
+#: src/replacements.js:177
 msgid "LINE"
 msgstr "LINE"
 
-#: ../src/replacements.js:163
+#: src/replacements.js:179
 msgid "You can install and use LINE through the Google Chrome Web Store"
 msgstr "Вы можете установить и использовать LINE через Интернет-магазин Google Chrome"
 
-#: ../src/replacements.js:170
+#: src/replacements.js:186
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
 msgstr "Но не беспокойтесь. С Endless OS вы уже защищены от вирусов, работающих только в Windows"
 
-#: ../src/replacements.js:177
-#, javascript-format
-msgid ""
-"Adobe Flash is downloaded and installed automatically by your browser on "
-"Endless OS. Please visit %s to check whether it has been installed correctly"
-" and contact the %s for support if you still have problems"
-msgstr "Adobe Flash загружается и устанавливается автоматически вашим браузером в Endless OS. Пожалуйста, посетите сайт %s, чтобы проверить, правильно ли он установлен, и обратитесь в поддержку %s, если у вас остались проблемы"
-
-#: ../src/replacements.js:177
-msgid "the Adobe Flash test page"
+#: src/replacements.js:194
+msgid "Adobe Flash Player"
 msgstr ""
 
-#: ../src/replacements.js:177
-msgid "Endless Community"
-msgstr "Endless Community"
+#: src/replacements.js:195
+msgid ""
+"If you need to use a website that requires Flash, try installing the <a "
+"href='https://ruffle.rs/'>Ruffle Flash Emulator</a> in your web browser."
+msgstr ""
 
-#: ../src/replacements.js:183
+#: src/replacements.js:203
 msgid "Microsoft Windows"
 msgstr "Microsoft Windows"
 
-#: ../src/replacements.js:186
+#: src/replacements.js:206
 msgid "GNOME Boxes"
 msgstr "GNOME Boxes"
 
-#: ../src/replacements.js:187
+#: src/replacements.js:207
 msgid ""
 "GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
 " run it alongside Endless OS"
 msgstr "GNOME Boxes — это виртуальная машина, на которую вы можете установить Microsoft Windows и запускать ее вместе с Endless OS"
 
-#: ../src/replacements.js:195
+#: src/replacements.js:215
 msgid "Minecraft"
 msgstr "Minecraft"
 
-#: ../src/replacements.js:202
+#: src/replacements.js:222
 msgid "Scratch"
 msgstr "Scratch"
 
-#: ../src/replacements.js:209
+#: src/replacements.js:229
 msgid "Microsoft Edge"
 msgstr "Microsoft Edge"
 
-#: ../src/replacements.js:219
+#: src/replacements.js:239
 msgid "Opera"
 msgstr "Opera"
 
-#: ../src/replacements.js:229
+#: src/replacements.js:249
 msgid "Telegram"
 msgstr "Telegram"
 
-#: ../src/replacements.js:239
+#: src/replacements.js:259
 msgid "FL Studio"
 msgstr "FL Studio"
 
-#: ../src/replacements.js:245
+#: src/replacements.js:265
 msgid "Ardour"
 msgstr "Ardour"
 
-#: ../src/replacements.js:246
+#: src/replacements.js:266
 msgid "Ardour is a digital audio workstation, like FL Studio"
 msgstr "Ardor — это рабочая станция для цифрового аудио, наподобие FL Studio."

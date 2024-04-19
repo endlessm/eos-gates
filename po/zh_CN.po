@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the eos-gates package.
 # 
 # Translators:
 # e2f_cn c5 <jarvisn@ecinnovations.com>, 2017
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 09:49+0000\n"
+"POT-Creation-Date: 2024-04-19 07:28+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
 "Last-Translator: Json Lu <3452829890@qq.com>, 2023\n"
 "Language-Team: Chinese (China) (http://app.transifex.com/endless-os/eos-gates/language/zh_CN/)\n"
@@ -21,231 +21,225 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/com.endlessm.Gates.LinuxPackage.desktop.in.in.h:1
+#: data/com.endlessm.Gates.LinuxPackage.desktop.in.in:4
+#: data/com.endlessm.Gates.LinuxPackage.desktop.in.in:5
 msgid "Install Linux Applications"
 msgstr "安装Linux应用程序"
 
-#: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:1
+#: data/com.endlessm.Gates.Windows.desktop.in.in:4
 msgid "Launch Windows Application"
 msgstr "启动Windows应用程序"
 
-#: ../data/com.endlessm.Gates.Windows.desktop.in.in.h:2
+#: data/com.endlessm.Gates.Windows.desktop.in.in:5
 msgid "Launch Windows Applications"
 msgstr "启动Windows应用程序"
 
-#: ../src/eos_gates.js:62
-msgid "OK"
-msgstr "好的"
-
-#: ../src/eos_gates.js:73
+#: src/eos_gates.js:45 src/eos_gates.js:70
 #, javascript-format
 msgid "Launch %s"
 msgstr "启动 %s"
 
-#: ../src/eos_gates.js:83
+#: src/eos_gates.js:45 src/eos_gates.js:116
+msgid "App Center"
+msgstr "应用中心"
+
+#: src/eos_gates.js:80
 #, javascript-format
 msgid "Install %s"
 msgstr "安装 %s"
 
-#: ../src/eos_gates.js:136
+#: src/eos_gates.js:116
 #, javascript-format
 msgid "You can install applications from our %s."
 msgstr "您可以从我们的 %s 中安装应用。"
 
-#: ../src/eos_gates.js:136
-msgid "App Center"
-msgstr "应用中心"
-
-#: ../src/eos_gates.js:147
+#: src/eos_gates.js:126
 #, javascript-format
 msgid "However, you already have %s installed"
 msgstr "但是，您已经安装了 %s"
 
-#: ../src/eos_gates.js:149
+#: src/eos_gates.js:128
 #, javascript-format
 msgid "However, you can install %s on the Endless App Center"
 msgstr "但是，您可以在 Endless 应用中心上安装 %s"
 
-#: ../src/eos_gates.js:176
+#: src/eos_gates.js:146
 #, javascript-format
 msgid "%s is unsupported"
 msgstr "不支持%s"
 
-#: ../src/eos_gates_linux_package.js:23
+#: src/eos_gates_linux_package.js:37
 #, javascript-format
 msgid "Sorry, you can't install %s on Endless."
 msgstr "抱歉，您无法在 Endless 上安装 %s。"
 
-#: ../src/eos_gates_windows.js:75
+#: src/eos_gates_windows.js:36
 #, javascript-format
 msgid "Sorry, you can't run %s on Endless."
 msgstr "抱歉，您无法在 Endless 上运行 %s。"
 
-#: ../src/replacements.js:9
+#: src/replacements.js:24
 msgid "You are already running Endless OS"
 msgstr "您已经运行 Endless 操作系统"
 
-#: ../src/replacements.js:18
+#: src/replacements.js:33
 msgid "Reformat with Endless OS"
 msgstr "使用 Endless 操作系统重新设置格式"
 
-#: ../src/replacements.js:19
+#: src/replacements.js:34
 msgid ""
 "You can reformat your computer with Endless OS. If you have Windows "
 "installed and want to keep it, reboot to Windows and run the Endless "
 "Installer under Windows."
 msgstr "可以使用 Endless 操作系统重新设置电脑的格式。如果您已安装 Windows 并希望保留该系统，则重启 Windows 并在该系统下运行 Endless 安装程序。"
 
-#: ../src/replacements.js:33
+#: src/replacements.js:48
 msgid "Zoom"
 msgstr "Zoom"
 
-#: ../src/replacements.js:40 ../src/replacements.js:97
+#: src/replacements.js:55 src/replacements.js:113
 msgid "Spotify"
 msgstr "Spotify"
 
-#: ../src/replacements.js:48
+#: src/replacements.js:63
 msgid "Firefox"
 msgstr "Firefox"
 
-#: ../src/replacements.js:56
+#: src/replacements.js:71
 msgid "Google Chrome "
 msgstr "Google Chrome "
 
-#: ../src/replacements.js:64
+#: src/replacements.js:79
 msgid "Skype"
 msgstr "Skype"
 
-#: ../src/replacements.js:72
+#: src/replacements.js:87
 msgid "Dropbox"
 msgstr "Dropbox"
 
-#: ../src/replacements.js:80
+#: src/replacements.js:95
 msgid "Steam"
 msgstr "Steam"
 
-#: ../src/replacements.js:87
+#: src/replacements.js:102
 msgid "WhatsApp"
 msgstr "WhatsApp"
 
-#: ../src/replacements.js:94
+#: src/replacements.js:104
+msgid "You can use WhatsApp in your web browser."
+msgstr ""
+
+#: src/replacements.js:110
 msgid "Apple iTunes"
 msgstr "Apple iTunes"
 
-#: ../src/replacements.js:98
+#: src/replacements.js:114
 msgid "Spotify is a streaming music service"
 msgstr "Spotify 是一款流式音乐服务"
 
-#: ../src/replacements.js:106 ../src/replacements.js:109
-#: ../src/replacements.js:120 ../src/replacements.js:153
+#: src/replacements.js:122 src/replacements.js:125 src/replacements.js:136
+#: src/replacements.js:169
 msgid "VLC"
 msgstr "VLC"
 
-#: ../src/replacements.js:110 ../src/replacements.js:121
-#: ../src/replacements.js:154
+#: src/replacements.js:126 src/replacements.js:137 src/replacements.js:170
 msgid "VLC is a media player that can play most media files"
 msgstr "VLC 是一款媒体播放器，可以播放大多数的媒体文件"
 
-#: ../src/replacements.js:117
+#: src/replacements.js:133
 msgid "K-Lite Mega Codec Pack"
 msgstr "K-Lite Mega Codec Pack"
 
-#: ../src/replacements.js:128
+#: src/replacements.js:144
 msgid "µTorrent"
 msgstr ""
 
-#: ../src/replacements.js:131 ../src/replacements.js:142
+#: src/replacements.js:147 src/replacements.js:158
 msgid "Transmission"
 msgstr "Transmission"
 
-#: ../src/replacements.js:132
+#: src/replacements.js:148
 msgid "Transmission is a BitTorrent client, like µTorrent"
 msgstr ""
 
-#: ../src/replacements.js:139
+#: src/replacements.js:155
 msgid "µTorrent Web"
 msgstr ""
 
-#: ../src/replacements.js:143
+#: src/replacements.js:159
 msgid "Transmission is a BitTorrent client, like µTorrent Web"
 msgstr ""
 
-#: ../src/replacements.js:150
+#: src/replacements.js:166
 msgid "DivX Codecs"
 msgstr "DivX Codecs"
 
-#: ../src/replacements.js:161
+#: src/replacements.js:177
 msgid "LINE"
 msgstr "LINE"
 
-#: ../src/replacements.js:163
+#: src/replacements.js:179
 msgid "You can install and use LINE through the Google Chrome Web Store"
 msgstr "可以通过 Google Chrome Web Store 安装并使用 LINE"
 
-#: ../src/replacements.js:170
+#: src/replacements.js:186
 msgid ""
 "But do not worry. With Endless OS you are already safe from viruses that "
 "only affect Windows"
 msgstr "但请不必担心。使用 Endless 操作系统已将您安全隔绝于仅影响 Windows 系统的病毒"
 
-#: ../src/replacements.js:177
-#, javascript-format
+#: src/replacements.js:194
+msgid "Adobe Flash Player"
+msgstr ""
+
+#: src/replacements.js:195
 msgid ""
-"Adobe Flash is downloaded and installed automatically by your browser on "
-"Endless OS. Please visit %s to check whether it has been installed correctly"
-" and contact the %s for support if you still have problems"
-msgstr "您的浏览器已自动下载 Adobe Flash 并将其安装在 Endless 操作系统上。请访问 %s 以检查该软件是否已正确安装，如果仍有问题，请联系 %s 寻求帮助"
+"If you need to use a website that requires Flash, try installing the <a "
+"href='https://ruffle.rs/'>Ruffle Flash Emulator</a> in your web browser."
+msgstr ""
 
-#: ../src/replacements.js:177
-msgid "the Adobe Flash test page"
-msgstr "Adobe Flash 测试页面"
-
-#: ../src/replacements.js:177
-msgid "Endless Community"
-msgstr "Endless 社区"
-
-#: ../src/replacements.js:183
+#: src/replacements.js:203
 msgid "Microsoft Windows"
 msgstr "Microsoft Windows"
 
-#: ../src/replacements.js:186
+#: src/replacements.js:206
 msgid "GNOME Boxes"
 msgstr "GNOME Boxes"
 
-#: ../src/replacements.js:187
+#: src/replacements.js:207
 msgid ""
 "GNOME Boxes is a Virtual Machine where you can install Microsoft Windows and"
 " run it alongside Endless OS"
 msgstr "GNOME Boxes 是一个虚拟机，您可以在其中安装Microsoft Windows并将其与Endless OS一起运行"
 
-#: ../src/replacements.js:195
+#: src/replacements.js:215
 msgid "Minecraft"
 msgstr "我的世界"
 
-#: ../src/replacements.js:202
+#: src/replacements.js:222
 msgid "Scratch"
 msgstr "Scratch"
 
-#: ../src/replacements.js:209
+#: src/replacements.js:229
 msgid "Microsoft Edge"
 msgstr ""
 
-#: ../src/replacements.js:219
+#: src/replacements.js:239
 msgid "Opera"
 msgstr ""
 
-#: ../src/replacements.js:229
+#: src/replacements.js:249
 msgid "Telegram"
 msgstr ""
 
-#: ../src/replacements.js:239
+#: src/replacements.js:259
 msgid "FL Studio"
 msgstr ""
 
-#: ../src/replacements.js:245
+#: src/replacements.js:265
 msgid "Ardour"
 msgstr ""
 
-#: ../src/replacements.js:246
+#: src/replacements.js:266
 msgid "Ardour is a digital audio workstation, like FL Studio"
 msgstr ""
