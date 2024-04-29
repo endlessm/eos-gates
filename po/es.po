@@ -6,6 +6,7 @@
 # Eddy Alegria <eddy@endlessm.com>, 2014
 # Joel Gil León <joel@endlessm.com>, 2014
 # Joel Gil León <joel@endlessm.com>, 2014
+# Manuel Quiñones, 2024
 # Nuritzi Sanchez <ns@endlessm.com>, 2017
 # Roddy Shuler <roddy@stanfordalumni.org>, 2014,2017
 # Will Thompson <wjt@endlessos.org>, 2022
@@ -13,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-19 07:28+0000\n"
+"POT-Creation-Date: 2024-04-25 08:57+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessos.org>, 2022\n"
+"Last-Translator: Manuel Quiñones, 2024\n"
 "Language-Team: Spanish (http://app.transifex.com/endless-os/eos-gates/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -129,7 +130,7 @@ msgstr "WhatsApp"
 
 #: src/replacements.js:104
 msgid "You can use WhatsApp in your web browser."
-msgstr ""
+msgstr "Puede usar Whatsapp en el navegador web."
 
 #: src/replacements.js:110
 msgid "Apple iTunes"
@@ -154,7 +155,7 @@ msgstr "Mega paquete de codecs para K-Lite"
 
 #: src/replacements.js:144
 msgid "µTorrent"
-msgstr ""
+msgstr "µTorrent"
 
 #: src/replacements.js:147 src/replacements.js:158
 msgid "Transmission"
@@ -162,15 +163,15 @@ msgstr "Transmission"
 
 #: src/replacements.js:148
 msgid "Transmission is a BitTorrent client, like µTorrent"
-msgstr ""
+msgstr "Transmission es un cliente de BitTorrent, como µTorrent"
 
 #: src/replacements.js:155
 msgid "µTorrent Web"
-msgstr ""
+msgstr "µTorrent Web"
 
 #: src/replacements.js:159
 msgid "Transmission is a BitTorrent client, like µTorrent Web"
-msgstr ""
+msgstr "Transmission es un cliente de BitTorrent, como µTorrent Web"
 
 #: src/replacements.js:166
 msgid "DivX Codecs"
@@ -192,13 +193,13 @@ msgstr "Pero no te preocupes. Usar Endless OS te protege de los virus que sólo 
 
 #: src/replacements.js:194
 msgid "Adobe Flash Player"
-msgstr ""
+msgstr "Adobe Flash Player"
 
 #: src/replacements.js:195
 msgid ""
 "If you need to use a website that requires Flash, try installing the <a "
 "href='https://ruffle.rs/'>Ruffle Flash Emulator</a> in your web browser."
-msgstr ""
+msgstr "Si necesita usar un sitio web que requiera Flash, intente instalar el emulador <a href='https://ruffle.rs/'>Ruffle Flash</a> en su navegador web."
 
 #: src/replacements.js:203
 msgid "Microsoft Windows"
@@ -224,24 +225,24 @@ msgstr "Scratch"
 
 #: src/replacements.js:229
 msgid "Microsoft Edge"
-msgstr ""
+msgstr "Microsoft Edge"
 
 #: src/replacements.js:239
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 #: src/replacements.js:249
 msgid "Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: src/replacements.js:259
 msgid "FL Studio"
-msgstr ""
+msgstr "FL Studio"
 
 #: src/replacements.js:265
 msgid "Ardour"
-msgstr ""
+msgstr "Ardour"
 
 #: src/replacements.js:266
 msgid "Ardour is a digital audio workstation, like FL Studio"
-msgstr ""
+msgstr "Ardour es una estación de trabajo de audio, como FL Studio"

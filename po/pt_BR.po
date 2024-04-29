@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Leandro Stanger <leandrostanger@hotmail.com>, 2019-2020,2022-2023
+# Manuel Quiñones, 2024
 # Mariana Barbosa <mariana@endlessm.com>, 2017
 # Richard Vignais, 2014
 # Roddy Shuler <roddy@stanfordalumni.org>, 2017
@@ -12,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-19 07:28+0000\n"
+"POT-Creation-Date: 2024-04-25 08:57+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
-"Last-Translator: Leandro Stanger <leandrostanger@hotmail.com>, 2019-2020,2022-2023\n"
+"Last-Translator: Manuel Quiñones, 2024\n"
 "Language-Team: Portuguese (Brazil) (http://app.transifex.com/endless-os/eos-gates/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -128,7 +129,7 @@ msgstr "WhatsApp"
 
 #: src/replacements.js:104
 msgid "You can use WhatsApp in your web browser."
-msgstr ""
+msgstr "Você pode usar o WhatsApp em seu navegador."
 
 #: src/replacements.js:110
 msgid "Apple iTunes"
@@ -191,13 +192,13 @@ msgstr "Não se preocupe. Com o Endless OS, você está protegido de vírus que 
 
 #: src/replacements.js:194
 msgid "Adobe Flash Player"
-msgstr ""
+msgstr "Adobe Flash Player"
 
 #: src/replacements.js:195
 msgid ""
 "If you need to use a website that requires Flash, try installing the <a "
 "href='https://ruffle.rs/'>Ruffle Flash Emulator</a> in your web browser."
-msgstr ""
+msgstr "Se você precisar usar um site que requer Flash, tente instalar o <a href='https://ruffle.rs/'>Ruffle Flash Emulator</a> em seu navegador."
 
 #: src/replacements.js:203
 msgid "Microsoft Windows"
