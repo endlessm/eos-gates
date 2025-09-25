@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Will Thompson <wjt@endlessos.org>, 2020
-# Shaddai, 2019-2020,2022
+# Shaddai, 2019-2020,2022,2025
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-19 07:28+0000\n"
+"POT-Creation-Date: 2025-09-25 08:57+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
-"Last-Translator: Shaddai, 2019-2020,2022\n"
+"Last-Translator: Shaddai, 2019-2020,2022,2025\n"
 "Language-Team: Slovenian (http://app.transifex.com/endless-os/eos-gates/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -125,7 +125,7 @@ msgstr "WhatsApp"
 
 #: src/replacements.js:104
 msgid "You can use WhatsApp in your web browser."
-msgstr ""
+msgstr "WhatsApp lahko uporabljate v spletnem brskalniku."
 
 #: src/replacements.js:110
 msgid "Apple iTunes"
@@ -150,7 +150,7 @@ msgstr "K-Lite Mega Codec Pack"
 
 #: src/replacements.js:144
 msgid "µTorrent"
-msgstr ""
+msgstr "µTorrent"
 
 #: src/replacements.js:147 src/replacements.js:158
 msgid "Transmission"
@@ -158,15 +158,15 @@ msgstr "Oddajalec"
 
 #: src/replacements.js:148
 msgid "Transmission is a BitTorrent client, like µTorrent"
-msgstr ""
+msgstr "Transmission je odjemalec BitTorrent, kot je μTorrent"
 
 #: src/replacements.js:155
 msgid "µTorrent Web"
-msgstr ""
+msgstr "µTorrent Web"
 
 #: src/replacements.js:159
 msgid "Transmission is a BitTorrent client, like µTorrent Web"
-msgstr ""
+msgstr "Prenos je odjemalec BitTorrent, kot je μTorrent Web"
 
 #: src/replacements.js:166
 msgid "DivX Codecs"
@@ -188,13 +188,13 @@ msgstr "Ampak ne skrbi. Z Endless OS ste že varni pred virusi, ki vplivajo samo
 
 #: src/replacements.js:194
 msgid "Adobe Flash Player"
-msgstr ""
+msgstr "Adobe Flash Player"
 
 #: src/replacements.js:195
 msgid ""
 "If you need to use a website that requires Flash, try installing the <a "
 "href='https://ruffle.rs/'>Ruffle Flash Emulator</a> in your web browser."
-msgstr ""
+msgstr "Če želite uporabiti spletno mesto, ki zahteva Flash, poskusite namestiti <a href='https://ruffle.rs/'>Ruffle Flash Emulator</a> v svoj spletni brskalnik."
 
 #: src/replacements.js:203
 msgid "Microsoft Windows"
@@ -220,24 +220,24 @@ msgstr "Skice"
 
 #: src/replacements.js:229
 msgid "Microsoft Edge"
-msgstr ""
+msgstr "Microsoft Edge"
 
 #: src/replacements.js:239
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 #: src/replacements.js:249
 msgid "Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: src/replacements.js:259
 msgid "FL Studio"
-msgstr ""
+msgstr "FL Studio"
 
 #: src/replacements.js:265
 msgid "Ardour"
-msgstr ""
+msgstr "Ardour"
 
 #: src/replacements.js:266
 msgid "Ardour is a digital audio workstation, like FL Studio"
-msgstr ""
+msgstr "Ardor je digitalna audio delovna postaja, kot je FL Studio"
