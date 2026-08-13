@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Martin Jelen <marty.jelen@seznam.cz>, 2018
-# Pavel Borecki <pavel.borecki@gmail.com>, 2020-2021
+# Pavel Borecki <pavel.borecki@gmail.com>, 2020-2021,2026
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-gates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-19 07:28+0000\n"
+"POT-Creation-Date: 2026-08-13 08:58+0000\n"
 "PO-Revision-Date: 2014-09-30 05:02+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>, 2020-2021\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>, 2020-2021,2026\n"
 "Language-Team: Czech (http://app.transifex.com/endless-os/eos-gates/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -93,7 +93,7 @@ msgstr "Můžete přeformátovat váš počítač na Endless OS. Pokud máte nai
 
 #: src/replacements.js:48
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: src/replacements.js:55 src/replacements.js:113
 msgid "Spotify"
@@ -125,7 +125,7 @@ msgstr "WhatsApp"
 
 #: src/replacements.js:104
 msgid "You can use WhatsApp in your web browser."
-msgstr ""
+msgstr "WhatsApp je možné používat ve webovém prohlížeči."
 
 #: src/replacements.js:110
 msgid "Apple iTunes"
@@ -150,7 +150,7 @@ msgstr "K-Lite Mega Codec Pack"
 
 #: src/replacements.js:144
 msgid "µTorrent"
-msgstr ""
+msgstr "µTorrent"
 
 #: src/replacements.js:147 src/replacements.js:158
 msgid "Transmission"
@@ -158,15 +158,15 @@ msgstr "Transmission"
 
 #: src/replacements.js:148
 msgid "Transmission is a BitTorrent client, like µTorrent"
-msgstr ""
+msgstr "Transmission je BitTorrent klient, stejně jako µTorrent"
 
 #: src/replacements.js:155
 msgid "µTorrent Web"
-msgstr ""
+msgstr "µTorrent Web"
 
 #: src/replacements.js:159
 msgid "Transmission is a BitTorrent client, like µTorrent Web"
-msgstr ""
+msgstr "Transmission je BitTorrent klient, stejně jako µTorrent Web"
 
 #: src/replacements.js:166
 msgid "DivX Codecs"
@@ -188,13 +188,13 @@ msgstr "Ale nemějte obavy. V případě Endless OS už jste v bezpečí před v
 
 #: src/replacements.js:194
 msgid "Adobe Flash Player"
-msgstr ""
+msgstr "Adobe Flash Player"
 
 #: src/replacements.js:195
 msgid ""
 "If you need to use a website that requires Flash, try installing the <a "
 "href='https://ruffle.rs/'>Ruffle Flash Emulator</a> in your web browser."
-msgstr ""
+msgstr "Pokud potřebujete používat web který vyžaduje Flash, zkuste do vámi využívaného webového prohlížeče nainstalovat <a href='https://ruffle.rs/'>Ruffle Flash Emulator</a>."
 
 #: src/replacements.js:203
 msgid "Microsoft Windows"
@@ -220,24 +220,24 @@ msgstr "Scratch"
 
 #: src/replacements.js:229
 msgid "Microsoft Edge"
-msgstr ""
+msgstr "Microsoft Edge"
 
 #: src/replacements.js:239
 msgid "Opera"
-msgstr ""
+msgstr "Opera"
 
 #: src/replacements.js:249
 msgid "Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: src/replacements.js:259
 msgid "FL Studio"
-msgstr ""
+msgstr "FL Studio"
 
 #: src/replacements.js:265
 msgid "Ardour"
-msgstr ""
+msgstr "Ardour"
 
 #: src/replacements.js:266
 msgid "Ardour is a digital audio workstation, like FL Studio"
-msgstr ""
+msgstr "Ardour je digital audio workstation, stejně jako FL Studio"
